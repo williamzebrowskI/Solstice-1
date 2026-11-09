@@ -57,12 +57,12 @@ Zero-shot likelihood scoring on the complete ARC Easy, ARC Challenge, PIQA and H
 
 | Benchmark | Solstice-1 acc / acc_norm | OpenSML-150M acc / acc_norm | SmolLM2-135M Instruct acc / acc_norm |
 | --- | --- | --- | --- |
-| ARC Easy | 62.58 / 62.33 | 56.65 / 55.43 | — / — |
-| ARC Challenge | 29.35 / 30.89 | 26.02 / 29.52 | — / — |
-| PIQA | 66.49 / 66.21 | 64.53 / 64.09 | — / 66.3 |
-| HellaSwag | 32.85 / 39.40 | 30.55 / 33.94 | — / 40.9 |
+| ARC Easy | **62.58** / **62.33** | 56.65 / 55.43 | 54.00 / 48.82 |
+| ARC Challenge | **29.35** / **30.89** | 26.02 / 29.52 | 25.94 / 27.73 |
+| PIQA | 66.49 / 66.21 | 64.53 / 64.09 | **66.70** / **66.76** |
+| HellaSwag | 32.85 / 39.40 | 30.55 / 33.94 | **35.02** / **42.90** |
 
-All values are percentages, shown as **acc / acc_norm**. SmolLM2 publishes ARC only as a combined average (**37.3% acc_norm**); separate Easy/Challenge scores are unavailable in its card.
+Values are percentages, shown as **acc / acc_norm**. Bold marks the highest reported value for each metric. SmolLM2 scores are from an independent published evaluation; protocol differences are noted below.
 
 ### Instruction following
 
@@ -70,19 +70,16 @@ IFEval checks whether generated responses follow explicit instructions. It measu
 
 | IFEval accuracy | Solstice-1 | OpenSML-150M | SmolLM2-135M Instruct |
 | --- | --- | --- | --- |
-| Strict prompts | 17.93% | 15.16% | — |
-| Strict instructions | 30.10% | 25.30% | — |
-| Loose prompts | 19.22% | 15.71% | — |
-| Loose instructions | 32.49% | 25.78% | — |
-| Publisher prompt/instruction average | — | — | 29.9% |
+| Strict prompts | 17.93% | 15.16% | **21.63%** |
+| Strict instructions | 30.10% | 25.30% | **35.85%** |
+| Loose prompts | 19.22% | 15.71% | **22.55%** |
+| Loose instructions | 32.49% | 25.78% | **37.29%** |
 
-![IFEval accuracy compared with OpenSML-150M and the earlier checkpoint 167](docs/figures/ifeval-comparison.png)
+Solstice uses greedy generation, no system message or repetition penalty, and a 1,024-token output cap. Of 541 prompts, 130 reach that cap; they remain in the scores. The 150M release and the independent SmolLM2 evaluation used a 1,280-token cap and different chat formats.
 
-Solstice uses greedy generation, no system message or repetition penalty, and a 1,024-token output cap. Of 541 prompts, 130 reach that cap; they remain in the scores. The 150M release used a 1,280-token cap and a different chat format.
+Sources: [OpenSML-150M model card](https://huggingface.co/OpenSML/OpenSML-150M) and [PetitGPT’s independent SmolLM2 evaluation](https://github.com/yangqi0/petitgpt/blob/a129f3b709d44ad6a53aef0d44a7054281099df2/README.md#results-at-a-glance).
 
-Baseline scores come from the published [OpenSML-150M card](https://huggingface.co/OpenSML/OpenSML-150M) and [SmolLM2-135M-Instruct card](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct), not fresh reruns. “—” means the required breakdown is not published in those cards. SmolLM2 reports ARC and IFEval as averages; no missing sub-scores are inferred.
-
-Solstice uses native MLX FP32 scoring. SmolLM2 uses LightEval; its [evaluation code](https://github.com/huggingface/smollm/tree/438be18dae658a638f3a6976fdf5190bb6d68619/text/evaluation/smollm2) specifies character-normalized choice scores with a leading space excluded and instruct runs with a chat template. OpenSML-150M uses an older native pipeline. Prompt formatting, precision and generation budgets differ, so these are reference comparisons, not a controlled leaderboard. [Exact sources and metric definitions](results/baselines/published_models.json).
+All three use FP32 choice scoring, but implementations and chat formats differ. Bold marks the highest reported score; these differences have not been tested for statistical significance. [SmolLM2 results and protocol](results/baselines/smollm2_independent.json) · [150M and official-card references](results/baselines/published_models.json).
 
 ### Conversation checks
 
@@ -93,8 +90,6 @@ A separate authored chat panel measures short-answer matching and response behav
 | Answer accuracy, objective cases | 59.44% |
 | Natural stopping, all responses | 99.48% |
 | Repetition flags, all responses | 1.56% |
-
-![Answer accuracy by chat category](docs/figures/chat-diagnostics.png)
 
 The panel contains 180 checked answers and 12 open-ended responses. Repetition flags were reviewed: two were clear loops and one was a milder repeated idea. The full panel and scorer are included in [the saved results](results/public/chat/results.json).
 

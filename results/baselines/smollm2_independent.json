@@ -1,0 +1,62 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "model_revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "evaluation_author": "PetitGPT project (Yang Qi)",
+  "type": "independent published evaluation; not the official Hugging Face benchmark run",
+  "checked_on": "2026-11-09",
+  "source_revision": "a129f3b709d44ad6a53aef0d44a7054281099df2",
+  "choice_source": "https://github.com/yangqi0/petitgpt/blob/a129f3b709d44ad6a53aef0d44a7054281099df2/docs/petitgpt-v1/tables/PUBLIC_BENCHMARK_RESULTS.csv",
+  "ifeval_source": "https://github.com/yangqi0/petitgpt/blob/a129f3b709d44ad6a53aef0d44a7054281099df2/docs/petitgpt-v1/tables/IFEVAL_RESULTS.csv",
+  "model_identity_source": "https://github.com/yangqi0/petitgpt/blob/a129f3b709d44ad6a53aef0d44a7054281099df2/configs/research-v1/benchmark_models.json",
+  "protocol_source": "https://github.com/yangqi0/petitgpt/blob/a129f3b709d44ad6a53aef0d44a7054281099df2/README.md",
+  "choices": {
+    "arc_easy": {
+      "acc": 0.539983164983165,
+      "acc_norm": 0.4882154882154882,
+      "evaluated": 2376,
+      "dataset": "allenai/ai2_arc",
+      "dataset_revision": "210d026faf9955653af8916fad021475a3f00453",
+      "result_version": "FP32_V2"
+    },
+    "piqa": {
+      "acc": 0.6670293797606094,
+      "acc_norm": 0.6675734494015234,
+      "evaluated": 1838,
+      "dataset": "baber/piqa",
+      "dataset_revision": "142f6d7367fd9877f0fb3b5734ea6a545f54cdd1",
+      "result_version": "FP32_V2"
+    },
+    "arc_challenge": {
+      "acc": 0.2593856655290102,
+      "acc_norm": 0.2773037542662116,
+      "evaluated": 1172,
+      "dataset": "allenai/ai2_arc",
+      "dataset_revision": "210d026faf9955653af8916fad021475a3f00453",
+      "result_version": "BENCHMARK_EXTENSION_V1"
+    },
+    "hellaswag": {
+      "acc": 0.35022903804023103,
+      "acc_norm": 0.4289982075283808,
+      "evaluated": 10042,
+      "dataset": "Rowan/hellaswag",
+      "dataset_revision": "218ec52e09a7e7462a5400043bb9a69a41d06b76",
+      "result_version": "BENCHMARK_EXTENSION_V1"
+    }
+  },
+  "ifeval": {
+    "strict": {
+      "prompt_accuracy": 0.21626617375231053,
+      "instruction_accuracy": 0.35851318944844124
+    },
+    "loose": {
+      "prompt_accuracy": 0.2255083179297597,
+      "instruction_accuracy": 0.37290167865707435
+    }
+  },
+  "protocol": {
+    "choices": "Full splits, zero-shot completion likelihood; FP32 parameters/forward, no chat template or BOS/EOS insertion, batch size 1, character-length normalization excluding leading delimiter; native PyTorch evaluator, not installed lm-eval.",
+    "ifeval": "541 prompts, 834 instructions; greedy native chat template including SmolLM2's default system text; 1280 generated-token cap, 233 cap hits; official strict/loose verifiers.",
+    "ifeval_dataset_revision": "966cd89545d6b6acfd7638bc708b98261ca58e84",
+    "solstice_comparison": "Reference comparison, not a new controlled rerun: native MLX vs PyTorch, different tokenizers/templates, Solstice 1024-token IFEval cap. Values from the official SmolLM2 card are retained separately and are not mixed into this result set."
+  }
+}

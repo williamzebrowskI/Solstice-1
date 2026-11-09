@@ -22,8 +22,8 @@
       "sha256": "0e6865f1a81cfd69ca48e6987658854ce0c0d23e91d72ae545393cd5fa032375"
     },
     "README.md": {
-      "bytes": 12978,
-      "sha256": "5c73a37be99c5640f2cfb13ac855ff901f77363ca60e0626243a6c7ee30ee87f"
+      "bytes": 12521,
+      "sha256": "db13fd778afa6f494aba19584b26674dceb87433f42ad985c820afd0bde6290e"
     },
     "REPOSITORIES.json": {
       "bytes": 716,
@@ -130,8 +130,8 @@
       "sha256": "e0b0c730321360c40f20e53a22890c52cd5294bad2a5777a0a891096557a2f0a"
     },
     "docs/EVALUATION.md": {
-      "bytes": 8582,
-      "sha256": "e890892eb870896a8f5d585bde6ab748820f91b2ff49e8d70434bc14140767a7"
+      "bytes": 8336,
+      "sha256": "b78247452825d577713115632bfd9900decf64ff991b098156184dec7a41f415"
     },
     "docs/EXAMPLES.md": {
       "bytes": 1117,
@@ -392,6 +392,10 @@
     "results/baselines/published_models.json": {
       "bytes": 2471,
       "sha256": "2cafe36ca3f2fe3dd00cf9aa63314eac64a73de2c58e2de92cdeee47306bd8ae"
+    },
+    "results/baselines/smollm2_independent.json": {
+      "bytes": 3080,
+      "sha256": "99d582c9ed4e90d87f16835e814beb4604687519734c7a74972367a61f8c10c9"
     },
     "results/package_inference_verification.json": {
       "bytes": 26015,
