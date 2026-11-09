@@ -64,8 +64,6 @@ Zero-shot likelihood scoring on the complete ARC Easy, ARC Challenge, PIQA and H
 
 All values are percentages, shown as **acc / acc_norm**. SmolLM2 publishes ARC only as a combined average (**37.3% acc_norm**); separate Easy/Challenge scores are unavailable in its card.
 
-![Normalized benchmark accuracy for Solstice-1 and published small-model references](docs/figures/benchmark-comparison.png)
-
 ### Instruction following
 
 IFEval checks whether generated responses follow explicit instructions. It measures accuracy, with separate strict and loose scoring at the prompt and instruction levels. **It has no `acc_norm` metric.**
