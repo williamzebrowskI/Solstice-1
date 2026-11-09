@@ -22,8 +22,8 @@
       "sha256": "0e6865f1a81cfd69ca48e6987658854ce0c0d23e91d72ae545393cd5fa032375"
     },
     "README.md": {
-      "bytes": 12521,
-      "sha256": "db13fd778afa6f494aba19584b26674dceb87433f42ad985c820afd0bde6290e"
+      "bytes": 13108,
+      "sha256": "b40daa97c526f73ecb882c3981a0fb700032541a0b10dd0eedf40cb9a49a64e2"
     },
     "REPOSITORIES.json": {
       "bytes": 716,
@@ -130,8 +130,8 @@
       "sha256": "e0b0c730321360c40f20e53a22890c52cd5294bad2a5777a0a891096557a2f0a"
     },
     "docs/EVALUATION.md": {
-      "bytes": 8336,
-      "sha256": "b78247452825d577713115632bfd9900decf64ff991b098156184dec7a41f415"
+      "bytes": 8923,
+      "sha256": "fc5860bdad9ac24a5931c15fdb0931caeac1751352377a8ef5d57b5240425bb6"
     },
     "docs/EXAMPLES.md": {
       "bytes": 1117,

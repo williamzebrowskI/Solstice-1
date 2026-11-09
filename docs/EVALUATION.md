@@ -4,12 +4,15 @@ All results identify the same release weight hash, `7b2d8777040f05d8e0849acac4e4
 
 ## Likelihood scoring
 
-| Benchmark | Solstice-1 acc / acc_norm | OpenSML-150M acc / acc_norm | SmolLM2-135M Instruct acc / acc_norm |
-| --- | --- | --- | --- |
-| ARC Easy | **62.58** / **62.33** | 56.65 / 55.43 | 54.00 / 48.82 |
-| ARC Challenge | **29.35** / **30.89** | 26.02 / 29.52 | 25.94 / 27.73 |
-| PIQA | 66.49 / 66.21 | 64.53 / 64.09 | **66.70** / **66.76** |
-| HellaSwag | 32.85 / 39.40 | 30.55 / 33.94 | **35.02** / **42.90** |
+<table>
+<tbody>
+<tr><td role="columnheader" align="center"><strong>Benchmark</strong></td><td role="columnheader" align="center"><strong>Solstice-1</strong><br><sub><em>acc / acc_norm</em></sub></td><td role="columnheader" align="center"><strong>OpenSML-150M</strong><br><sub><em>acc / acc_norm</em></sub></td><td role="columnheader" align="center"><strong>SmolLM2-135M</strong><br><sub><em>acc / acc_norm</em></sub></td></tr>
+<tr><td>ARC Easy</td><td><strong>62.58</strong> / <strong>62.33</strong></td><td>56.65 / 55.43</td><td>54.00 / 48.82</td></tr>
+<tr><td>ARC Challenge</td><td><strong>29.35</strong> / <strong>30.89</strong></td><td>26.02 / 29.52</td><td>25.94 / 27.73</td></tr>
+<tr><td>PIQA</td><td>66.49 / 66.21</td><td>64.53 / 64.09</td><td><strong>66.70</strong> / <strong>66.76</strong></td></tr>
+<tr><td>HellaSwag</td><td>32.85 / 39.40</td><td>30.55 / 33.94</td><td><strong>35.02</strong> / <strong>42.90</strong></td></tr>
+</tbody>
+</table>
 
 Values are percentages, shown as **acc / acc_norm**. Bold marks the highest reported value for each metric. SmolLM2 scores are from an independent published evaluation; protocol differences are noted below.
 
@@ -17,7 +20,7 @@ Native MLX evaluates complete ARC Easy/Challenge test splits, PIQA validation an
 
 ## Instruction following
 
-| IFEval accuracy | Solstice-1 | OpenSML-150M | SmolLM2-135M Instruct |
+| IFEval accuracy | Solstice-1 | OpenSML-150M | SmolLM2-135M |
 | --- | --- | --- | --- |
 | Strict prompts | 17.93% | 15.16% | **21.63%** |
 | Strict instructions | 30.10% | 25.30% | **35.85%** |
@@ -30,7 +33,7 @@ Google IFEval is pinned to dataset revision `966cd89545d6b6acfd7638bc708b98261ca
 
 Sources: [OpenSML-150M model card](https://huggingface.co/OpenSML/OpenSML-150M) and [PetitGPT’s independent SmolLM2 evaluation](https://github.com/yangqi0/petitgpt/blob/a129f3b709d44ad6a53aef0d44a7054281099df2/README.md#results-at-a-glance).
 
-All three use FP32 choice scoring, but implementations and chat formats differ. Bold marks the highest reported score; these differences have not been tested for statistical significance. [SmolLM2 results and protocol](../results/baselines/smollm2_independent.json) · [150M and official-card references](../results/baselines/published_models.json).
+The SmolLM2 column refers to **SmolLM2-135M-Instruct**. All three use FP32 choice scoring, but implementations and chat formats differ. Bold marks the highest reported score; these differences have not been tested for statistical significance. [SmolLM2 results and protocol](../results/baselines/smollm2_independent.json) · [150M and official-card references](../results/baselines/published_models.json).
 
 The independent evaluation pins SmolLM2 to revision `12fd25f77366fa6b3b4b768ec3050bf629380bac`. Choice scoring uses complete splits, FP32, batch size one, raw completion prompts and character-length normalization. IFEval uses the model's native template, including its default system text, with 233/541 responses reaching the 1,280-token cap. These are reported measurements from another project, not a rerun in the Solstice release environment. The official Hugging Face card's aggregate scores are retained separately in the source record and are not mixed into these tables.
 
