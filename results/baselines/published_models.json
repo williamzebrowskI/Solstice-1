@@ -1,0 +1,61 @@
+{
+  "checked_on": "2026-11-09",
+  "scope": "Published reference values, not matched fresh runs; percentages rounded as in source cards. Absent metrics remain absent.",
+  "models": {
+    "OpenSML/OpenSML-150M": {
+      "revision": "7708682482f8c877c0793aed1af1064bf56db9ed",
+      "model_card": "https://huggingface.co/OpenSML/OpenSML-150M/blob/7708682482f8c877c0793aed1af1064bf56db9ed/README.md",
+      "readme_sha256": "7edb9a16eaf1ef9232bf5eb3b82dd6a6e5df36fe63108d1525bce00777025bdc",
+      "choices": {
+        "arc_easy": {
+          "acc": 0.5665,
+          "acc_norm": 0.5543
+        },
+        "arc_challenge": {
+          "acc": 0.2602,
+          "acc_norm": 0.2952
+        },
+        "piqa": {
+          "acc": 0.6453,
+          "acc_norm": 0.6409
+        },
+        "hellaswag": {
+          "acc": 0.3055,
+          "acc_norm": 0.3394
+        }
+      },
+      "ifeval": {
+        "strict": {
+          "prompt_accuracy": 0.1516,
+          "instruction_accuracy": 0.253
+        },
+        "loose": {
+          "prompt_accuracy": 0.1571,
+          "instruction_accuracy": 0.2578
+        }
+      }
+    },
+    "HuggingFaceTB/SmolLM2-135M-Instruct": {
+      "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+      "model_card": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/blob/12fd25f77366fa6b3b4b768ec3050bf629380bac/README.md",
+      "readme_sha256": "4f97533ad95b1b2fea15fbc075c01b94578ebdd7c8138888fa43fa3abd530dc4",
+      "choices": {
+        "piqa": {
+          "acc_norm": 0.663
+        },
+        "hellaswag": {
+          "acc_norm": 0.409
+        }
+      },
+      "arc_publisher_average": 0.373,
+      "ifeval_publisher_average": 0.299,
+      "missing": "Raw accuracy, separate ARC Easy/Challenge scores and separate strict/loose IFEval scores are not reported in the cited model card.",
+      "ifeval_aggregation": "Publisher label: Average prompt/inst. No strict/loose weighting inferred.",
+      "evaluation_code_revision": "438be18dae658a638f3a6976fdf5190bb6d68619",
+      "evaluation_code": "https://github.com/huggingface/smollm/tree/438be18dae658a638f3a6976fdf5190bb6d68619/text/evaluation/smollm2",
+      "lighteval_revision": "ea46419a93fb390e8f694f7c6c64c1e684487c9d",
+      "choice_metric": "loglikelihood_acc_norm_nospace: divide by Unicode-character count excluding an initial space",
+      "protocol": "Published zero-shot LightEval; linked instruct recipe uses a chat template. Not rerun for this release."
+    }
+  }
+}

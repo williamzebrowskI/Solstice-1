@@ -26,35 +26,140 @@ datasets:
 
 # Solstice-1
 
-**An OpenSML 175M-parameter English chat research model trained from scratch on Apple Silicon.**
+**A 175M-parameter English chat model, trained from scratch on five Macs.**
 
-Author: William Zebrowski · License: Apache-2.0 · Status: research preview
+William Zebrowski · OpenSML · Apache-2.0 · Research preview
 
-[Model weights](https://huggingface.co/OpenSML/Solstice-1) · [GitHub source](https://github.com/williamzebrowskI/Solstice-1) · [Run guide](RUN_GUIDE.md) · [Technical report](docs/TECHNICAL_REPORT.md) · [Evaluation](docs/EVALUATION.md) · [Training data](docs/DATA.md) · [Results](results/public/summary.json)
+[Weights](https://huggingface.co/OpenSML/Solstice-1) · [Source](https://github.com/williamzebrowskI/Solstice-1) · [Run guide](RUN_GUIDE.md) · [Technical report](docs/TECHNICAL_REPORT.md) · [Evaluation](docs/EVALUATION.md) · [Data](docs/DATA.md)
 
-Solstice-1 starts a model family under OpenSML. This first release is a 175M chat model with a 2,048-token context. Its selected weights come from **42.001B pretraining tokens and three adapter fine-tuning stages**. The package provides merged FP32 weights, the original tokenizer, a native MLX runner, training-source snapshots, and recorded evaluation evidence.
-
-The model is intended for research into small English language models, short conversations, reading supplied text, and instruction following. It can produce incorrect answers, repeat itself, decline answerable questions, and invent information that was not provided. The measurements below do not establish dependable factual or production behavior.
+Solstice-1 is the first model in the Solstice family. It combines **42.001B pretraining tokens** with three stages of adapter fine-tuning for short conversations, reading comprehension and instruction following. The release includes merged FP32 weights, the original tokenizer, an MLX runner, training records and benchmark outputs.
 
 ## Model specification
 
 | Setting | Value |
 | --- | --- |
-| Public size designation | 175M |
-| Exact parameter count | 174,202,432 |
-| Transformer | 44 layers; width 576; SwiGLU intermediate width 1,536 |
-| Attention | 9 query heads / 3 KV heads; head dimension 64 |
-| Components | RoPE 10,000; RMSNorm; Q/K normalization; tied embeddings |
-| Vocabulary / shared context | 32,000 byte-level BPE tokens / 2,048 tokens |
-| Pretraining exposure | 42,001,367,040 processed token positions |
-| Released weights | Unquantized merged FP32 safetensors |
-| Supported inference | Supplied native MLX runner on Apple Silicon |
+| Parameters | 175M rounded; 174,202,432 exact |
+| Transformer | 44 layers; hidden width 576; SwiGLU width 1,536 |
+| Attention | 9 query heads, 3 KV heads; head dimension 64 |
+| Components | RoPE (base 10,000), RMSNorm, Q/K normalization, tied embeddings |
+| Tokenizer | 32,000-token byte-level BPE, reused from OpenSML |
+| Context | 2,048 tokens, including conversation history and generated output |
+| Pretraining | 42,001,367,040 processed token positions |
+| Release | Merged FP32 safetensors; native MLX on Apple Silicon |
 
-This is a different architecture and lineage from OpenSML-150M and OpenSML-JSONLite-175M. Those releases are comparison references, not weight ancestors. The frozen tokenizer is reused from the earlier OpenSML project.
+Solstice-1 has a separate weight lineage from OpenSML-150M and OpenSML-JSONLite-175M. Reusing the tokenizer does not make those models its weight ancestors.
+
+## Measured results
+
+### Knowledge and commonsense
+
+Zero-shot likelihood scoring on the complete ARC Easy, ARC Challenge, PIQA and HellaSwag evaluation splits. Accuracy ranks the total answer log-likelihood; `acc_norm` ranks it after dividing by answer length in characters. Higher is better.
+
+| Benchmark | Metric | Solstice-1 | OpenSML-150M | SmolLM2-135M Instruct |
+| --- | --- | --- | --- | --- |
+| ARC Easy | Accuracy | 62.58% | 56.65% | — |
+| ARC Easy | acc_norm | 62.33% | 55.43% | — |
+| ARC Challenge | Accuracy | 29.35% | 26.02% | — |
+| ARC Challenge | acc_norm | 30.89% | 29.52% | — |
+| PIQA | Accuracy | 66.49% | 64.53% | — |
+| PIQA | acc_norm | 66.21% | 64.09% | 66.3% |
+| HellaSwag | Accuracy | 32.85% | 30.55% | — |
+| HellaSwag | acc_norm | 39.40% | 33.94% | 40.9% |
+| ARC (publisher average) | acc_norm | — | — | 37.3% |
+
+![Normalized benchmark accuracy for Solstice-1 and published small-model references](docs/figures/benchmark-comparison.png)
+
+### Instruction following
+
+IFEval checks whether generated responses follow explicit instructions. It measures accuracy, with separate strict and loose scoring at the prompt and instruction levels. **It has no `acc_norm` metric.**
+
+| IFEval accuracy | Solstice-1 | OpenSML-150M | SmolLM2-135M Instruct |
+| --- | --- | --- | --- |
+| Strict prompts | 17.93% | 15.16% | — |
+| Strict instructions | 30.10% | 25.30% | — |
+| Loose prompts | 19.22% | 15.71% | — |
+| Loose instructions | 32.49% | 25.78% | — |
+| Publisher prompt/instruction average | — | — | 29.9% |
+
+![IFEval accuracy compared with OpenSML-150M and the earlier checkpoint 167](docs/figures/ifeval-comparison.png)
+
+Solstice uses greedy generation, no system message or repetition penalty, and a 1,024-token output cap. Of 541 prompts, 130 reach that cap; they remain in the scores. The 150M release used a 1,280-token cap and a different chat format.
+
+Baseline scores come from the published [OpenSML-150M card](https://huggingface.co/OpenSML/OpenSML-150M) and [SmolLM2-135M-Instruct card](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct), not fresh reruns. “—” means the required breakdown is not published in those cards. SmolLM2 reports ARC and IFEval as averages; no missing sub-scores are inferred.
+
+Solstice uses native MLX FP32 scoring. SmolLM2 uses LightEval; its [evaluation code](https://github.com/huggingface/smollm/tree/438be18dae658a638f3a6976fdf5190bb6d68619/text/evaluation/smollm2) specifies character-normalized choice scores with a leading space excluded and instruct runs with a chat template. OpenSML-150M uses an older native pipeline. Prompt formatting, precision and generation budgets differ, so these are reference comparisons, not a controlled leaderboard. [Exact sources and metric definitions](results/baselines/published_models.json).
+
+### Conversation checks
+
+A separate authored chat panel measures short-answer matching and response behavior. These automatic checks are narrower than human judgments of conversation quality.
+
+| Measure | Solstice-1 |
+| --- | ---: |
+| Answer accuracy, objective cases | 59.44% |
+| Natural stopping, all responses | 99.48% |
+| Repetition flags, all responses | 1.56% |
+
+![Answer accuracy by chat category](docs/figures/chat-diagnostics.png)
+
+The panel contains 180 checked answers and 12 open-ended responses. Repetition flags were reviewed: two were clear loops and one was a milder repeated idea. The full panel and scorer are included in [the saved results](results/public/chat/results.json).
+
+On the separate reserved authored test, Solstice reaches **51.9%**, versus **20.0%** after SFT 1 and **25.9%** after SFT 2. On an older, reused panel, the corresponding scores are **53.84%, 52.13% and 54.55%**: the last stage does not improve every measure. The [evaluation report](docs/EVALUATION.md) explains selection, uncertainty and test exposure.
+
+## Pretraining
+
+Pretraining starts from random weights. Five Apple Silicon workers use BF16 compute with FP32 master weights, gradients and optimizer state. The 2,048-token sequence length and accumulated batch produce **131,072 token positions per update**. AdamW uses betas (0.9, 0.95), weight decay 0.1 and gradient clipping at 1.
+
+### Data mixture
+
+| Source | First 36.801B tokens | Remaining 5.200B tokens |
+| --- | ---: | ---: |
+| FineWeb-Edu | 70% | 56% |
+| DCLM-Edu | 20% | 16% |
+| English FineWiki | 10% | 8% |
+| Python: public Stack-Edu text mirror | — | 15% |
+| SQL: public Stack-Edu text mirror / configured continuation | — | 5% |
+
+These are configured token shares, not measured unique-token counts. Data is streamed with bounded shuffling, quality filters, a recent-document deduplication window and fixed train/validation partitioning. The tokenizer stays frozen. Exact dataset revisions, filtering rules and upstream terms are in [Data provenance](docs/DATA.md).
+
+### Loss and learning rate
+
+![Recorded training loss, prose validation loss and learning rate](docs/figures/pretraining-overview.png)
+
+The learning rate warms up to 3e-4, then changes through the recorded continuation schedules. At 40.001B tokens, a final 2B-token cooldown lowers it from 7.94e-5 to 1e-5. The selected base finishes at **42.001B tokens**, with prose validation loss **2.8356** on the training-time BF16 evaluation path.
+
+![Late pretraining and the final cooldown](docs/figures/cooldown-detail.png)
+
+The shaded region is the cooldown; the dashed line marks the addition of Python and SQL. Training loss uses the changing mixture, while prose validation uses a fixed holdout. Their levels should not be treated as the same measurement. [Curve data](results/pretraining_validation.csv) · [Schedule details](docs/TECHNICAL_REPORT.md#5-distributed-optimization-and-schedules)
+
+## Fine-tuning
+
+All three stages run on one Mac. They train rank-32 LoRA adapters on attention projections, plus the two chat-boundary token rows: **3.786M trainable parameters**. Each stage starts fresh optimizer moments and inherits the previous stage's adapters. The release merges these updates into the original FP32 base weights.
+
+| Stage | Selected updates | Training data and objective |
+| --- | ---: | --- |
+| SFT 1 | 2,000 | Two passes over 48,000 conversations; assistant-only supervision with 20% prose-replay loss |
+| SFT 2 | 256 | Editing, constraints, dialogue and grounding; conversational replay and a parent-distribution penalty |
+| SFT 3 | 128 | Short reasoning, grounding, dialogue and abstention; replay and a lighter parent-distribution penalty |
+
+Public SFT sources include Smol-SmolTalk, SmolTalk everyday conversations, SQuAD v2 and SciQ, alongside authored tasks. Whole conversations are retained; oversized examples and dedicated code, SQL, JSON and tool tasks are excluded from the selected text-chat recipe. The largest stage-1 conversation is 1,385 serialized tokens, within the 2,048-token context.
+
+The final stage was planned for 256 updates; **only its first 128 are in this release**. It was selected using development checks before evaluation on the reserved test. This lineage uses supervised fine-tuning with replay and KL preservation, not DPO or reinforcement learning. Checkpoint 167 is a comparison model, not an ancestor. [Stage recipes, learning rates and selection](docs/TECHNICAL_REPORT.md#6-selected-fine-tuning-lineage) · [Exact lineage](provenance/LINEAGE.json)
+
+## Recorded examples
+
+Greedy FP32 outputs reproduced in the release environment. The incorrect example is included to show the gap between fluent answers and factual reliability.
+
+| Prompt | Model answer | Assessment |
+| --- | --- | --- |
+| What is the capital of Japan? Give a short answer. | Tokyo | Correct |
+| Anika brought a teal notebook. Greta brought a black notebook. What color was Anika’s notebook? | teal | Correct; supplied-text question¹ |
+| Which planet is closest to the Sun? Give a short answer. | venus | Incorrect; the answer is Mercury |
+
+¹ The full prompt also asks the model to use only the supplied information and give a short answer. Full prompts, a conversation-correction example and stop reasons are in [Recorded examples](docs/EXAMPLES.md).
 
 ## Run locally
 
-Download the entire model repository, including its tokenizer and native source. While the repository is private, run `hf auth login` after installing `huggingface_hub`, using an account with access to OpenSML/Solstice-1:
+Use Python 3.11 on Apple Silicon. While the repository is private, sign in with `hf auth login` after installing `huggingface_hub`.
 
 ```bash
 python3.11 -m venv .venv
@@ -67,62 +172,25 @@ python inference.py --prompt "What is the main function of the heart?" --max-new
 python inference.py --interactive
 ```
 
-The runner uses the model's native structural-token chat format. It checks the weight hash and tokenizer before loading, defaults to greedy FP32 inference, and rejects context overflow without truncation. `/reset` clears an interactive conversation; `/quit` exits. See [recorded package verification](PACKAGING_VERIFICATION.json) for the environment and checks actually completed.
+The runner defaults to greedy FP32 generation and uses the native chat tokens. Interactive mode retains previous turns; `/reset` clears history and `/quit` exits. Inputs that exceed the shared context budget are rejected rather than silently truncated. [Sampling and conversation options](RUN_GUIDE.md).
 
-**Use the supplied runner.** This package does not provide a verified Transformers AutoModel, MLX-LM auto-loader, GGUF, or CUDA implementation. The context limit includes previous turns, role delimiters, the current prompt, and the requested output budget.
+The supplied runner is the supported inference path. Transformers AutoModel, MLX-LM auto-loading, GGUF and CUDA have not been validated for this package. A clean-environment check reproduced 27 saved responses exactly; this verifies the package, not general answer quality. [Verification record](PACKAGING_VERIFICATION.json).
 
-## Measured results
+## Limitations
 
-Full-split, zero-shot likelihood evaluations use native MLX FP32 scoring:
+- **Factual errors:** plausible explanations and short answers can be wrong.
+- **Instruction following:** strict IFEval prompt accuracy is 17.93%; many longer outputs reach the token cap.
+- **Answerability:** the model can decline questions whose answers are provided, yet invent answers when information is missing. Results depend strongly on wording.
+- **Repetition:** loops and repeated ideas remain possible, particularly in open-ended responses.
+- **Scope:** reliable coding, SQL, JSON extraction, tool use, multilingual use and long conversations are not established capabilities.
+- **Evaluation coverage:** public and historical tests informed earlier research. The reserved test shares authored task families with training. No comprehensive semantic contamination audit, independent human study or safety assessment is claimed.
 
-| Benchmark | Examples | Accuracy | Normalized accuracy |
-| --- | --- | --- | --- |
-| ARC Easy | 2376 | 62.58% | 62.33% |
-| ARC Challenge | 1172 | 29.35% | 30.89% |
-| PIQA | 1838 | 66.49% | 66.21% |
-| HellaSwag | 10042 | 32.85% | 39.40% |
+Solstice-1 is a research release for short English text and chat. It is not a dependable source of facts or a validated system for consequential decisions.
 
-`acc_norm` divides each candidate's summed log-likelihood by its Unicode-character count. It is distinct from raw accuracy. The evaluator follows pinned task conventions but is not an installed lm-evaluation-harness run.
+## Files, reproducibility and license
 
-| IFEval metric | Score | Passes / checks |
-| --- | --- | --- |
-| Strict prompts | 17.93% | 97/541 |
-| Strict instructions | 30.10% | 251/834 |
-| Loose prompts | 19.22% | 104/541 |
-| Loose instructions | 32.49% | 271/834 |
+[Technical report](docs/TECHNICAL_REPORT.md) · [Data provenance](docs/DATA.md) · [Evaluation and failure analysis](docs/EVALUATION.md) · [Training archive](TRAINING_AND_REPRODUCIBILITY.md) · [Raw benchmark summary](results/public/summary.json)
 
-IFEval uses all 541 prompts / 834 instructions, greedy native-chat generation, no system message or repetition penalty, and a 1,024-token output cap. **130/541 responses reach that cap.** All responses are scored as produced. These numbers do not measure general factual accuracy.
+The repository includes weights on Hugging Face, tokenizer files, inference code, sanitized training snapshots, frozen recipes, selected-checkpoint hashes, curves and saved evaluation outputs. Raw corpora, optimizer binaries and all ancestor weights are not bundled. The training archive documents the run; it is not a verified one-command retraining package.
 
-On a separate 192-response authored chat check, 107/180 automatically checked answers match the accepted answers; 191/192 responses stop naturally, and three have repetition flags. Automatic answer matching is conservative, and repetition detection is heuristic. These checks are not a broad human preference study.
-
-![Recorded pretraining history](docs/figures/pretraining-overview.png)
-
-See the [evaluation report](docs/EVALUATION.md) for baseline comparisons, dataset pins, protocol differences, and private-test scope.
-
-## Training lineage
-
-```text
-Fresh Deep44 initialization → streamed prose pretraining
-  → add Python/SQL at 36.801B → 40.001B → 2.000B-token cooldown
-  → 42.001B pretrained base
-  → adapter SFT 1, selected update 2000
-  → adapter SFT 2, selected update 256
-  → adapter SFT 3, selected update 128 → Solstice-1
-```
-
-Only updates through 128 of the final 256-update experiment are inherited. Earlier experimental branches and checkpoint 167 are not additional stages in this lineage. [Checkpoint lineage and hashes](provenance/LINEAGE.json) · [Selected data exposure](provenance/SELECTED_PREFIX.json).
-
-## Known limitations
-
-- The model sometimes gives fluent but incorrect factual explanations.
-- On the new authored evaluation, 111/200 answerable extraction questions triggered unnecessary-abstention signals. On a separate set with different wording, it failed all 15 missing-information cases. These are distinct tests, not contradictory measures of the same inputs.
-- Instruction following remains incomplete; only 97/541 IFEval prompts satisfy every strict requirement.
-- Repetition and token-limit stops remain possible, especially on longer requested outputs.
-- JSON extraction, tool use, robust coding, long documents, multilingual use, safety behavior, and prompt-injection resistance are not validated release capabilities.
-- Public and historical benchmarks informed earlier experiments. The newly reserved 1,000-case panel was evaluated after this finalist was selected, but shares authored task families with training. No comprehensive semantic contamination audit or independent human evaluation is claimed.
-
-## Repository contents and licensing
-
-The weights and author-controlled code are released under [Apache-2.0](LICENSE). Upstream datasets and third-party code retain their own terms; the model license does not relicense those materials. [Source notice](SOURCE_NOTICE.md) · [Third-party notices](THIRD_PARTY_NOTICES.md).
-
-Technical details, data provenance, exact selected training prefixes, source snapshots, and reproduction prerequisites are included. Full raw corpora, optimizer binaries, and all ancestor weights are not distributed. The historical training archive is not a verified one-command retraining package. [Training and reproducibility](TRAINING_AND_REPRODUCIBILITY.md).
+Weights and author-controlled code use [Apache-2.0](LICENSE). Upstream datasets and third-party code retain their own terms. [Source notice](SOURCE_NOTICE.md) · [Third-party notices](THIRD_PARTY_NOTICES.md) · [Citation](CITATION.cff)

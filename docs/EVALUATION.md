@@ -4,25 +4,43 @@ All results identify the same release weight hash, `7b2d8777040f05d8e0849acac4e4
 
 ## Likelihood scoring
 
-| Benchmark | Examples | Accuracy | Normalized accuracy |
-| --- | --- | --- | --- |
-| ARC Easy | 2376 | 62.58% | 62.33% |
-| ARC Challenge | 1172 | 29.35% | 30.89% |
-| PIQA | 1838 | 66.49% | 66.21% |
-| HellaSwag | 10042 | 32.85% | 39.40% |
+| Benchmark | Metric | Solstice-1 | OpenSML-150M | SmolLM2-135M Instruct |
+| --- | --- | --- | --- | --- |
+| ARC Easy | Accuracy | 62.58% | 56.65% | — |
+| ARC Easy | acc_norm | 62.33% | 55.43% | — |
+| ARC Challenge | Accuracy | 29.35% | 26.02% | — |
+| ARC Challenge | acc_norm | 30.89% | 29.52% | — |
+| PIQA | Accuracy | 66.49% | 64.53% | — |
+| PIQA | acc_norm | 66.21% | 64.09% | 66.3% |
+| HellaSwag | Accuracy | 32.85% | 30.55% | — |
+| HellaSwag | acc_norm | 39.40% | 33.94% | 40.9% |
+| ARC (publisher average) | acc_norm | — | — | 37.3% |
 
 Native MLX evaluates complete ARC Easy/Challenge test splits, PIQA validation and HellaSwag validation. It uses zero-shot raw completion prompts, no chat template or inserted BOS/EOS, FP32 weights, vanilla attention, batch size four and chunked scoring. Raw accuracy ranks summed continuation log-likelihood; normalized accuracy divides by choice Unicode-character count. No generated explanation or LLM judge determines the answer. No choices were context-truncated. Dataset revisions and scorer settings are preserved in [the result record](../results/public/choices/results.json).
 
 ## Instruction following
 
-| IFEval metric | Score | Passes / checks |
-| --- | --- | --- |
-| Strict prompts | 17.93% | 97/541 |
-| Strict instructions | 30.10% | 251/834 |
-| Loose prompts | 19.22% | 104/541 |
-| Loose instructions | 32.49% | 271/834 |
+| IFEval accuracy | Solstice-1 | OpenSML-150M | SmolLM2-135M Instruct |
+| --- | --- | --- | --- |
+| Strict prompts | 17.93% | 15.16% | — |
+| Strict instructions | 30.10% | 25.30% | — |
+| Loose prompts | 19.22% | 15.71% | — |
+| Loose instructions | 32.49% | 25.78% | — |
+| Publisher prompt/instruction average | — | — | 29.9% |
 
 Google IFEval is pinned to dataset revision `966cd89545d6b6acfd7638bc708b98261ca58e84` and google-research commit `83f1e7b59e762648c953de751d31f75720683622`. All 541 prompts and 834 instructions use the recorded strict/loose programmatic verifiers. Generation is greedy, native-chat formatted, FP32, without a system message or repetition penalty. Output cap: 1,024 tokens. Token-cap hits: **130/541**; context-cap hits: **0**. All generated responses are scored, including cap hits. The official dataset's split is named `train`; it is used as evaluation input here, not SFT training material.
+
+## Published small-model references
+
+Baseline scores come from the published [OpenSML-150M card](https://huggingface.co/OpenSML/OpenSML-150M) and [SmolLM2-135M-Instruct card](https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct), not fresh reruns. “—” means the required breakdown is not published in those cards. SmolLM2 reports ARC and IFEval as averages; no missing sub-scores are inferred.
+
+Solstice uses native MLX FP32 scoring. SmolLM2 uses LightEval; its [evaluation code](https://github.com/huggingface/smollm/tree/438be18dae658a638f3a6976fdf5190bb6d68619/text/evaluation/smollm2) specifies character-normalized choice scores with a leading space excluded and instruct runs with a chat template. OpenSML-150M uses an older native pipeline. Prompt formatting, precision and generation budgets differ, so these are reference comparisons, not a controlled leaderboard. [Exact sources and metric definitions](../results/baselines/published_models.json).
+
+![Published normalized-accuracy comparison](figures/benchmark-comparison.png)
+
+![IFEval comparison](figures/ifeval-comparison.png)
+
+Figure data is read directly from the saved JSON records by [plot_results.py](../scripts/plot_results.py). Run that script with matplotlib 3.10.8 to regenerate PNG and SVG figures. The SmolLM2 card does not identify how strict versus loose IFEval metrics contribute to its published average, so that average is not assigned to any one of Solstice's four IFEval metrics.
 
 ## Historical comparison
 
@@ -61,6 +79,8 @@ Against parent 2000, the new-panel gain is 31.9 percentage points, with a 97.5% 
 The new panel flags unnecessary abstention on 111/200 answerable extraction cases. Separately, all 15 differently worded missing-information chat cases fail appropriate abstention. Saved examples include invented values and copied irrelevant text, so this second issue is not explained solely by strict answer matching. Wording sensitivity remains a limitation even though the final selection guards passed.
 
 Manual inspection of the three chat repetition flags found two clear loops and one milder repeated sentence/idea. Keep the original three-flag result for consistent comparisons; it does not mean all three are equally severe. All 180 objective chat responses stop naturally; the qualitative cases account for the single token-cap hit and the repetition flags.
+
+![Chat category diagnostics](figures/chat-diagnostics.png)
 
 ## Selection and test exposure
 

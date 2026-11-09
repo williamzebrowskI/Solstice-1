@@ -22,8 +22,8 @@
       "sha256": "0e6865f1a81cfd69ca48e6987658854ce0c0d23e91d72ae545393cd5fa032375"
     },
     "README.md": {
-      "bytes": 7647,
-      "sha256": "2bcb95ff85d71d6f2c9fa6711bcbad62c52d68ab3367a8317db72b6d88bb04fd"
+      "bytes": 13103,
+      "sha256": "714a2f7eae444f284d3492978f441de67c13ee1e6bf5eaeeba6fc4869615afd3"
     },
     "REPOSITORIES.json": {
       "bytes": 716,
@@ -130,8 +130,8 @@
       "sha256": "e0b0c730321360c40f20e53a22890c52cd5294bad2a5777a0a891096557a2f0a"
     },
     "docs/EVALUATION.md": {
-      "bytes": 6613,
-      "sha256": "5522817f8d698f05b43adfc1c5227bab4e917492c898fa4b792d521d42a512d8"
+      "bytes": 8582,
+      "sha256": "79c7190a634b9008502242133bf76e246ab69700814049b5ac39f49ad51c57c3"
     },
     "docs/EXAMPLES.md": {
       "bytes": 1117,
@@ -141,6 +141,22 @@
       "bytes": 13515,
       "sha256": "f98d45b39b9595510fa80d495a3758b211d8c770adc739d381763d3cfb2a2a0b"
     },
+    "docs/figures/benchmark-comparison.png": {
+      "bytes": 125053,
+      "sha256": "37438bfe291e2cc5b7513ec912cab9eaf7ce3d6352543f8e63d44da3a4f7d5b3"
+    },
+    "docs/figures/benchmark-comparison.svg": {
+      "bytes": 89737,
+      "sha256": "64297355167c23c84cc4227bf54eb6be8d66c5837d45e201ed9304594df36d85"
+    },
+    "docs/figures/chat-diagnostics.png": {
+      "bytes": 108673,
+      "sha256": "08388301b65a94ce3bd166de02dd6aa887515f9ed617a8972359b742334cb422"
+    },
+    "docs/figures/chat-diagnostics.svg": {
+      "bytes": 64470,
+      "sha256": "b70ae8d8b730c7f178a41ae9d781d2f7f8fbedf3640f9d4991a77c6c89e39725"
+    },
     "docs/figures/cooldown-detail.png": {
       "bytes": 185666,
       "sha256": "0fa840653d1a5305297ef6f51ba08dc70a4bbfaf8029c411627e39dfc3cdc153"
@@ -148,6 +164,14 @@
     "docs/figures/cooldown-detail.svg": {
       "bytes": 174630,
       "sha256": "1071d21211f7d32d9f9f5874e62f46a2a17306f88f0f355b24aee5b4af4c4e0f"
+    },
+    "docs/figures/ifeval-comparison.png": {
+      "bytes": 108050,
+      "sha256": "c5a39cdcbc0b8b2a48dd7e8136c61132b4340e0145fde1cdf1e73a498785e207"
+    },
+    "docs/figures/ifeval-comparison.svg": {
+      "bytes": 69743,
+      "sha256": "9416ed14acd5d52ea3931100e5c2330c6e1c7c7f19724602c389fc71c79a56d8"
     },
     "docs/figures/pretraining-overview.png": {
       "bytes": 157953,
@@ -365,6 +389,10 @@
       "bytes": 4788,
       "sha256": "2b59f728ebc9bef6deaf378e6908f7b55723b368f60da83f9af5b2b1731d0346"
     },
+    "results/baselines/published_models.json": {
+      "bytes": 2471,
+      "sha256": "2cafe36ca3f2fe3dd00cf9aa63314eac64a73de2c58e2de92cdeee47306bd8ae"
+    },
     "results/package_inference_verification.json": {
       "bytes": 26015,
       "sha256": "fed55313b61008e8f379a7b4bc49535cc501a31a942c7560687de4a4bd1cd47f"
@@ -476,6 +504,10 @@
     "scripts/materialize_training_snapshot.py": {
       "bytes": 1823,
       "sha256": "cac0e352b21365bfb4fef9f5c265aa36426552bb47851be5fdb5ff585648f69a"
+    },
+    "scripts/plot_results.py": {
+      "bytes": 6190,
+      "sha256": "d7d137a4ff838c2bd9d1cdd7f8428a9a78101ab97868ebbaab42eb4a561ae648"
     },
     "scripts/plot_training.py": {
       "bytes": 2877,
