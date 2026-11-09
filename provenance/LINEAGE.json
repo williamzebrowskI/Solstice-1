@@ -1,0 +1,172 @@
+{
+  "comparisons_not_ancestors": [
+    "Reliable Chat 167",
+    "OpenSML-150M",
+    "OpenSML-JSONLite-175M"
+  ],
+  "model": "OpenSML/Solstice-1",
+  "parameter_label": "175M",
+  "parameters": 174202432,
+  "pretraining": {
+    "bundle": "step_0320445_08b689895ed2",
+    "original_manifest_sha256": "f1f8519ca75a35343cfec7e88c8197bb84aa7d97d809353861b97c1cf3d77513",
+    "step": 320445,
+    "tokens": 42001367040
+  },
+  "release_weight_sha256": "7b2d8777040f05d8e0849acac4e45013b2de3d72145c363cd22825e80115c515",
+  "stages": [
+    {
+      "assistant_tokens_recorded": 4440608,
+      "bundle": "step_0002000_f3d1ffd185f9",
+      "input_tokens_recorded": 29271514,
+      "manifest_sha256": "f9273450799963b2fd8e61a5e9cb6892be7ba4a2308849623e288302a687a1f7",
+      "optimizer": "Fresh AdamW moments at each SFT stage",
+      "parent_manifest": null,
+      "plan": "configs/sft1/plan.json",
+      "prose_replay": {
+        "presentations": 32000,
+        "tokens": 16384000
+      },
+      "source_pretraining_tokens": 42001367040,
+      "stage": "sft1",
+      "steps": 2000,
+      "supervised": {
+        "components": {
+          "constraints": 12400,
+          "dialogue": 16000,
+          "general": 9600,
+          "grounded": 22000,
+          "knowledge": 8000,
+          "rewrite": 2000,
+          "skills": 24000,
+          "social": 2000
+        },
+        "maximum_serialized_tokens": 1385,
+        "presentations": 96000,
+        "subsets": {
+          "sciq": 8000,
+          "smol": 12000,
+          "smol_constraints": 4000,
+          "smol_rewrite": 2000,
+          "social": 2000,
+          "squad": 22000,
+          "verified_constraints": 8400,
+          "verified_dialogue": 13600,
+          "verified_skills": 24000
+        },
+        "unique_rows": 48000
+      }
+    },
+    {
+      "actual_sources_note": "Fresh tasks are authored/computed; replay is selected from stage-1 training. Inherited plan.sources and corpus manifest describe broader/stale configuration, not additional fetched sources.",
+      "assistant_tokens_recorded": 279606,
+      "bundle": "step_0000256_6074b98fe66b",
+      "fresh": {
+        "components": {
+          "constraints": 1638,
+          "dialogue": 410,
+          "grounded": 410,
+          "skills": 1638
+        },
+        "maximum_serialized_tokens": 115,
+        "presentations": 4096,
+        "subsets": {
+          "unspecified": 4096
+        },
+        "unique_rows": 4096
+      },
+      "fresh_file_sha256": "0a90cbb82b2587f20026dd21c9d1697ab37016c7714e19caade3ce4c94856dcc",
+      "input_tokens_recorded": 816428,
+      "manifest_sha256": "dcab4ad8e4484ad1cc4b32ffbc6352b6a6ff9ea0a4ddccdb8d367d23db098a3f",
+      "optimizer": "Fresh AdamW moments at each SFT stage",
+      "parent_manifest": "f9273450799963b2fd8e61a5e9cb6892be7ba4a2308849623e288302a687a1f7",
+      "plan": "configs/sft2/plan.json",
+      "replay": {
+        "components": {
+          "constraints": 512,
+          "dialogue": 512,
+          "general": 768,
+          "grounded": 512,
+          "knowledge": 768,
+          "rewrite": 256,
+          "skills": 512,
+          "social": 256
+        },
+        "maximum_serialized_tokens": 512,
+        "presentations": 4096,
+        "subsets": {
+          "sciq": 768,
+          "smol": 781,
+          "smol_constraints": 162,
+          "smol_rewrite": 256,
+          "social": 256,
+          "squad": 512,
+          "verified_constraints": 350,
+          "verified_dialogue": 499,
+          "verified_skills": 512
+        },
+        "unique_rows": 4096
+      },
+      "replay_file_sha256": "3b7897ad24c215c309b1a693dc6b3606783c678e82f7d595bdc3f9f97d8797ab",
+      "source_pretraining_tokens": 42001367040,
+      "stage": "sft2",
+      "steps": 256
+    },
+    {
+      "actual_sources_note": "Fresh tasks are authored/computed; replay is selected from stage-1 training. Inherited plan.sources and corpus manifest describe broader/stale configuration, not additional fetched sources.",
+      "assistant_tokens_recorded": 120629,
+      "bundle": "step_0000128_5937a6def881",
+      "fresh": {
+        "components": {
+          "abstention": 188,
+          "dialogue": 306,
+          "grounded": 324,
+          "reasoning": 1230
+        },
+        "maximum_serialized_tokens": 137,
+        "presentations": 2048,
+        "subsets": {
+          "unspecified": 2048
+        },
+        "unique_rows": 2048
+      },
+      "fresh_file_sha256": "c32660b92756608b1c949730c61595dc78d29b0afb3695caf6cfc8397d4acbf5",
+      "input_tokens_recorded": 411448,
+      "manifest_sha256": "2118c7446c412a4ee7a4b7a356a211ad91574983e213da45980707b5fa1ca124",
+      "optimizer": "Fresh AdamW moments at each SFT stage",
+      "parent_manifest": "dcab4ad8e4484ad1cc4b32ffbc6352b6a6ff9ea0a4ddccdb8d367d23db098a3f",
+      "plan": "configs/sft3/plan.json",
+      "replay": {
+        "components": {
+          "constraints": 246,
+          "dialogue": 317,
+          "general": 352,
+          "grounded": 226,
+          "knowledge": 413,
+          "rewrite": 130,
+          "skills": 254,
+          "social": 110
+        },
+        "maximum_serialized_tokens": 512,
+        "presentations": 2048,
+        "subsets": {
+          "sciq": 413,
+          "smol": 365,
+          "smol_constraints": 73,
+          "smol_rewrite": 130,
+          "social": 110,
+          "squad": 226,
+          "verified_constraints": 173,
+          "verified_dialogue": 304,
+          "verified_skills": 254
+        },
+        "unique_rows": 2048
+      },
+      "replay_file_sha256": "3b7897ad24c215c309b1a693dc6b3606783c678e82f7d595bdc3f9f97d8797ab",
+      "source_pretraining_tokens": 42001367040,
+      "stage": "sft3",
+      "steps": 128
+    }
+  ],
+  "tokenizer_fingerprint": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+}

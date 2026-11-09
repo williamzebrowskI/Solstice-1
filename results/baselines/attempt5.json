@@ -1,0 +1,179 @@
+{
+  "chat": {
+    "answerability": {
+      "False": {
+        "answer_match": 0,
+        "answer_match_with_neutral_wrapper": 0,
+        "clean_response": 15,
+        "count": 15,
+        "empty": 0,
+        "natural_stop": 15,
+        "repeated": 0,
+        "strict_task_success": 0,
+        "token_limit": 0,
+        "unexpected_structure": 0
+      },
+      "True": {
+        "answer_match": 12,
+        "answer_match_with_neutral_wrapper": 12,
+        "clean_response": 15,
+        "count": 15,
+        "empty": 0,
+        "natural_stop": 15,
+        "repeated": 0,
+        "strict_task_success": 12,
+        "token_limit": 0,
+        "unexpected_structure": 0
+      }
+    },
+    "categories": {
+      "answerability": {
+        "answer_match": 12,
+        "answer_match_with_neutral_wrapper": 12,
+        "clean_response": 30,
+        "count": 30,
+        "empty": 0,
+        "natural_stop": 30,
+        "repeated": 0,
+        "strict_task_success": 12,
+        "token_limit": 0,
+        "unexpected_structure": 0
+      },
+      "conversation": {
+        "answer_match": 25,
+        "answer_match_with_neutral_wrapper": 25,
+        "clean_response": 30,
+        "count": 30,
+        "empty": 0,
+        "natural_stop": 30,
+        "repeated": 0,
+        "strict_task_success": 25,
+        "token_limit": 0,
+        "unexpected_structure": 0
+      },
+      "instructions": {
+        "answer_match": 11,
+        "answer_match_with_neutral_wrapper": 11,
+        "clean_response": 30,
+        "count": 30,
+        "empty": 0,
+        "natural_stop": 30,
+        "repeated": 0,
+        "strict_task_success": 11,
+        "token_limit": 0,
+        "unexpected_structure": 0
+      },
+      "knowledge": {
+        "answer_match": 15,
+        "answer_match_with_neutral_wrapper": 15,
+        "clean_response": 30,
+        "count": 30,
+        "empty": 0,
+        "natural_stop": 30,
+        "repeated": 0,
+        "strict_task_success": 15,
+        "token_limit": 0,
+        "unexpected_structure": 0
+      },
+      "reading": {
+        "answer_match": 27,
+        "answer_match_with_neutral_wrapper": 27,
+        "clean_response": 30,
+        "count": 30,
+        "empty": 0,
+        "natural_stop": 30,
+        "repeated": 0,
+        "strict_task_success": 27,
+        "token_limit": 0,
+        "unexpected_structure": 0
+      },
+      "reasoning": {
+        "answer_match": 11,
+        "answer_match_with_neutral_wrapper": 11,
+        "clean_response": 30,
+        "count": 30,
+        "empty": 0,
+        "natural_stop": 30,
+        "repeated": 0,
+        "strict_task_success": 11,
+        "token_limit": 0,
+        "unexpected_structure": 0
+      }
+    },
+    "caveat": "Answer match is conservative automatic scoring, not a complete semantic correctness judgment. Non-matching answers and open chat require review. Repetition detection is heuristic.",
+    "objective": {
+      "answer_match": 101,
+      "answer_match_with_neutral_wrapper": 101,
+      "clean_response": 180,
+      "count": 180,
+      "empty": 0,
+      "natural_stop": 180,
+      "repeated": 0,
+      "strict_task_success": 101,
+      "token_limit": 0,
+      "unexpected_structure": 0
+    },
+    "response_control_all": {
+      "answer_match": 101,
+      "answer_match_with_neutral_wrapper": 101,
+      "clean_response": 190,
+      "count": 192,
+      "empty": 0,
+      "natural_stop": 191,
+      "repeated": 2,
+      "strict_task_success": 101,
+      "token_limit": 1,
+      "unexpected_structure": 0
+    }
+  },
+  "choices": {
+    "arc_challenge": {
+      "acc": 0.2901023890784983,
+      "acc_norm": 0.3122866894197952,
+      "complete": true,
+      "context_truncated_choices": 0,
+      "evaluated": 1172,
+      "expected": 1172
+    },
+    "arc_easy": {
+      "acc": 0.6300505050505051,
+      "acc_norm": 0.6233164983164983,
+      "complete": true,
+      "context_truncated_choices": 0,
+      "evaluated": 2376,
+      "expected": 2376
+    },
+    "hellaswag": {
+      "acc": 0.329416450906194,
+      "acc_norm": 0.394443337980482,
+      "complete": true,
+      "context_truncated_choices": 0,
+      "evaluated": 10042,
+      "expected": 10042
+    },
+    "piqa": {
+      "acc": 0.6632208922742111,
+      "acc_norm": 0.6643090315560392,
+      "complete": true,
+      "context_truncated_choices": 0,
+      "evaluated": 1838,
+      "expected": 1838
+    }
+  },
+  "complete": true,
+  "ifeval": {
+    "loose": {
+      "instruction_accuracy": 0.30335731414868106,
+      "instructions": 834,
+      "prompt_accuracy": 0.1645101663585952,
+      "prompts": 541
+    },
+    "strict": {
+      "instruction_accuracy": 0.28177458033573144,
+      "instructions": 834,
+      "prompt_accuracy": 0.15526802218114602,
+      "prompts": 541
+    }
+  },
+  "model_sha256": "2cba542e887527a294bf8435d59015318dbeb3f58503d075abe14c90775b5ab0"
+}

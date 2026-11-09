@@ -1,0 +1,110 @@
+{
+  "checkpoint": {
+    "files": {
+      "model.safetensors": {
+        "bytes": 696844252,
+        "sha256": "6a5f3a678f39ae457e3e2008aac5efe988e87d0aba3f95e7b10f6ba9979982f3"
+      },
+      "model.safetensors.json": {
+        "bytes": 41059,
+        "sha256": "14a6bdd694e0c34da5ca708ce9f2e07bcc53038a3a72c3aa25a44e26ee21b41c"
+      }
+    },
+    "format": "sml-benchmark-snapshot-v1",
+    "parent_step": 305186,
+    "phase": "SFT",
+    "selection": "Explicit saved candidate for evaluation; not automatically promoted by SFT quality gates.",
+    "source_bundle": "step_0000167_05db0bf87897",
+    "step": 167,
+    "tokens": 2366410
+  },
+  "datasets": {
+    "arc_challenge": {
+      "expected_examples": 1172,
+      "name": "ARC-Challenge",
+      "path": "allenai/ai2_arc",
+      "revision": "210d026faf9955653af8916fad021475a3f00453",
+      "split": "test"
+    },
+    "arc_easy": {
+      "expected_examples": 2376,
+      "name": "ARC-Easy",
+      "path": "allenai/ai2_arc",
+      "revision": "210d026faf9955653af8916fad021475a3f00453",
+      "split": "test"
+    },
+    "hellaswag": {
+      "expected_examples": 10042,
+      "name": null,
+      "path": "Rowan/hellaswag",
+      "revision": "218ec52e09a7e7462a5400043bb9a69a41d06b76",
+      "split": "validation"
+    },
+    "piqa": {
+      "expected_examples": 1838,
+      "name": null,
+      "path": "baber/piqa",
+      "revision": "142f6d7367fd9877f0fb3b5734ea6a545f54cdd1",
+      "split": "validation"
+    }
+  },
+  "format": "sml-choice-results-v1",
+  "results": {
+    "arc_challenge": {
+      "acc": 0.28071672354948807,
+      "acc_norm": 0.3046075085324232,
+      "complete": true,
+      "context_truncated_choices": 0,
+      "evaluated": 1172,
+      "expected": 1172
+    },
+    "arc_easy": {
+      "acc": 0.5997474747474747,
+      "acc_norm": 0.61489898989899,
+      "complete": true,
+      "context_truncated_choices": 0,
+      "evaluated": 2376,
+      "expected": 2376
+    },
+    "hellaswag": {
+      "acc": 0.3292172873929496,
+      "acc_norm": 0.3859788886675961,
+      "complete": true,
+      "context_truncated_choices": 0,
+      "evaluated": 10042,
+      "expected": 10042
+    },
+    "piqa": {
+      "acc": 0.6545157780195865,
+      "acc_norm": 0.6566920565832427,
+      "complete": true,
+      "context_truncated_choices": 0,
+      "evaluated": 1838,
+      "expected": 1838
+    }
+  },
+  "runtime": {
+    "elapsed_seconds": 354.40802137507126,
+    "last_observed_training_step": null,
+    "peak_rss_gib": 1.0895538330078125,
+    "training_baseline_tokens_per_second": null
+  },
+  "settings": {
+    "batch_size": 4,
+    "chat_template": false,
+    "chunk_tokens": 128,
+    "compute_precision": "float32",
+    "device": "gpu",
+    "implementation": "native MLX; lm-eval-style task prompts; not harness-validated",
+    "limit_per_task": 0,
+    "mlx_enable_tf32": "default",
+    "num_fewshot": 0,
+    "scoring": "sum continuation log-likelihood; acc_norm divides by choice characters",
+    "weight_provenance": {
+      "precision": "exact FP32 optimizer masters",
+      "source_bundle": "${WORKSPACE}/pretraining/runs/deep44_reliable_chat_sft_20261106/step_0000167_05db0bf87897",
+      "source_optimizer_sha256": "0bebbc3bcb19d2b5adf6d6173ffea9a241cb0755d302b23c9b4bfac50257653b"
+    }
+  },
+  "status": "complete"
+}

@@ -1,0 +1,47 @@
+{
+  "five_mac_cluster.py": {
+    "original_sha256": "27544f082d142bb4ee436f3a527667bd3c68559d1f70c67114a2ac16dccca2bc",
+    "packaged_sha256": "27544f082d142bb4ee436f3a527667bd3c68559d1f70c67114a2ac16dccca2bc",
+    "scope": "Workspace launcher copy at release preparation; frozen worker source is separately archived."
+  },
+  "launch_research.py": {
+    "original_sha256": "b70ea382d073a0a2ef37c1acb4b5925ea1fe4ef509e0cfdb31282ab054bf5247",
+    "packaged_sha256": "b70ea382d073a0a2ef37c1acb4b5925ea1fe4ef509e0cfdb31282ab054bf5247",
+    "scope": "Workspace launcher copy at release preparation; frozen worker source is separately archived."
+  },
+  "launch_stable_pretraining.py": {
+    "original_sha256": "770dc6f9bb9c60114838bfda93582fb917cd93754a3af33757580f75395031bf",
+    "packaged_sha256": "770dc6f9bb9c60114838bfda93582fb917cd93754a3af33757580f75395031bf",
+    "scope": "Workspace launcher copy at release preparation; frozen worker source is separately archived."
+  },
+  "launch_code_pretraining.py": {
+    "original_sha256": "5f74006eae3c6b34cd1901b634dda1f6b8712ab740ef118bd203214767124e76",
+    "packaged_sha256": "5f74006eae3c6b34cd1901b634dda1f6b8712ab740ef118bd203214767124e76",
+    "scope": "Workspace launcher copy at release preparation; frozen worker source is separately archived."
+  },
+  "launch_deep44_cooldown.py": {
+    "original_sha256": "854b9aba576fbe181620023bb2739450da00a767dbbcf1bb78d7c9acfb84ebc0",
+    "packaged_sha256": "7887737805af333126e2755fc04b6e16b1ced7e1e7c8091e358867d3d6176a21",
+    "scope": "Workspace launcher copy at release preparation; frozen worker source is separately archived."
+  },
+  "launch_adapter_trial_09_replica_20261108.py": {
+    "original_sha256": "f289117941679701cb4e29dc79c3dc859f5739df416fcbc2447441d607d00695",
+    "packaged_sha256": "f289117941679701cb4e29dc79c3dc859f5739df416fcbc2447441d607d00695",
+    "scope": "Workspace launcher copy at release preparation; frozen worker source is separately archived."
+  },
+  "reproduce_parent2000_attempt5.py": {
+    "original_sha256": "6ba5201968f384b1823e878ff0b3b173e0977916508891ee33e6065dfd2bc98b",
+    "packaged_sha256": "6ba5201968f384b1823e878ff0b3b173e0977916508891ee33e6065dfd2bc98b",
+    "scope": "Workspace launcher copy at release preparation; frozen worker source is separately archived."
+  },
+  "run_chat_repair_search.py": {
+    "original_sha256": "4e4c405eb89b9de3e3d1eecec682ab225bf4288768537ba766bad1d5e4ddfbbf",
+    "packaged_sha256": "4e4c405eb89b9de3e3d1eecec682ab225bf4288768537ba766bad1d5e4ddfbbf",
+    "scope": "Workspace launcher copy at release preparation; frozen worker source is separately archived."
+  },
+  "preflight_chat_repair_search.py": {
+    "original_sha256": "58f99d20ee7d37bde6e0ee260f6a31c39ac76296771fa3afcf466a311dfd2327",
+    "packaged_sha256": "58f99d20ee7d37bde6e0ee260f6a31c39ac76296771fa3afcf466a311dfd2327",
+    "scope": "Workspace launcher copy at release preparation; frozen worker source is separately archived."
+  }
+}

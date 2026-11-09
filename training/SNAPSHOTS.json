@@ -1,0 +1,46 @@
+{
+  "pretrain_20261022_121457_b3d5f398": {
+    "files": 37,
+    "snapshot": "training/snapshots/pretrain_20261022_121457_b3d5f398.json"
+  },
+  "pretrain_20261024_111140_5f596b7a": {
+    "files": 37,
+    "snapshot": "training/snapshots/pretrain_20261024_111140_5f596b7a.json"
+  },
+  "pretrain_20261027_222615_4d065da7": {
+    "files": 37,
+    "snapshot": "training/snapshots/pretrain_20261027_222615_4d065da7.json"
+  },
+  "pretrain_20261028_093017_dd42e713": {
+    "files": 37,
+    "snapshot": "training/snapshots/pretrain_20261028_093017_dd42e713.json"
+  },
+  "pretrain_20261102_234538_0ee851dc": {
+    "files": 37,
+    "snapshot": "training/snapshots/pretrain_20261102_234538_0ee851dc.json"
+  },
+  "pretrain_20261103_000432_8ac2605e": {
+    "files": 37,
+    "snapshot": "training/snapshots/pretrain_20261103_000432_8ac2605e.json"
+  },
+  "pretrain_20261104_170916_448e6f64": {
+    "files": 226,
+    "snapshot": "training/snapshots/pretrain_20261104_170916_448e6f64.json"
+  },
+  "pretrain_20261107_142423_40700422": {
+    "files": 226,
+    "snapshot": "training/snapshots/pretrain_20261107_142423_40700422.json"
+  },
+  "sft1": {
+    "files": 283,
+    "snapshot": "training/snapshots/sft1.json"
+  },
+  "sft2": {
+    "files": 291,
+    "snapshot": "training/snapshots/sft2.json"
+  },
+  "sft3": {
+    "files": 297,
+    "snapshot": "training/snapshots/sft3.json"
+  }
+}

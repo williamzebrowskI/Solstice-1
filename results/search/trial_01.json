@@ -1,0 +1,325 @@
+{
+  "attempt": 1,
+  "checkpoint": "${WORKSPACE}/pretraining/runs/deep44_chat_repair_01_20261109/step_0000064_a62529851917",
+  "checkpoint_manifest": "edffdfc456b5425a75e86b169bdcc2087800e5a1c30da6422e0b8a23254d3ac8",
+  "legacy_dev": {
+    "assistant_nll": 0.9981280918509583,
+    "components": {
+      "constraints": 0.35231624516745796,
+      "dialogue": 0.656033631421451,
+      "general": 1.761838249862194,
+      "grounded": 0.4091239768313244,
+      "knowledge": 1.3047487791627645,
+      "rewrite": 1.2936597764492035,
+      "skills": 0.5985566234157886,
+      "social": 1.6087474524974823
+    },
+    "empty_rate": 0.0,
+    "generated_counts": {
+      "constraints": 64,
+      "dialogue": 64,
+      "grounded": 64,
+      "knowledge": 64,
+      "skills": 64
+    },
+    "generated_macro_pass": 0.634375,
+    "generated_pass_counts": {
+      "constraints": 58,
+      "dialogue": 61,
+      "grounded": 44,
+      "knowledge": 12,
+      "skills": 28
+    },
+    "generated_rates": {
+      "constraints": 0.90625,
+      "dialogue": 0.953125,
+      "grounded": 0.6875,
+      "knowledge": 0.1875,
+      "skills": 0.4375
+    },
+    "natural_stop": 0.9888888888888889,
+    "precision": "fp32-chat-repair",
+    "qualitative_count": 40,
+    "repetition_rate": 0.030555555555555555,
+    "replacement_character_rate": 0.0,
+    "retention": {
+      "sources": {
+        "dclm": 2.9642923697829247,
+        "web": 2.8970615416765213,
+        "wiki": 2.4223727211356163
+      },
+      "val_loss": 2.8630388252437116,
+      "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa"
+    },
+    "scope": "Checked grounded answers, deterministic tasks and authored conversation context. Public general/dialogue/social outputs require semantic review. No code, SQL, JSON, or public benchmark scores select checkpoints.",
+    "split": "dev",
+    "step": 64,
+    "stop_reason_counts": {
+      "token_limit": 4,
+      "turn_end": 356
+    },
+    "turn_end_rate": 0.9888888888888889
+  },
+  "new_dev": {
+    "correct": 177,
+    "counts": {
+      "abstention": 59,
+      "constraints": 6,
+      "dialogue": 58,
+      "grounded": 45,
+      "reasoning": 9
+    },
+    "empty": 0,
+    "false_abstention_signals": 13,
+    "identity": {
+      "data": "a9c20f71859a9269b4875ef301e45938bb8d36ee62f3d135dcddc1ac6f14f066",
+      "evaluator": "40dbfada2856c91b0a7ffe5df7b9584175dbd479a1c6b581d1935d38dd6228aa",
+      "parent": null
+    },
+    "missing_fact_abstention_signals": 59,
+    "natural_stop": 1.0,
+    "repetition_rate": 0.0,
+    "scoring": "Conservative whole-answer equivalence for factual tasks; exact format for transformation tasks. Strict format compliance is reported separately. Whole-passage copying and contradictory extra claims are not accepted.",
+    "strict_correct": 177,
+    "strict_counts": {
+      "abstention": 59,
+      "constraints": 6,
+      "dialogue": 58,
+      "grounded": 45,
+      "reasoning": 9
+    },
+    "total": 300,
+    "totals": {
+      "abstention": 60,
+      "constraints": 60,
+      "dialogue": 60,
+      "grounded": 60,
+      "reasoning": 60
+    }
+  },
+  "parent": "attempt5",
+  "plan": {
+    "adaptation": {
+      "adapter_compute": "float32",
+      "alpha": 64,
+      "base_compute": "bfloat16",
+      "dropout": 0.0,
+      "expected_trainable_parameters": 3785856,
+      "layers": "all",
+      "method": "lora",
+      "rank": 32,
+      "targets": [
+        "attn.qkv_proj",
+        "attn.proj"
+      ],
+      "trainable_token_ids": [
+        2,
+        3
+      ]
+    },
+    "answer_max_tokens": {
+      "constraints": 320,
+      "dialogue": 256,
+      "general": 256,
+      "grounded": 160,
+      "knowledge": 80,
+      "rewrite": 320,
+      "skills": 160,
+      "social": 128
+    },
+    "authored_holdouts": {
+      "constraints": 128,
+      "dialogue": 128,
+      "skills": 192
+    },
+    "authored_quotas": {
+      "constraints": 4200,
+      "dialogue": 6800,
+      "skills": 12000
+    },
+    "baseline_cache": "${WORKSPACE}/pretraining/prepared/chat_adapter_search_20261108/baseline_cache",
+    "batches": [
+      8
+    ],
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "checked_components": [
+      "knowledge",
+      "grounded",
+      "skills",
+      "constraints",
+      "dialogue"
+    ],
+    "comparison_checkpoint": "${WORKSPACE}/reports/benchmarks/deep44-reliable-chat-167-fp32-20261106/choices/checkpoint",
+    "component_quotas": {
+      "constraints": 800,
+      "dialogue": 2000,
+      "general": 2400,
+      "grounded": 2000,
+      "skills": 800
+    },
+    "components": [
+      "general",
+      "knowledge",
+      "grounded",
+      "skills",
+      "constraints",
+      "dialogue",
+      "social",
+      "rewrite"
+    ],
+    "epochs": 1,
+    "eps": 1e-08,
+    "eval_every": 64,
+    "eval_examples_per_component": 64,
+    "execution": "single-mac",
+    "final_lr": 2.0000000000000003e-06,
+    "format": "opensml-verified-chat-v2",
+    "fresh_mixture": {
+      "abstention": 0.4,
+      "dialogue": 0.2,
+      "grounded": 0.4
+    },
+    "fresh_weight": 0.4,
+    "generated_eval_per_component": 64,
+    "grad_accum": 8,
+    "grad_clip": 1.0,
+    "initial_checkpoint": "${WORKSPACE}/pretraining/runs/deep44_parent2000_generalize_05_replica_20261109/step_0000256_6074b98fe66b",
+    "keep_checkpoints": 6,
+    "kl_weight": 0.25,
+    "log_every": 10,
+    "max_cumulative_retention_loss_increase": 0.03,
+    "max_messages": 8,
+    "max_repetition_rate": 0.025,
+    "max_retention_loss_increase": 0.003,
+    "max_sequence_length": 2048,
+    "max_steps": 256,
+    "method": "Extraction and appropriate abstention",
+    "microbatch_rows": 4,
+    "min_domain_pass_cases": {},
+    "min_natural_stop": 0.9861111111111112,
+    "min_task_gain_cases": 4,
+    "minimum_source_tokens": 42000000000,
+    "original_pretraining_retention_loss": 2.8353193145245315,
+    "output": "${WORKSPACE}/pretraining/runs/deep44_chat_repair_01_20261109",
+    "peak_lr": 2e-05,
+    "prepared": "${WORKSPACE}/pretraining/runs/deep44_chat_repair_01_20261109/input/corpus",
+    "public_holdouts": {
+      "constraints_smol": 32,
+      "dialogue_smol": 64,
+      "general_smol": 64,
+      "grounded_no": 32,
+      "grounded_yes": 96,
+      "knowledge": 128,
+      "rewrite_smol": 32,
+      "social": 32
+    },
+    "public_quotas": {
+      "constraints_smol": 2000,
+      "dialogue_smol": 1200,
+      "general_smol": 4800,
+      "grounded_no": 2750,
+      "grounded_yes": 8250,
+      "knowledge": 4000,
+      "rewrite_smol": 1000,
+      "social": 1000
+    },
+    "qualitative_eval_per_component": 8,
+    "regression_patience": 2,
+    "repair_parent": "attempt5",
+    "replay_length": 512,
+    "replay_mixture": {
+      "constraints": 0.125,
+      "dialogue": 0.125,
+      "general": 0.1875,
+      "grounded": 0.125,
+      "knowledge": 0.1875,
+      "rewrite": 0.0625,
+      "skills": 0.125,
+      "social": 0.0625
+    },
+    "replay_objective_weight": 0.2,
+    "replay_policy": "prose-only",
+    "replay_rows_per_update": 16,
+    "retention": "${WORKSPACE}/pretraining/data/deep44_pretraining_validation_20261102",
+    "rows_per_group": 16,
+    "seed": 2026110915,
+    "selection_reference": "New 300-case development test, with historical 320-case and prose retention guards. Final 1000-case test is unopened until a single finalist is frozen.",
+    "sft_objective_weight": 0.8,
+    "sft_rows_per_update": 48,
+    "sft_stage": 2,
+    "source_checkpoint": "${WORKSPACE}/pretraining/runs/deep44_cooldown_2b_20261107/step_0320445_08b689895ed2",
+    "source_run": "${WORKSPACE}/pretraining/runs/deep44_cooldown_2b_20261107",
+    "sources": [
+      {
+        "file": "train.jsonl.gz",
+        "label": "helpsteer2",
+        "license": "cc-by-4.0",
+        "repo": "nvidia/HelpSteer2",
+        "revision": "990b2711a36180dd19d9c94b8627844866f8982a"
+      },
+      {
+        "file": "data/train-00000-of-00001-b42a775f407cee45.parquet",
+        "label": "oasst1",
+        "license": "apache-2.0",
+        "repo": "OpenAssistant/oasst1",
+        "revision": "fdf72ae0827c1cda404aff25b6603abec9e3399b"
+      },
+      {
+        "files": [
+          "data/smol-magpie-ultra/train-00000-of-00006.parquet",
+          "data/smol-magpie-ultra/train-00001-of-00006.parquet",
+          "data/smol-magpie-ultra/train-00002-of-00006.parquet",
+          "data/smol-magpie-ultra/train-00003-of-00006.parquet",
+          "data/smol-magpie-ultra/train-00004-of-00006.parquet",
+          "data/smol-magpie-ultra/train-00005-of-00006.parquet"
+        ],
+        "label": "smol_magpie_ultra",
+        "license": "apache-2.0",
+        "repo": "HuggingFaceTB/smoltalk",
+        "revision": "5feaf2fd3ffca7c237fc38d1861bc30365d48ffa"
+      },
+      {
+        "label": "squad",
+        "license": "cc-by-sa-4.0",
+        "parquet_urls": [
+          "https://huggingface.co/datasets/rajpurkar/squad_v2/resolve/3ffb306f725f7d2ce8394bc1873b24868140c412/squad_v2/train-00000-of-00001.parquet"
+        ],
+        "repo": "rajpurkar/squad_v2",
+        "revision": "3ffb306f725f7d2ce8394bc1873b24868140c412",
+        "split": "train"
+      },
+      {
+        "label": "squad_validation",
+        "license": "cc-by-sa-4.0",
+        "parquet_urls": [
+          "https://huggingface.co/datasets/rajpurkar/squad_v2/resolve/3ffb306f725f7d2ce8394bc1873b24868140c412/squad_v2/validation-00000-of-00001.parquet"
+        ],
+        "repo": "rajpurkar/squad_v2",
+        "revision": "3ffb306f725f7d2ce8394bc1873b24868140c412",
+        "split": "validation"
+      }
+    ],
+    "strategy": "Independent small adapter updates from parent2000 or preserved attempt5; verified text tasks and 60% replay objective with frozen-source probability preservation.",
+    "tokenizer": "${WORKSPACE}/reference/opensml-150m/tokenizer/bytebpe32k_v1",
+    "warmup_fraction": 0.1,
+    "weight_decay": 0.0
+  },
+  "quality": {
+    "consecutive_severe": 0,
+    "eligible": true,
+    "key": [
+      1,
+      177,
+      203,
+      1.0,
+      -0.0,
+      -0.9981280918509583
+    ],
+    "reasons": []
+  },
+  "status": "complete",
+  "step": 64
+}

@@ -1,0 +1,1039 @@
+{
+  "passed": true,
+  "full_benchmark_rerun": false,
+  "weight_sha256": "7b2d8777040f05d8e0849acac4e45013b2de3d72145c363cd22825e80115c515",
+  "environment": {
+    "python": "3.11.13",
+    "macos": "27.0.1",
+    "machine": "arm64",
+    "mlx": "0.32.3",
+    "numpy": "2.4.2",
+    "tokenizers": "0.22.2"
+  },
+  "checks": [
+    "Tokenizer round trips and literal structural-token isolation",
+    "Explicit chat token boundaries",
+    "Invalid roles, empty messages and turn orders rejected",
+    "Output budget bounds and context overflow rejected",
+    "Non-finite and out-of-range temperatures rejected",
+    "Fixed-seed sampling is repeatable in this runtime"
+  ],
+  "saved_response_comparisons": 27,
+  "matching_responses": 27,
+  "comparisons": [
+    {
+      "id": "knowledge-00",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "Tokyo",
+        "tokens": 3,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "Tokyo",
+        "token_ids": [
+          55,
+          605,
+          9070
+        ],
+        "prompt_tokens": 20,
+        "output_tokens": 3,
+        "stop_reason": "turn_end",
+        "seconds": 0.3210636670701206,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "knowledge-01",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "venus",
+        "tokens": 2,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "venus",
+        "token_ids": [
+          1227,
+          381
+        ],
+        "prompt_tokens": 21,
+        "output_tokens": 2,
+        "stop_reason": "turn_end",
+        "seconds": 0.02261858293786645,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "knowledge-05",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "Jane Austen",
+        "tokens": 4,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "Jane Austen",
+        "token_ids": [
+          45,
+          1843,
+          2189,
+          272
+        ],
+        "prompt_tokens": 21,
+        "output_tokens": 4,
+        "stop_reason": "turn_end",
+        "seconds": 0.03336187498643994,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "knowledge-15",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "south",
+        "tokens": 1,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "south",
+        "token_ids": [
+          27287
+        ],
+        "prompt_tokens": 20,
+        "output_tokens": 1,
+        "stop_reason": "turn_end",
+        "seconds": 0.01520308293402195,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "reading-00",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "teal",
+        "tokens": 2,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "teal",
+        "token_ids": [
+          712,
+          280
+        ],
+        "prompt_tokens": 47,
+        "output_tokens": 2,
+        "stop_reason": "turn_end",
+        "seconds": 0.02083662524819374,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "reading-01",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "Tuesday",
+        "tokens": 1,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "Tuesday",
+        "token_ids": [
+          27107
+        ],
+        "prompt_tokens": 49,
+        "output_tokens": 1,
+        "stop_reason": "turn_end",
+        "seconds": 0.01899162493646145,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "reading-05",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "maroon",
+        "tokens": 2,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "maroon",
+        "token_ids": [
+          3050,
+          2343
+        ],
+        "prompt_tokens": 46,
+        "output_tokens": 2,
+        "stop_reason": "turn_end",
+        "seconds": 0.02122450014576316,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "reading-15",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "indigo",
+        "tokens": 2,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "indigo",
+        "token_ids": [
+          548,
+          13816
+        ],
+        "prompt_tokens": 48,
+        "output_tokens": 2,
+        "stop_reason": "turn_end",
+        "seconds": 0.024134499952197075,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "reasoning-00",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "9",
+        "tokens": 1,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "9",
+        "token_ids": [
+          28
+        ],
+        "prompt_tokens": 34,
+        "output_tokens": 1,
+        "stop_reason": "turn_end",
+        "seconds": 0.015261500142514706,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "reasoning-01",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "19",
+        "tokens": 1,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "19",
+        "token_ids": [
+          1000
+        ],
+        "prompt_tokens": 28,
+        "output_tokens": 1,
+        "stop_reason": "turn_end",
+        "seconds": 0.015410041902214289,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "reasoning-05",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "12",
+        "tokens": 1,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "12",
+        "token_ids": [
+          1670
+        ],
+        "prompt_tokens": 34,
+        "output_tokens": 1,
+        "stop_reason": "turn_end",
+        "seconds": 0.01592041691765189,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "reasoning-15",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "15",
+        "tokens": 1,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "15",
+        "token_ids": [
+          1971
+        ],
+        "prompt_tokens": 33,
+        "output_tokens": 1,
+        "stop_reason": "turn_end",
+        "seconds": 0.014898958150297403,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "instructions-00",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "NEWTON",
+        "tokens": 4,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "NEWTON",
+        "token_ids": [
+          49,
+          20279,
+          55,
+          3418
+        ],
+        "prompt_tokens": 23,
+        "output_tokens": 4,
+        "stop_reason": "turn_end",
+        "seconds": 0.034648416098207235,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "instructions-01",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "teal, notebook, kyoto",
+        "tokens": 8,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "teal, notebook, kyoto",
+        "token_ids": [
+          712,
+          280,
+          15,
+          27283,
+          15,
+          498,
+          92,
+          5207
+        ],
+        "prompt_tokens": 39,
+        "output_tokens": 8,
+        "stop_reason": "turn_end",
+        "seconds": 0.05527900019660592,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "instructions-05",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "UPPERCASE",
+        "tokens": 5,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "UPPERCASE",
+        "token_ids": [
+          56,
+          11507,
+          2445,
+          38,
+          21289
+        ],
+        "prompt_tokens": 23,
+        "output_tokens": 5,
+        "stop_reason": "turn_end",
+        "seconds": 0.03887320775538683,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "instructions-15",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "SCRATCH",
+        "tokens": 4,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "SCRATCH",
+        "token_ids": [
+          54,
+          9148,
+          2956,
+          6988
+        ],
+        "prompt_tokens": 24,
+        "output_tokens": 4,
+        "stop_reason": "turn_end",
+        "seconds": 0.03279904229566455,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "conversation-00",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "317",
+        "tokens": 2,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "317",
+        "token_ids": [
+          22,
+          2056
+        ],
+        "prompt_tokens": 61,
+        "output_tokens": 2,
+        "stop_reason": "turn_end",
+        "seconds": 0.023011791054159403,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "conversation-01",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "rice",
+        "tokens": 1,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "rice",
+        "token_ids": [
+          23468
+        ],
+        "prompt_tokens": 40,
+        "output_tokens": 1,
+        "stop_reason": "turn_end",
+        "seconds": 0.016686708200722933,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "conversation-05",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "318",
+        "tokens": 2,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "318",
+        "token_ids": [
+          22,
+          1589
+        ],
+        "prompt_tokens": 61,
+        "output_tokens": 2,
+        "stop_reason": "turn_end",
+        "seconds": 0.023333874996751547,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "conversation-15",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "320",
+        "tokens": 2,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "320",
+        "token_ids": [
+          22,
+          1045
+        ],
+        "prompt_tokens": 60,
+        "output_tokens": 2,
+        "stop_reason": "turn_end",
+        "seconds": 0.02568712504580617,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "answerability-00",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "12:30",
+        "tokens": 3,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "12:30",
+        "token_ids": [
+          1670,
+          29,
+          2163
+        ],
+        "prompt_tokens": 55,
+        "output_tokens": 3,
+        "stop_reason": "turn_end",
+        "seconds": 0.031204292085021734,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "answerability-01",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "8",
+        "tokens": 1,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "8",
+        "token_ids": [
+          27
+        ],
+        "prompt_tokens": 49,
+        "output_tokens": 1,
+        "stop_reason": "turn_end",
+        "seconds": 0.01847654115408659,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "answerability-05",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "8:00",
+        "tokens": 3,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "8:00",
+        "token_ids": [
+          27,
+          29,
+          469
+        ],
+        "prompt_tokens": 46,
+        "output_tokens": 3,
+        "stop_reason": "turn_end",
+        "seconds": 0.03204433433711529,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "answerability-15",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "8:00",
+        "tokens": 3,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "8:00",
+        "token_ids": [
+          27,
+          29,
+          469
+        ],
+        "prompt_tokens": 46,
+        "output_tokens": 3,
+        "stop_reason": "turn_end",
+        "seconds": 0.032622833736240864,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 128,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "open_chat-00",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "Hello! How are you?",
+        "tokens": 6,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "Hello! How are you?",
+        "token_ids": [
+          22724,
+          4,
+          1047,
+          366,
+          357,
+          34
+        ],
+        "prompt_tokens": 14,
+        "output_tokens": 6,
+        "stop_reason": "turn_end",
+        "seconds": 0.05578645830973983,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 160,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "open_chat-01",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "Thank you for your help. I hope you're well. I've been working on a project that involves using data visualization to help understand and interpret data. I'm looking for a way to visualize data in a way that's easy to understand and understand. I'm looking for a way to visualize data in a way that's easy to understand and understand. I'm looking for a way to visualize data in a way that's easy to understand and understand. I'm looking for a way to visualize data in a way that's easy to understand and understand. I'm looking for a way to visualize data in a way that's easy to understand and understand.",
+        "tokens": 131,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "Thank you for your help. I hope you're well. I've been working on a project that involves using data visualization to help understand and interpret data. I'm looking for a way to visualize data in a way that's easy to understand and understand. I'm looking for a way to visualize data in a way that's easy to understand and understand. I'm looking for a way to visualize data in a way that's easy to understand and understand. I'm looking for a way to visualize data in a way that's easy to understand and understand. I'm looking for a way to visualize data in a way that's easy to understand and understand.",
+        "token_ids": [
+          18909,
+          357,
+          338,
+          496,
+          760,
+          17,
+          345,
+          3737,
+          357,
+          2573,
+          870,
+          17,
+          345,
+          4156,
+          706,
+          1968,
+          341,
+          261,
+          1497,
+          344,
+          3697,
+          1034,
+          1062,
+          16138,
+          295,
+          760,
+          1110,
+          293,
+          4562,
+          1062,
+          17,
+          345,
+          6119,
+          3062,
+          338,
+          261,
+          953,
+          295,
+          16829,
+          1062,
+          289,
+          261,
+          953,
+          344,
+          503,
+          2730,
+          295,
+          1110,
+          293,
+          1110,
+          17,
+          345,
+          6119,
+          3062,
+          338,
+          261,
+          953,
+          295,
+          16829,
+          1062,
+          289,
+          261,
+          953,
+          344,
+          503,
+          2730,
+          295,
+          1110,
+          293,
+          1110,
+          17,
+          345,
+          6119,
+          3062,
+          338,
+          261,
+          953,
+          295,
+          16829,
+          1062,
+          289,
+          261,
+          953,
+          344,
+          503,
+          2730,
+          295,
+          1110,
+          293,
+          1110,
+          17,
+          345,
+          6119,
+          3062,
+          338,
+          261,
+          953,
+          295,
+          16829,
+          1062,
+          289,
+          261,
+          953,
+          344,
+          503,
+          2730,
+          295,
+          1110,
+          293,
+          1110,
+          17,
+          345,
+          6119,
+          3062,
+          338,
+          261,
+          953,
+          295,
+          16829,
+          1062,
+          289,
+          261,
+          953,
+          344,
+          503,
+          2730,
+          295,
+          1110,
+          293,
+          1110,
+          17
+        ],
+        "prompt_tokens": 13,
+        "output_tokens": 131,
+        "stop_reason": "turn_end",
+        "seconds": 1.0323430839926004,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 160,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    },
+    {
+      "id": "open_chat-05",
+      "matches_saved_fp32": true,
+      "previous": {
+        "text": "To keep your reusable bag at the store, bring it to the store and place it in the back of the store. This will help you avoid leaving it at the store.",
+        "tokens": 35,
+        "stop_reason": "turn_end"
+      },
+      "observed": {
+        "model": "Solstice-1",
+        "text": "To keep your reusable bag at the store, bring it to the store and place it in the back of the store. This will help you avoid leaving it at the store.",
+        "token_ids": [
+          2293,
+          1527,
+          496,
+          22580,
+          8534,
+          426,
+          267,
+          4341,
+          15,
+          2707,
+          367,
+          295,
+          267,
+          4341,
+          293,
+          1321,
+          367,
+          289,
+          267,
+          1051,
+          288,
+          267,
+          4341,
+          17,
+          671,
+          532,
+          760,
+          357,
+          2526,
+          5474,
+          367,
+          426,
+          267,
+          4341,
+          17
+        ],
+        "prompt_tokens": 25,
+        "output_tokens": 35,
+        "stop_reason": "turn_end",
+        "seconds": 0.32158508291468024,
+        "protocol": {
+          "precision": "float32",
+          "attention": "vanilla",
+          "temperature": 0.0,
+          "seed": 2026,
+          "max_new_tokens": 160,
+          "repetition_penalty": 1,
+          "serialization": "explicit-ids-assistant-mask-v1",
+          "truncation": false
+        }
+      }
+    }
+  ]
+}

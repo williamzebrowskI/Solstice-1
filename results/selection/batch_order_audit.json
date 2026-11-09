@@ -1,0 +1,49 @@
+{
+  "actual_order_hash": "5e4cc1c34f86ab5228a3b82a5c1e7d50645ec80db40b40c9febef8a943740617",
+  "actual_worker_matches": true,
+  "clarification": "Preflight metadata now uses the same sorted-key serialization as the stored worker plans; actual training remains unchanged.",
+  "matched_trial_1_and_2": true,
+  "previous_preflight_orders": [
+    {
+      "attempt": 1,
+      "combined_trial_uses_provisional_balanced_mixture": false,
+      "fresh_selected": 4096,
+      "order_hash": "39767fb7a16b89e5d484ef28024da3f82484aa6edf6939c9203e5bd2d8380efa",
+      "replay_selected": 4096,
+      "steps": 256
+    },
+    {
+      "attempt": 2,
+      "combined_trial_uses_provisional_balanced_mixture": false,
+      "fresh_selected": 4096,
+      "order_hash": "39767fb7a16b89e5d484ef28024da3f82484aa6edf6939c9203e5bd2d8380efa",
+      "replay_selected": 4096,
+      "steps": 256
+    },
+    {
+      "attempt": 3,
+      "combined_trial_uses_provisional_balanced_mixture": false,
+      "fresh_selected": 4096,
+      "order_hash": "3a5cd6484ce0394014a6313326e9006fc33db64a419679fb1246536af5b12039",
+      "replay_selected": 4096,
+      "steps": 256
+    },
+    {
+      "attempt": 4,
+      "combined_trial_uses_provisional_balanced_mixture": false,
+      "fresh_selected": 4096,
+      "order_hash": "543c0e7f502549e0c45a3c6accef2c4b728f46f2d31f5d387e027dbb2a68fd5a",
+      "replay_selected": 4096,
+      "steps": 256
+    },
+    {
+      "attempt": 5,
+      "combined_trial_uses_provisional_balanced_mixture": true,
+      "fresh_selected": 4096,
+      "order_hash": "6e772977dfccd8adf2caf2b6e647b40a04ac3202ea764b28b61f12386cd1f534",
+      "replay_selected": 4096,
+      "steps": 256
+    }
+  ],
+  "training_runtime_or_data_changed": false
+}

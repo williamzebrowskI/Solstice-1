@@ -1,0 +1,71 @@
+{
+  "complete": true,
+  "context_limited": 0,
+  "evaluated": 541,
+  "expected": 541,
+  "metrics": {
+    "loose": {
+      "instruction_accuracy": 0.3129496402877698,
+      "instructions": 834,
+      "prompt_accuracy": 0.17929759704251386,
+      "prompts": 541
+    },
+    "strict": {
+      "instruction_accuracy": 0.29136690647482016,
+      "instructions": 834,
+      "prompt_accuracy": 0.1645101663585952,
+      "prompts": 541
+    }
+  },
+  "protocol": {
+    "checkpoint": "${WORKSPACE}/reports/benchmarks/deep44-reliable-chat-167-fp32-20261106/choices/checkpoint",
+    "compute_precision": "float32",
+    "context_limit": 2048,
+    "dataset": "google/IFEval",
+    "dataset_revision": "966cd89545d6b6acfd7638bc708b98261ca58e84",
+    "evaluator_files": {
+      "__init__.py": "8f77aceef943735bec21b7f42630794cad7ce20d32b72a83889e20274fb6df31",
+      "evaluation_lib.py": "35decc06000718487f44d7deafa6d3f48a8ec0886281edf40162c0265b7d248c",
+      "instructions.py": "60e086f5342a03ce8e18b64bbcccf86308f523c08aa826707a562150a52f3edf",
+      "instructions_registry.py": "ec92d72c264f6d906978613085db262356174300370a3fffe6fefd5969ce9cfc",
+      "instructions_util.py": "a73797261eee5bf447e279d82a2b700b1bdd3cb1193412dbab1270a85832bc6b"
+    },
+    "format": "opensml-ifeval-v1",
+    "google_research_commit": "83f1e7b59e762648c953de751d31f75720683622",
+    "max_tokens": 1024,
+    "metadata_sha256": "14a6bdd694e0c34da5ca708ce9f2e07bcc53038a3a72c3aa25a44e26ee21b41c",
+    "mlx_enable_tf32": "default",
+    "model_implementation": {
+      "attention_impl": "vanilla",
+      "bias": false,
+      "ce_impl": "reference",
+      "d_model": 576,
+      "ffn_impl": "reference",
+      "loss_dtype": "float32",
+      "max_seq_len": 2048,
+      "mlp_multiple_of": 256,
+      "mlp_ratio": 4.0,
+      "n_heads": 9,
+      "n_kv_heads": 3,
+      "n_layers": 44,
+      "qk_norm": true,
+      "vocab_size": 32000
+    },
+    "model_sha256": "6a5f3a678f39ae457e3e2008aac5efe988e87d0aba3f95e7b10f6ba9979982f3",
+    "prompt_truncation": false,
+    "repetition_penalty": 1,
+    "runner_sha256": "10ae9d2c49236c377d6e9952674b14289f5f92c310c29cbe592a40c98a14c752",
+    "serialization": "native SFT chat template",
+    "step": 167,
+    "system_prompt": null,
+    "temperature": 0,
+    "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb",
+    "weight_provenance": {
+      "precision": "exact FP32 optimizer masters",
+      "source_bundle": "${WORKSPACE}/pretraining/runs/deep44_reliable_chat_sft_20261106/step_0000167_05db0bf87897",
+      "source_optimizer_sha256": "0bebbc3bcb19d2b5adf6d6173ffea9a241cb0755d302b23c9b4bfac50257653b"
+    }
+  },
+  "scope": "Official pinned IFEval strict/loose checks; native SFT generation, no harness parity claim.",
+  "token_limited": 76
+}

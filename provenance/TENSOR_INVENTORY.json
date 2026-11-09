@@ -1,0 +1,2306 @@
+{
+  "parameters": 174202432,
+  "tensors": {
+    "blocks.0.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.0.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.0.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.0.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.0.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.0.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.0.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.0.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.1.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.1.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.1.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.1.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.1.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.1.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.1.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.1.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.10.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.10.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.10.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.10.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.10.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.10.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.10.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.10.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.11.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.11.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.11.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.11.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.11.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.11.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.11.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.11.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.12.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.12.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.12.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.12.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.12.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.12.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.12.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.12.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.13.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.13.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.13.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.13.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.13.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.13.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.13.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.13.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.14.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.14.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.14.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.14.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.14.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.14.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.14.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.14.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.15.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.15.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.15.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.15.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.15.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.15.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.15.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.15.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.16.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.16.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.16.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.16.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.16.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.16.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.16.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.16.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.17.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.17.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.17.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.17.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.17.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.17.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.17.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.17.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.18.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.18.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.18.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.18.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.18.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.18.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.18.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.18.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.19.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.19.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.19.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.19.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.19.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.19.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.19.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.19.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.2.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.2.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.2.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.2.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.2.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.2.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.2.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.2.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.20.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.20.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.20.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.20.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.20.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.20.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.20.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.20.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.21.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.21.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.21.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.21.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.21.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.21.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.21.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.21.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.22.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.22.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.22.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.22.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.22.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.22.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.22.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.22.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.23.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.23.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.23.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.23.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.23.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.23.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.23.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.23.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.24.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.24.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.24.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.24.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.24.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.24.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.24.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.24.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.25.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.25.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.25.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.25.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.25.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.25.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.25.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.25.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.26.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.26.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.26.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.26.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.26.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.26.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.26.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.26.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.27.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.27.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.27.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.27.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.27.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.27.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.27.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.27.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.28.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.28.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.28.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.28.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.28.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.28.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.28.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.28.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.29.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.29.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.29.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.29.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.29.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.29.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.29.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.29.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.3.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.3.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.3.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.3.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.3.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.3.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.3.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.3.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.30.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.30.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.30.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.30.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.30.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.30.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.30.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.30.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.31.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.31.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.31.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.31.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.31.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.31.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.31.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.31.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.32.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.32.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.32.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.32.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.32.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.32.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.32.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.32.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.33.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.33.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.33.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.33.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.33.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.33.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.33.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.33.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.34.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.34.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.34.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.34.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.34.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.34.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.34.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.34.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.35.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.35.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.35.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.35.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.35.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.35.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.35.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.35.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.36.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.36.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.36.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.36.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.36.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.36.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.36.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.36.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.37.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.37.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.37.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.37.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.37.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.37.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.37.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.37.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.38.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.38.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.38.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.38.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.38.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.38.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.38.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.38.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.39.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.39.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.39.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.39.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.39.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.39.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.39.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.39.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.4.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.4.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.4.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.4.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.4.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.4.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.4.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.4.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.40.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.40.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.40.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.40.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.40.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.40.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.40.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.40.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.41.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.41.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.41.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.41.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.41.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.41.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.41.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.41.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.42.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.42.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.42.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.42.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.42.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.42.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.42.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.42.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.43.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.43.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.43.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.43.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.43.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.43.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.43.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.43.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.5.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.5.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.5.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.5.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.5.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.5.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.5.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.5.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.6.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.6.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.6.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.6.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.6.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.6.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.6.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.6.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.7.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.7.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.7.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.7.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.7.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.7.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.7.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.7.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.8.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.8.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.8.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.8.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.8.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.8.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.8.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.8.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.9.attn.k_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.9.attn.proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        576
+      ]
+    },
+    "blocks.9.attn.q_norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        64
+      ]
+    },
+    "blocks.9.attn.qkv_proj.weight": {
+      "dtype": "F32",
+      "shape": [
+        960,
+        576
+      ]
+    },
+    "blocks.9.ffn.down.weight": {
+      "dtype": "F32",
+      "shape": [
+        576,
+        1536
+      ]
+    },
+    "blocks.9.ffn.gate_up.weight": {
+      "dtype": "F32",
+      "shape": [
+        3072,
+        576
+      ]
+    },
+    "blocks.9.norm1.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "blocks.9.norm2.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    },
+    "embed.weight": {
+      "dtype": "F32",
+      "shape": [
+        32000,
+        576
+      ]
+    },
+    "norm.weight": {
+      "dtype": "F32",
+      "shape": [
+        576
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "attention": "vanilla",
+  "cases": "3fe1b15858329766a4fe532dad9d3aa1fb49f712b7b9f7443eb5049800b227ee",
+  "ffn": "reference",
+  "model_sha256": "7b2d8777040f05d8e0849acac4e45013b2de3d72145c363cd22825e80115c515",
+  "precision": "FP32 base masters plus FP32 trained deltas",
+  "prompt_truncation": false,
+  "repetition_penalty": 1,
+  "scoring": {
+    "pretraining/chat_benchmark/panel.py": "70d78840147614727a34a775f669f9316c8d589721d41fdf2dd8c98deb2475bd",
+    "pretraining/chat_benchmark/scoring.py": "e63a8715c302e2b59b0fadc3598e912d3f695fb9352b541e33dba3b046017c54",
+    "pretraining/scripts/benchmark_best.py": "f3835c8cb0bdf580e4142a57ac3724c474dcc1d44aa01dbbd805c989a587c7c7",
+    "pretraining/scripts/benchmark_ifeval.py": "10ae9d2c49236c377d6e9952674b14289f5f92c310c29cbe592a40c98a14c752",
+    "pretraining/sft/data.py": "5c558b0cfd4d2061af144c3f295b7bec31d92cb4b0fb605f702972c373e2d1e8",
+    "pretraining/sft/evaluate.py": "80624551512112850145ccb57d6435d7a1bae86d0b95f8f52d56b8cb6f102a76",
+    "pretraining/sml_v1/model.py": "1eee6f8afe78767ff6b9c604ccf2328c98b24bc94dbad6291a0ad699dd7345fe",
+    "pretraining/sml_v1/tokenization.py": "254e1f5d60cc4498a9f1209955752db28b91839f48d3121d674f3f5ac42e52e5"
+  },
+  "system_prompt": null,
+  "temperature": 0,
+  "weight_provenance": {
+    "precision": "FP32 pretrained masters plus FP32 LoRA and tied chat-token deltas",
+    "resume": "Use the enclosing adapter bundle; this is an inference export",
+    "trainable_parameters": 3785856
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "combined_peak_lr": 1.5e-05,
+  "development_cases": 300,
+  "fifth_trial": "Choose original starting checkpoint using matched repair trials 1/2 dev scores; allocate 10%-40% per domain using positive dev gains from first four. No chaining of experimental checkpoints.",
+  "final_lr_fraction": 0.1,
+  "legacy_dev_cases": 320,
+  "legacy_test_cases": 704,
+  "maximum_attempts": 5,
+  "new_objective_weight": 0.4,
+  "peak_lr": 2e-05,
+  "practical_success": "At least 5pp new heldout content correctness gain over EACH baseline with 97.5% paired scenario-bootstrap intervals above zero; preserve strict instruction compliance, domains and general benchmarks within predeclared tolerances.",
+  "preservation": "Both starting models and previous protected checkpoints remain immutable. Keep the highest-dev-ranked new candidate even if final results do not establish an improvement. Remove other new trial artifacts only after all final assessments complete.",
+  "public_tolerances": {
+    "chat_answer_cases": 2,
+    "chat_repetition_cases": 1,
+    "chat_stop_cases": 1,
+    "choice_mean_pp": 0.25,
+    "choice_per_task_pp": 1,
+    "ifeval_loose_pp": 0.5,
+    "ifeval_strict_pp": 0
+  },
+  "replay_kl_weight": 0.25,
+  "replay_objective_weight": 0.6,
+  "reserved_test_cases": 1000,
+  "seed": 2026110915,
+  "selected_new_conversations": 4096,
+  "selected_replay_conversations": 4096,
+  "selection": "Highest dev key with preservation guards; one finalist is frozen before reserved test or new public benchmark evaluation.",
+  "trials": [
+    {
+      "mixture": {
+        "abstention": 0.4,
+        "dialogue": 0.2,
+        "grounded": 0.4
+      },
+      "name": "Extraction and appropriate abstention",
+      "parent": "attempt5"
+    },
+    {
+      "mixture": {
+        "abstention": 0.4,
+        "dialogue": 0.2,
+        "grounded": 0.4
+      },
+      "name": "Matched repair from parent2000",
+      "parent": "parent2000"
+    },
+    {
+      "mixture": {
+        "abstention": 0.1,
+        "constraints": 0.65,
+        "dialogue": 0.15,
+        "grounded": 0.1
+      },
+      "name": "Practical combined instructions",
+      "parent": "attempt5"
+    },
+    {
+      "mixture": {
+        "abstention": 0.1,
+        "dialogue": 0.15,
+        "grounded": 0.15,
+        "reasoning": 0.6
+      },
+      "name": "Short checked reasoning",
+      "parent": "attempt5"
+    },
+    {
+      "mixture": null,
+      "name": "Development-selected combination",
+      "parent": null
+    }
+  ],
+  "updates_per_attempt": 256,
+  "warmup_fraction": 0.1
+}

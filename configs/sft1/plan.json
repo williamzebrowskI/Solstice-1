@@ -1,0 +1,189 @@
+{
+  "adaptation": {
+    "adapter_compute": "float32",
+    "alpha": 64,
+    "base_compute": "bfloat16",
+    "dropout": 0.0,
+    "expected_trainable_parameters": 3785856,
+    "layers": "all",
+    "method": "lora",
+    "rank": 32,
+    "targets": [
+      "attn.qkv_proj",
+      "attn.proj"
+    ],
+    "trainable_token_ids": [
+      2,
+      3
+    ]
+  },
+  "answer_max_tokens": {
+    "constraints": 320,
+    "dialogue": 256,
+    "general": 256,
+    "grounded": 160,
+    "knowledge": 80,
+    "rewrite": 320,
+    "skills": 160,
+    "social": 128
+  },
+  "authored_holdouts": {
+    "constraints": 128,
+    "dialogue": 128,
+    "skills": 192
+  },
+  "authored_quotas": {
+    "constraints": 4200,
+    "dialogue": 6800,
+    "skills": 12000
+  },
+  "baseline_cache": "${WORKSPACE}/pretraining/prepared/chat_adapter_search_20261108/baseline_cache",
+  "batches": [
+    8
+  ],
+  "betas": [
+    0.9,
+    0.95
+  ],
+  "checked_components": [
+    "knowledge",
+    "grounded",
+    "skills",
+    "constraints",
+    "dialogue"
+  ],
+  "comparison_checkpoint": "${WORKSPACE}/reports/benchmarks/deep44-reliable-chat-167-fp32-20261106/choices/checkpoint",
+  "component_quotas": {
+    "constraints": 6200,
+    "dialogue": 8000,
+    "general": 4800,
+    "grounded": 11000,
+    "knowledge": 4000,
+    "rewrite": 1000,
+    "skills": 12000,
+    "social": 1000
+  },
+  "components": [
+    "general",
+    "knowledge",
+    "grounded",
+    "skills",
+    "constraints",
+    "dialogue",
+    "social",
+    "rewrite"
+  ],
+  "epochs": 2,
+  "eps": 1e-08,
+  "eval_every": 200,
+  "eval_examples_per_component": 64,
+  "execution": "single-mac",
+  "final_lr": 2e-05,
+  "format": "opensml-verified-chat-v2",
+  "generated_eval_per_component": 64,
+  "grad_accum": 8,
+  "grad_clip": 1.0,
+  "keep_checkpoints": 6,
+  "log_every": 10,
+  "max_messages": 8,
+  "max_repetition_rate": 0.05,
+  "max_retention_loss_increase": 0.03,
+  "max_sequence_length": 2048,
+  "min_domain_pass_cases": {
+    "constraints": 24,
+    "dialogue": 32,
+    "grounded": 20,
+    "knowledge": 24,
+    "skills": 16
+  },
+  "min_natural_stop": 0.95,
+  "min_task_gain_cases": 8,
+  "minimum_source_tokens": 42000000000,
+  "output": "${WORKSPACE}/pretraining/runs/deep44_adapter_trial_09_replica_20261108",
+  "peak_lr": 0.0002,
+  "prepared": "${WORKSPACE}/pretraining/prepared/adapter_trial_09_replica_20261108/data",
+  "public_holdouts": {
+    "constraints_smol": 32,
+    "dialogue_smol": 64,
+    "general_smol": 64,
+    "grounded_no": 32,
+    "grounded_yes": 96,
+    "knowledge": 128,
+    "rewrite_smol": 32,
+    "social": 32
+  },
+  "public_quotas": {
+    "constraints_smol": 2000,
+    "dialogue_smol": 1200,
+    "general_smol": 4800,
+    "grounded_no": 2750,
+    "grounded_yes": 8250,
+    "knowledge": 4000,
+    "rewrite_smol": 1000,
+    "social": 1000
+  },
+  "qualitative_eval_per_component": 8,
+  "regression_patience": 2,
+  "replay_length": 512,
+  "replay_objective_weight": 0.2,
+  "replay_policy": "prose-only",
+  "replay_rows_per_update": 16,
+  "retention": "${WORKSPACE}/pretraining/data/deep44_pretraining_validation_20261102",
+  "seed": 202611053,
+  "selection_reference": "Retained checkpoint 167 for behavior; exact FP32 cooled 42B base for prose retention",
+  "sft_objective_weight": 0.8,
+  "sft_rows_per_update": 48,
+  "source_checkpoint": "${WORKSPACE}/pretraining/runs/deep44_cooldown_2b_20261107/step_0320445_08b689895ed2",
+  "source_run": "${WORKSPACE}/pretraining/runs/deep44_cooldown_2b_20261107",
+  "sources": [
+    {
+      "label": "smol",
+      "license": "apache-2.0",
+      "parquet_urls": [
+        "https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/data/train-00000-of-00004.parquet",
+        "https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/data/train-00001-of-00004.parquet",
+        "https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/data/train-00002-of-00004.parquet",
+        "https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/data/train-00003-of-00004.parquet"
+      ],
+      "repo": "HuggingFaceTB/smol-smoltalk",
+      "revision": "f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc",
+      "split": "train"
+    },
+    {
+      "label": "social",
+      "license": "see upstream component license",
+      "parquet_urls": [
+        "https://huggingface.co/datasets/HuggingFaceTB/smoltalk/resolve/5feaf2fd3ffca7c237fc38d1861bc30365d48ffa/data/everyday-conversations/train-00000-of-00001.parquet"
+      ],
+      "repo": "HuggingFaceTB/smoltalk",
+      "revision": "5feaf2fd3ffca7c237fc38d1861bc30365d48ffa",
+      "split": "train"
+    },
+    {
+      "label": "squad",
+      "license": [
+        "cc-by-sa-4.0"
+      ],
+      "parquet_urls": [
+        "https://huggingface.co/datasets/rajpurkar/squad_v2/resolve/3ffb306f725f7d2ce8394bc1873b24868140c412/squad_v2/train-00000-of-00001.parquet"
+      ],
+      "repo": "rajpurkar/squad_v2",
+      "revision": "3ffb306f725f7d2ce8394bc1873b24868140c412",
+      "split": "train"
+    },
+    {
+      "label": "sciq",
+      "license": "cc-by-nc-3.0",
+      "parquet_urls": [
+        "https://huggingface.co/datasets/allenai/sciq/resolve/2c94ad3e1aafab77146f384e23536f97a4849815/data/train-00000-of-00001.parquet"
+      ],
+      "repo": "allenai/sciq",
+      "revision": "2c94ad3e1aafab77146f384e23536f97a4849815",
+      "split": "train"
+    }
+  ],
+  "strategy": "Fresh 42B base, tied chat tokens, rank 32 attention adapters; 2 complete passes. Fixed data, checks and benchmark protocol.",
+  "tokenizer": "${WORKSPACE}/reference/opensml-150m/tokenizer/bytebpe32k_v1",
+  "warmup_fraction": 0.05,
+  "weight_decay": 0.0
+}

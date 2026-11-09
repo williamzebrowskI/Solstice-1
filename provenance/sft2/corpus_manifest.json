@@ -1,0 +1,223 @@
+{
+  "counts": {
+    "dev": {
+      "assistant_tokens": 61482,
+      "assistant_turns": 1364,
+      "components": {
+        "constraints": 160,
+        "dialogue": 192,
+        "general": 64,
+        "grounded": 128,
+        "knowledge": 128,
+        "rewrite": 32,
+        "skills": 192,
+        "social": 32
+      },
+      "conversations": 928,
+      "input_tokens": 139881,
+      "multiple_exchanges": 224,
+      "subsets": {
+        "sciq": 128,
+        "smol": 128,
+        "smol_constraints": 32,
+        "smol_rewrite": 32,
+        "social": 32,
+        "squad": 128,
+        "verified_constraints": 128,
+        "verified_dialogue": 128,
+        "verified_skills": 192
+      }
+    },
+    "test": {
+      "assistant_tokens": 60677,
+      "assistant_turns": 1368,
+      "components": {
+        "constraints": 160,
+        "dialogue": 192,
+        "general": 64,
+        "grounded": 128,
+        "knowledge": 128,
+        "rewrite": 32,
+        "skills": 192,
+        "social": 32
+      },
+      "conversations": 928,
+      "input_tokens": 142958,
+      "multiple_exchanges": 224,
+      "subsets": {
+        "sciq": 128,
+        "smol": 128,
+        "smol_constraints": 32,
+        "smol_rewrite": 32,
+        "social": 32,
+        "squad": 128,
+        "verified_constraints": 128,
+        "verified_dialogue": 128,
+        "verified_skills": 192
+      }
+    },
+    "train": {
+      "assistant_tokens": 2220304,
+      "assistant_turns": 64880,
+      "components": {
+        "constraints": 6200,
+        "dialogue": 8000,
+        "general": 4800,
+        "grounded": 11000,
+        "knowledge": 4000,
+        "rewrite": 1000,
+        "skills": 12000,
+        "social": 1000
+      },
+      "conversations": 48000,
+      "input_tokens": 6443757,
+      "multiple_exchanges": 9000,
+      "subsets": {
+        "sciq": 4000,
+        "smol": 6000,
+        "smol_constraints": 2000,
+        "smol_rewrite": 1000,
+        "social": 1000,
+        "squad": 11000,
+        "verified_constraints": 4200,
+        "verified_dialogue": 6800,
+        "verified_skills": 12000
+      }
+    }
+  },
+  "files": {
+    "dev.jsonl": {
+      "bytes": 1353868,
+      "sha256": "010a15a0194b445e88dbc523358a62d90655dc291a52f76190c32d908655fe82"
+    },
+    "dev.mask.npy": {
+      "bytes": 140937,
+      "sha256": "b146b3dfc8d2f7a404501d203daac17e4f9027b87598578c95431c753d779b43"
+    },
+    "dev.offsets.npy": {
+      "bytes": 7560,
+      "sha256": "687d1fb8ad30f30844d98d1f3a28172ecafedd16dc7cbec15b9393fab346a878"
+    },
+    "dev.tokens.npy": {
+      "bytes": 563364,
+      "sha256": "f42e9c7ad9e4aa180d391b04eafd52af0dd16b92e2fd8a9cfdac8d89f32a96ed"
+    },
+    "replay.json": {
+      "bytes": 1784807,
+      "sha256": "4875346a05d79d388b6c8299b97d4ae056bcf3d79f0c99e65825184585fc6e99"
+    },
+    "replay.npy": {
+      "bytes": 65664128,
+      "sha256": "9afe5e2eb5c2fff0ec763efab005d8b00b6c9f825c54f2d91636692be73936dc"
+    },
+    "test.jsonl": {
+      "bytes": 1353627,
+      "sha256": "07282f8c62bff7563e73921abe85e868df9f3d32096ca747b364a271b019dd9e"
+    },
+    "test.mask.npy": {
+      "bytes": 144014,
+      "sha256": "8227fade7cd5adff936f5ac7f97a31067cd694ad600d2e8fe34ef924e6322705"
+    },
+    "test.offsets.npy": {
+      "bytes": 7560,
+      "sha256": "1c491e85c0ea72f886e05677d3b72ccb7617783ea59b745ae6b56ceb8f037a0a"
+    },
+    "test.tokens.npy": {
+      "bytes": 575672,
+      "sha256": "38430e3a166b98cab203bc6eed8fdd0d090076a5b7cb6249ebfafa482dc7da32"
+    },
+    "train.jsonl": {
+      "bytes": 62830660,
+      "sha256": "f4837b42390186dbd8a412f2eb991f5bea68e17c662ab5d458333aa82c128ee9"
+    },
+    "train.mask.npy": {
+      "bytes": 6491885,
+      "sha256": "7b9a61a9c4392cbdfd709778708683b8d30001366f65f5ee2651561c43d5c199"
+    },
+    "train.offsets.npy": {
+      "bytes": 384136,
+      "sha256": "ed28cf6943dfdfe6ed03756baeee6ff8609318f9e98e3d81320f610b6b095c5b"
+    },
+    "train.tokens.npy": {
+      "bytes": 25967156,
+      "sha256": "5eb48e97c09f0aebcfef312dd3a19e69c7b3982f72286d5aaa979356830b5ec5"
+    }
+  },
+  "format": "opensml-verified-chat-v2",
+  "limitations": [
+    "Public synthetic/human answers are filtered and sample-reviewed, not independently verified fact by fact.",
+    "SQuAD span checks verify annotations, not every annotation’s semantic correctness.",
+    "Exact prompt exclusions and grouped splits do not prove semantic decontamination.",
+    "Authored operations overlap across splits; entities and instruction templates are partitioned. Public constraint properties are checked, but semantics are sample-reviewed."
+  ],
+  "plan": "b8f6e145a7d858e4e81ad4c8e2618c99d1f1c4b36e833f9cc459f6b34ab39d8e",
+  "sources": [
+    {
+      "label": "smol",
+      "license": "apache-2.0",
+      "parquet_urls": [
+        "https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/data/train-00000-of-00004.parquet",
+        "https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/data/train-00001-of-00004.parquet",
+        "https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/data/train-00002-of-00004.parquet",
+        "https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk/resolve/f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc/data/train-00003-of-00004.parquet"
+      ],
+      "repo": "HuggingFaceTB/smol-smoltalk",
+      "revision": "f73fe857d519ff6ac5af2ea67c4d3834da7b8bcc",
+      "split": "train"
+    },
+    {
+      "label": "social",
+      "license": "see upstream component license",
+      "parquet_urls": [
+        "https://huggingface.co/datasets/HuggingFaceTB/smoltalk/resolve/5feaf2fd3ffca7c237fc38d1861bc30365d48ffa/data/everyday-conversations/train-00000-of-00001.parquet"
+      ],
+      "repo": "HuggingFaceTB/smoltalk",
+      "revision": "5feaf2fd3ffca7c237fc38d1861bc30365d48ffa",
+      "split": "train"
+    },
+    {
+      "label": "squad",
+      "license": [
+        "cc-by-sa-4.0"
+      ],
+      "parquet_urls": [
+        "https://huggingface.co/datasets/rajpurkar/squad_v2/resolve/3ffb306f725f7d2ce8394bc1873b24868140c412/squad_v2/train-00000-of-00001.parquet"
+      ],
+      "repo": "rajpurkar/squad_v2",
+      "revision": "3ffb306f725f7d2ce8394bc1873b24868140c412",
+      "split": "train"
+    },
+    {
+      "label": "sciq",
+      "license": "cc-by-nc-3.0",
+      "parquet_urls": [
+        "https://huggingface.co/datasets/allenai/sciq/resolve/2c94ad3e1aafab77146f384e23536f97a4849815/data/train-00000-of-00001.parquet"
+      ],
+      "repo": "allenai/sciq",
+      "revision": "2c94ad3e1aafab77146f384e23536f97a4849815",
+      "split": "train"
+    }
+  ],
+  "token_stats": {
+    "dev": {
+      "max_sequence": 927,
+      "p50": 91.0,
+      "p95": 559.65,
+      "truncated": 0
+    },
+    "test": {
+      "max_sequence": 1097,
+      "p50": 89.0,
+      "p95": 573.8999999999999,
+      "truncated": 0
+    },
+    "train": {
+      "max_sequence": 1384,
+      "p50": 91.0,
+      "p95": 325.0,
+      "truncated": 0
+    }
+  },
+  "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb",
+  "total_steps": 2000
+}

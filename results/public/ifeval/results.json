@@ -1,0 +1,71 @@
+{
+  "complete": true,
+  "context_limited": 0,
+  "evaluated": 541,
+  "expected": 541,
+  "metrics": {
+    "loose": {
+      "instruction_accuracy": 0.3249400479616307,
+      "instructions": 834,
+      "prompt_accuracy": 0.1922365988909427,
+      "prompts": 541
+    },
+    "strict": {
+      "instruction_accuracy": 0.3009592326139089,
+      "instructions": 834,
+      "prompt_accuracy": 0.17929759704251386,
+      "prompts": 541
+    }
+  },
+  "protocol": {
+    "checkpoint": "${WORKSPACE}/reports/sft_search/chat_repair_search_20261109/final/public/choices/checkpoint",
+    "compute_precision": "float32",
+    "context_limit": 2048,
+    "dataset": "google/IFEval",
+    "dataset_revision": "966cd89545d6b6acfd7638bc708b98261ca58e84",
+    "evaluator_files": {
+      "__init__.py": "8f77aceef943735bec21b7f42630794cad7ce20d32b72a83889e20274fb6df31",
+      "evaluation_lib.py": "35decc06000718487f44d7deafa6d3f48a8ec0886281edf40162c0265b7d248c",
+      "instructions.py": "60e086f5342a03ce8e18b64bbcccf86308f523c08aa826707a562150a52f3edf",
+      "instructions_registry.py": "ec92d72c264f6d906978613085db262356174300370a3fffe6fefd5969ce9cfc",
+      "instructions_util.py": "a73797261eee5bf447e279d82a2b700b1bdd3cb1193412dbab1270a85832bc6b"
+    },
+    "format": "opensml-ifeval-v1",
+    "google_research_commit": "83f1e7b59e762648c953de751d31f75720683622",
+    "max_tokens": 1024,
+    "metadata_sha256": "f1adf7d2c3a91ee6a4643beb26ce8d9cdfbdb69156e96439d01be657abf4ad20",
+    "mlx_enable_tf32": "default",
+    "model_implementation": {
+      "attention_impl": "vanilla",
+      "bias": false,
+      "ce_impl": "reference",
+      "d_model": 576,
+      "ffn_impl": "reference",
+      "loss_dtype": "float32",
+      "max_seq_len": 2048,
+      "mlp_multiple_of": 256,
+      "mlp_ratio": 4.0,
+      "n_heads": 9,
+      "n_kv_heads": 3,
+      "n_layers": 44,
+      "qk_norm": true,
+      "vocab_size": 32000
+    },
+    "model_sha256": "7b2d8777040f05d8e0849acac4e45013b2de3d72145c363cd22825e80115c515",
+    "prompt_truncation": false,
+    "repetition_penalty": 1,
+    "runner_sha256": "10ae9d2c49236c377d6e9952674b14289f5f92c310c29cbe592a40c98a14c752",
+    "serialization": "native SFT chat template",
+    "step": 128,
+    "system_prompt": null,
+    "temperature": 0,
+    "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb",
+    "weight_provenance": {
+      "precision": "FP32 pretrained masters plus FP32 LoRA and tied chat-token deltas",
+      "resume": "Use the enclosing adapter bundle; this is an inference export",
+      "trainable_parameters": 3785856
+    }
+  },
+  "scope": "Official pinned IFEval strict/loose checks; native SFT generation, no harness parity claim.",
+  "token_limited": 130
+}

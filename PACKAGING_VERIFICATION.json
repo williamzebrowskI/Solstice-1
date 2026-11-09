@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-09",
+  "model": "OpenSML/Solstice-1",
+  "parameter_label": "175M",
+  "parameters": 174202432,
+  "status": "passed",
+  "weight_sha256": "7b2d8777040f05d8e0849acac4e45013b2de3d72145c363cd22825e80115c515",
+  "environment": {
+    "python": "3.11.13",
+    "macos": "27.0.1",
+    "machine": "arm64",
+    "mlx": "0.32.3",
+    "numpy": "2.4.2",
+    "tokenizers": "0.22.2"
+  },
+  "clean_environment": true,
+  "external_working_directory": true,
+  "inference_dependencies_from_training_checkout": false,
+  "saved_responses_matched": 27,
+  "saved_responses_checked": 27,
+  "checks": [
+    "Tokenizer round trips and literal structural-token isolation",
+    "Explicit chat token boundaries",
+    "Invalid roles, empty messages and turn orders rejected",
+    "Output budget bounds and context overflow rejected",
+    "Non-finite and out-of-range temperatures rejected",
+    "Fixed-seed sampling is repeatable in this runtime"
+  ],
+  "full_public_suite_rerun": false,
+  "public_suite_evidence": "Previously completed full public suite on the identical FP32 tensor file.",
+  "details": "results/package_inference_verification.json",
+  "training_reproduction": "Not rerun. Historical sources/configs are an audit archive with documented external prerequisites."
+}

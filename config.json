@@ -1,0 +1,31 @@
+{
+  "checkpoint": "step_0000128_5937a6def881",
+  "compute_precision": "float32",
+  "context_limit": 2048,
+  "format": "opensml-native-chat-v1",
+  "license": "apache-2.0",
+  "model": {
+    "attention_impl": "vanilla",
+    "bias": false,
+    "ce_impl": "reference",
+    "d_model": 576,
+    "ffn_impl": "reference",
+    "loss_dtype": "float32",
+    "max_seq_len": 2048,
+    "mlp_multiple_of": 256,
+    "mlp_ratio": 4.0,
+    "n_heads": 9,
+    "n_kv_heads": 3,
+    "n_layers": 44,
+    "qk_norm": true,
+    "vocab_size": 32000
+  },
+  "model_id": "OpenSML/Solstice-1",
+  "model_name": "Solstice-1",
+  "organization": "OpenSML",
+  "parameter_label": "175M",
+  "parameters": 174202432,
+  "serialization": "explicit-ids-assistant-mask-v1",
+  "tokenizer_fingerprint": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb",
+  "weight_sha256": "7b2d8777040f05d8e0849acac4e45013b2de3d72145c363cd22825e80115c515"
+}

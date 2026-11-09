@@ -1,0 +1,31 @@
+{
+  "created_ns": 1794244978447008000,
+  "files": {
+    "adapters.safetensors": {
+      "bytes": 15160663,
+      "sha256": "50903bac25b42377d714bd7f8f97dd73c412a8b70b798c46c83b170ae683884a"
+    },
+    "inference/manifest.json": {
+      "bytes": 360,
+      "sha256": "666f68164580f45d2cbac2afc1705811a13c45efa71911fb20b9d50aa0079102"
+    },
+    "inference/model.safetensors": {
+      "bytes": 696844242,
+      "sha256": "7b2d8777040f05d8e0849acac4e45013b2de3d72145c363cd22825e80115c515"
+    },
+    "inference/model.safetensors.json": {
+      "bytes": 35799,
+      "sha256": "f1adf7d2c3a91ee6a4643beb26ce8d9cdfbdb69156e96439d01be657abf4ad20"
+    },
+    "optimizer.safetensors": {
+      "bytes": 45484563,
+      "sha256": "fcade77253f9f59b2e0c09c8576f64b3963bf616f36fb3498beee88641140310"
+    },
+    "state.json": {
+      "bytes": 35507,
+      "sha256": "fcddeb9a030bcf8f627b654332489acb8fd8b0fb5a88aa949d98ac78a22f712c"
+    }
+  },
+  "format": "opensml-lora-sft-bundle-v1",
+  "step": 128
+}

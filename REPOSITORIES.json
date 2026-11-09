@@ -1,0 +1,21 @@
+{
+  "model": "Solstice-1",
+  "organization": "OpenSML",
+  "parameter_label": "175M",
+  "license": "Apache-2.0",
+  "release_status": "private review",
+  "repositories": {
+    "github": {
+      "url": "https://github.com/williamzebrowskI/Solstice-1",
+      "visibility": "private",
+      "role": "Native inference code, documentation, training provenance, evaluation evidence"
+    },
+    "huggingface": {
+      "url": "https://huggingface.co/OpenSML/Solstice-1",
+      "visibility": "private",
+      "role": "Complete runnable package, including merged FP32 weights and tokenizer"
+    }
+  },
+  "weight_file": "model.safetensors",
+  "weight_sha256": "7b2d8777040f05d8e0849acac4e45013b2de3d72145c363cd22825e80115c515"
+}

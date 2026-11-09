@@ -1,0 +1,43 @@
+{
+  "counts": {
+    "dev": {
+      "abstention": 60,
+      "constraints": 60,
+      "dialogue": 60,
+      "grounded": 60,
+      "reasoning": 60
+    },
+    "test": {
+      "abstention": 200,
+      "constraints": 200,
+      "dialogue": 200,
+      "grounded": 200,
+      "reasoning": 200
+    },
+    "train": {
+      "abstention": 4096,
+      "constraints": 4096,
+      "dialogue": 4096,
+      "grounded": 4096,
+      "reasoning": 4096
+    }
+  },
+  "files": {
+    "dev.jsonl": "a9c20f71859a9269b4875ef301e45938bb8d36ee62f3d135dcddc1ac6f14f066",
+    "replay.jsonl": "3b7897ad24c215c309b1a693dc6b3606783c678e82f7d595bdc3f9f97d8797ab",
+    "test.jsonl": "abcdf03853c4f00fff1e92cdf5f98d8ee3bea42526c18f15585650b368ddd2f3",
+    "train.jsonl": "c32660b92756608b1c949730c61595dc78d29b0afb3695caf6cfc8397d4acbf5"
+  },
+  "format": "chat-repair-data-v1",
+  "maximum_sequence_tokens": 137,
+  "parents": {
+    "attempt5": "dcab4ad8e4484ad1cc4b32ffbc6352b6a6ff9ea0a4ddccdb8d367d23db098a3f",
+    "parent2000": "f9273450799963b2fd8e61a5e9cb6892be7ba4a2308849623e288302a687a1f7"
+  },
+  "public_prompt_overlap": 0,
+  "replay_sha256": "3b7897ad24c215c309b1a693dc6b3606783c678e82f7d595bdc3f9f97d8797ab",
+  "replay_source": "${WORKSPACE}/pretraining/prepared/parent2000_generalize_20261109/fresh_data/replay.jsonl",
+  "scope": "Verified fictional records and computable text tasks. Historical and public evaluations separately check broader abilities. Test reserved for one development-selected finalist.",
+  "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb",
+  "truncated": 0
+}

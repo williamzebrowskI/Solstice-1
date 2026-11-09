@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use Solstice-1, cite this model and its recorded release revision."
+title: "Solstice-1: a 175M English chat research model"
+authors:
+  - family-names: Zebrowski
+    given-names: William
+type: software
+version: "1.0.0"
+license: Apache-2.0
+url: "https://huggingface.co/OpenSML/Solstice-1"

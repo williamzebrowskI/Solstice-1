@@ -1,0 +1,14 @@
+{
+  "format": "opensml-ifeval-runtime-v1",
+  "dataset": "google/IFEval",
+  "dataset_revision": "966cd89545d6b6acfd7638bc708b98261ca58e84",
+  "google_research_commit": "83f1e7b59e762648c953de751d31f75720683622",
+  "evaluator_blob_sha1": {
+    "evaluation_lib.py": "c87422822f9e1565ca7574ac0b3cee5389c9f44e",
+    "instructions.py": "0007359bd37c7b9c1d9557f8937cb6586d2788a7",
+    "instructions_registry.py": "6b42adcc4c8cc827810ab3efa8a06f02bb48c397",
+    "instructions_util.py": "d50702400738df4378fe286c0090a416f9a172fa"
+  },
+  "provenance": "Local evaluator files byte-match the pinned official Google Research files.",
+  "expected_prompts": 541
+}

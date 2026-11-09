@@ -1,0 +1,6 @@
+{
+  "changes": "Weight bytes unchanged; native inference uses FP32/reference attention and FFN, as in saved benchmarks.",
+  "model_sha256": "7b2d8777040f05d8e0849acac4e45013b2de3d72145c363cd22825e80115c515",
+  "source_bundle": "step_0000128_5937a6def881",
+  "source_metadata_sha256": "f1adf7d2c3a91ee6a4643beb26ce8d9cdfbdb69156e96439d01be657abf4ad20"
+}

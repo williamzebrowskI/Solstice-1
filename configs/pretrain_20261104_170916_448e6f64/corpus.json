@@ -1,0 +1,294 @@
+{
+  "code_validation": {
+    "excluded_content_keys": [
+      "08b5b1ba858dcc4735bb66d304552d51c7b4cb9e09e0c4a5f76ef9847bb6d280",
+      "08cf74e1f4e2c0cd0a6da7e3967c6078df34d77a3f821b46e50c4f7f3fa105cd",
+      "09e9c4d3e6531b853abfc336eb1108890938bfaef18c130dcb34e755fe2c4152",
+      "0d39776a10139d74bcf4be8dd4d5995e79250ddaf0f3aa774ec04fb6ddcb345e",
+      "0d5657b52456eb5c86def02acf3e48318a02f84156ecce6a93b5b163237a54fa",
+      "122be194cc01c08ece5ca2963889fa0f832a9dea93df4b2167df2fb5c52edde9",
+      "1d551c6746418a80059b8a91d59edda84702237c34e91164595eb71b0f407bd4",
+      "226a6abf548fecd027726c22c1955000cb2564cd4cdd59671718b437d1a72539",
+      "2272dc1f261d64ba4a5408767a0c4a4657df2e529896a66914be92dc5895f2ea",
+      "237d921824da9070732b02963c62f472f193b337de7e6b3b71b45f6e326054b2",
+      "2629b2da8684627610d62d8c4d3d85200fec971f88a19300a20495f8dc74a512",
+      "2c38a41f5e6feb03fc2247a084b91916402619870843e22fb53fbc2a8fd330ef",
+      "31d69258a6797aa6563792d0782586ab688e118bed55fad6aa046320c2a70f35",
+      "3632860aeca3ea4b5d684f9c033ed5cc8d3d37cb85eab5526f44e0a578f468b4",
+      "36dde4bc7d0745c15ff12932b830183b79f5a6302bf800d38b58cfdac37f7660",
+      "370e8a14410af597be9dbca64b2f810227ea9ab0d6ff8e25861aad41762cd8f0",
+      "37a28d12641f1f861c6714fcb39d6b384d087ccc8882cdcaeb493041279b1b7a",
+      "389e360ee797751c34139fb80e438c09bc2e633c6eccf84207d4474e7904fa51",
+      "38b715099c0c8ff8a29da8ee6aab0de70511644ecd3536eaaf1daa3c9272a438",
+      "3c4fd1ec175f0d607bc76f0fc403b09bd89f00f39686f4267fbfd579138a699d",
+      "3d4e11b3cadc6694af7692270c0e5fc948dd8a4facf8c541237e6deaf95ce249",
+      "3e552d387eeadfcd6eee143a6448580edc77c3922598e05f49b5a02b13067f4d",
+      "3fcd7df015ad72401934b00142c6b376fc8224f8da40228aa281fde483755340",
+      "418e27e85222a65b6d12a5410b18004231c0a272df29ce7ed12d9f791b16249d",
+      "44a070c90eafff5a7a75a3100acf6625d8b53c988e9eae25f46938eaf606c77e",
+      "47551c7fdcc40c723ffbfb208fef3a50dca21429a3a919a571edbc2449da5ec3",
+      "4ba039726827e69cab1d99be769d9557f9afde6a324a0afbfb8bc2e13f3108e0",
+      "4e82c21a44381ffdd7267a55cb62bd895e67becb654859dcab77927a260787f0",
+      "518c0cb14dc7a6209c53d126f063084e43868bba49e7ad6209bbf7f83e717547",
+      "5329ebfcb0b7909c99fd9263cd32fab1d4c1127214370d0ef7eca45265280454",
+      "535f61e917bc83dd829c1e5879e617d3eb2a10adf2c24202a6428ce8a1f19564",
+      "56a15f625a58b7bfe2ef7f5c8a1e3f997cc655da612f92fba410ba0b40a5c88b",
+      "5903890e66f7fbcba23d7b8a660c854ab38b1032ec93b9e37000ef68c49187dd",
+      "5d2d9776d96b3b3fb7442d05fd6a19884f7c15885adc2a9f6f63beb801b653c3",
+      "66200637354d0023e5bfc1267129d30cc741207a56485da56d507a5027dd0f1e",
+      "6919decb44a2962f4016a5a80ad5b3e1418589547ee4e44eed44e8ae49c5d9d5",
+      "69296bb650fc3edb51fc22a87570c8fe74ae5470822f5b8a8d7601846f882510",
+      "69b1d10f8738d815c86ca6dbf4b25a4fb7e026dc82ebbc10d77a0705c33558be",
+      "6def147f96b57191c11b3e5837244b9cb2782d4fcbac2cab5ec117e9e057dcd2",
+      "6f2fd18b4416df36e733e50560f857ba928d8f5a969dbd8b4f90a9ad1893d664",
+      "6fa61db6aa2c6c57642d868a0c8de647a5d589feafa7113d3fdbea54ed00564d",
+      "70def7eb6110256e84436e057be4257187df903616a924e55567517b922aa9dc",
+      "70f0b4ca4af111a506c62323277135a95cbc850584adbbd2b328855450f093f1",
+      "776e9930bc4fb4e3ae4027dc5d911a0ae03aa5cdb1ec55e6e67cd701cd04735c",
+      "806a4ecae59173c6f899197db153877670d14c8ced2cffca1f7230c40a4138ce",
+      "890b111b6bf7e6cb62598a049dafa5fbf0d1b20cd00d6816b0bd74363139b8d1",
+      "8ca2ff38d8d25fe96382d157d660a95e64581f194c907ecf2bfef8dc091f21ec",
+      "a7ebe97f86560ac023f5c7032f2ae5e0b156235ffebaef667012d72c090dcf78",
+      "b12d9d5665a7a7c1276d2c66a1e0b248f8efedb132c42d7058f4faf86538abd1",
+      "b31ba3a54899565789422821d9069be1a08adc6f1933934a7522f32f77ee62d9",
+      "b41b2b21b7df3ae441ef4b127ce894b74ab929d3f2100d02726fdb0dac61fe06",
+      "b6919fef0a28f857fb5659a6919dd8e7a4d46477bffb18fe33653bcf58fc669b",
+      "bb57476f00cf4dd574bd4364cec4da646706c778f6570e5c62c4b4da58289dad",
+      "bb9f2e9774508071947a739285a72b2e75ad7e33fe3942936c5adeb9ad741851",
+      "c261eaf172509ed43f1e733dcc08e79e55dc5f7b6e6c63d834071fa6823ec800",
+      "c32e278f6c6b67fa5de35e8a3df3ae90f7b1e285590da5c7932f5286ee7c0439",
+      "c7d120103d1cf9fc3142cb36645bd54543072f579fd0cd4af64158fd797341af",
+      "c81cf714da2e5cf627222a910a602c42ff2b445e9646e1bf1ce5ea4a480763af",
+      "c93274b966ce10113e9559fdd00e758a8dcd1b4fba5dc49d2f50b2a9b5126e4b",
+      "ca60dfcd82dc85c7f1aac743c9ebc799721b59a404f25717e8d45ca053802160",
+      "cb8e3691b4513a063f738f9b0e2adaf7ad6f54e033b700c2f3eae0928c356df2",
+      "ce298eec02cdda9b80999d6d4d5f83e98d8011c742d3af26c4f92a794bc2cc85",
+      "d126c3c9fd2ddf8f774e605e50ebfb82da972cd17b77b3ed7061c2910cdbb09b",
+      "d160f7f0150624a438a259ac94c4fa5fc72ae656678b764af153a38c4cb4a280",
+      "d5f7d6a12cd4b124fbbcb8ab893bb20f030ecce4def4d21c51079599c01542fa",
+      "d6f8e71eb189de2073f985bf055252ba8ba0b6853ca10562e9db45ab09461750",
+      "d98e902d44585100466d5e5991280decb93b938f74d96c0a6d3ab642e6f05407",
+      "dacf411bc176fa1c64f5656606848ac167f63a52e7c235f2a21453046ecb66db",
+      "dec4288d321e694d1a15dadabbd882f75fbfd151d487bbfa7eecd7905a049c6d",
+      "df04a03f7ebe2bdb6b65c40178342f3abf3655442b5ee9ace187093a4b25b4e1",
+      "e2ea5f987fe3ddad84ea91169baa6931a69e82c2827ba1c88989267a83a12e47",
+      "e5083ed8625be5f1b504ea1e6505d0f7390cdd3364a292bbfaa00efbe45333eb",
+      "e5b14324d302b7849c871328b2e65fbe957fefa941e10314bdc1b693b9f449c3",
+      "e9c0bef83bed2a0077d649defd6b96fb572eb9e5feefe943748938e612176fbc",
+      "ebeacc07897d24a98c18af4307545e213e5d234b8bb358cf3f4b868d97ce8f2c",
+      "ec9af0ec16d18cf655ba0ae197488c076e0a5b6dfddc21a567a573b525ab5183",
+      "ed0252613ae99ddda19bf87323b80e370cb0f0bbae5c2263655a3ce4aaad4464",
+      "f05dac8db278593a240548d207e047a61dab771c54903933c9cad0b28045905f",
+      "f51376acd8a20affee0e785e25c86d081aa74253ee29d6327263a59a5bdfe26c",
+      "fc7812e727a9b2a19481d9f8633fb62bd7ff347964246e5fe5d987aa48ef8f17",
+      "fd1fa0111249a7806808497f416d423641435652f373bb9e4cfa7c3650d68c1e",
+      "fd9734ecdefbb34e470ca31c77bd71b49317e0ab7797200f170152ab1cf63c20"
+    ],
+    "format": "sml-python-sql-heldout-v1",
+    "seq_len": 2048,
+    "sequences": 16,
+    "sha256": "641529f48090540b75bb444deca63680f73ffd7b542639398a2d6c47f4e9e170",
+    "sources": "e9ce1db0add5eb8b8ba38e403c6efdf30ef0106a97c298fc0ef1eb8593f2b39e",
+    "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+  },
+  "max_bytes": 200000,
+  "max_rows_per_source": 50000000,
+  "min_chars": 200,
+  "name": "deep44-prose80-python15-sql5-public-v1",
+  "reference_corpus": {
+    "max_bytes": 200000,
+    "max_rows_per_source": 50000000,
+    "min_chars": 200,
+    "name": "research-20b-live-english-prose-v1",
+    "seed": 7337,
+    "shuffle_buffer": 10000,
+    "sources": [
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "fineweb-edu-dedup",
+        "label": "web",
+        "license": "ODC-BY; preserve underlying source notices",
+        "repo": "HuggingFaceTB/smollm-corpus",
+        "revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+        "split": "train",
+        "text_field": "text",
+        "weight": 70
+      },
+      {
+        "columns": [
+          "text",
+          "id",
+          "edu_int_score"
+        ],
+        "label": "dclm",
+        "license": "CC-BY-4.0",
+        "min_score": {
+          "field": "edu_int_score",
+          "value": 3
+        },
+        "repo": "HuggingFaceTB/dclm-edu",
+        "revision": "dbad8ad71224482740cd9c9d353591adbf62fe04",
+        "split": "train",
+        "text_field": "text",
+        "weight": 20
+      },
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "en",
+        "label": "wiki",
+        "license": "CC-BY-SA-4.0 / GFDL",
+        "repo": "HuggingFaceFW/finewiki",
+        "revision": "8bd13e72e6a002407649b3e898535f42ceb1aeb9",
+        "split": "train",
+        "text_field": "text",
+        "weight": 10
+      }
+    ],
+    "split_buckets": 10000,
+    "text_filter": "english-prose-v1"
+  },
+  "seed": 7337,
+  "shuffle_buffer": 10000,
+  "sources": [
+    {
+      "columns": [
+        "text",
+        "id"
+      ],
+      "config": "fineweb-edu-dedup",
+      "label": "web",
+      "license": "ODC-BY; preserve underlying source notices",
+      "repo": "HuggingFaceTB/smollm-corpus",
+      "revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+      "split": "train",
+      "text_field": "text",
+      "weight": 56
+    },
+    {
+      "columns": [
+        "text",
+        "id",
+        "edu_int_score"
+      ],
+      "label": "dclm",
+      "license": "CC-BY-4.0",
+      "min_score": {
+        "field": "edu_int_score",
+        "value": 3
+      },
+      "repo": "HuggingFaceTB/dclm-edu",
+      "revision": "dbad8ad71224482740cd9c9d353591adbf62fe04",
+      "split": "train",
+      "text_field": "text",
+      "weight": 16
+    },
+    {
+      "columns": [
+        "text",
+        "id"
+      ],
+      "config": "en",
+      "label": "wiki",
+      "license": "CC-BY-SA-4.0 / GFDL",
+      "repo": "HuggingFaceFW/finewiki",
+      "revision": "8bd13e72e6a002407649b3e898535f42ceb1aeb9",
+      "split": "train",
+      "text_field": "text",
+      "weight": 8
+    },
+    {
+      "code_filter": {
+        "language": "Python",
+        "require_explicit_license": false
+      },
+      "columns": [
+        "blob_id",
+        "repo_name",
+        "path",
+        "src_encoding",
+        "length_bytes",
+        "int_score",
+        "detected_licenses",
+        "license_type",
+        "language",
+        "text",
+        "download_success"
+      ],
+      "config": "default",
+      "label": "python",
+      "license": "Original source repository licenses; preserve provenance and notices",
+      "min_score": {
+        "field": "int_score",
+        "value": 3
+      },
+      "repo": "hongliu9903/stack_edu_python",
+      "revision": "76eeb3eb59bbad948e4fbfae9f4e6159d6f8f376",
+      "split": "train",
+      "text_field": "text",
+      "upstream_config": "Python",
+      "upstream_repo": "HuggingFaceTB/stack-edu",
+      "upstream_revision": "eeec5caac5cc3758a18f1d3ba4416837a9ba814c",
+      "weight": 15
+    },
+    {
+      "additional_sources": [
+        {
+          "columns": [
+            "db_id",
+            "schema",
+            "sql",
+            "question",
+            "external_knowledge"
+          ],
+          "config": "default",
+          "renderer": "synsql-schema-query-v1",
+          "repo": "iNeil77/SynSQL-2.5M",
+          "revision": "56fed46215366defbbc3d7d13064349bbd990a8f",
+          "split": "train",
+          "upstream_repo": "seeklhy/SynSQL-2.5M",
+          "upstream_revision": "cca2c84cc3b41afa6b51534762a6a3a4a420baca"
+        }
+      ],
+      "code_filter": {
+        "language": "SQL",
+        "require_explicit_license": false
+      },
+      "columns": [
+        "blob_id",
+        "repo_name",
+        "path",
+        "src_encoding",
+        "length_bytes",
+        "int_score",
+        "detected_licenses",
+        "license_type",
+        "language",
+        "text",
+        "download_success"
+      ],
+      "config": "default",
+      "label": "sql",
+      "license": "Original source repository licenses; preserve provenance and notices",
+      "min_score": {
+        "field": "int_score",
+        "value": 3
+      },
+      "repo": "hongliu9903/stack_edu_sql",
+      "revision": "079ce8b93c0e83a767ee61af20b9de9931a7e07c",
+      "split": "train",
+      "text_field": "text",
+      "upstream_config": "SQL",
+      "upstream_repo": "HuggingFaceTB/stack-edu",
+      "upstream_revision": "eeec5caac5cc3758a18f1d3ba4416837a9ba814c",
+      "weight": 5
+    }
+  ],
+  "split_buckets": 10000,
+  "text_filter": "english-prose-v1"
+}

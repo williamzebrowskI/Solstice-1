@@ -1,0 +1,49 @@
+{
+  "counts": {
+    "fresh_test": {
+      "constraints": 64,
+      "dialogue": 64,
+      "grounded": 64,
+      "skills": 64
+    },
+    "replay": {
+      "constraints": 1000,
+      "dialogue": 1000,
+      "general": 1500,
+      "grounded": 1000,
+      "knowledge": 1500,
+      "rewrite": 500,
+      "skills": 1000,
+      "social": 500
+    },
+    "train": {
+      "constraints": 2000,
+      "dialogue": 2000,
+      "grounded": 2000,
+      "skills": 2000
+    }
+  },
+  "evaluation_exclusions": {
+    "dev": "010a15a0194b445e88dbc523358a62d90655dc291a52f76190c32d908655fe82",
+    "test": "07282f8c62bff7563e73921abe85e868df9f3d32096ca747b364a271b019dd9e"
+  },
+  "files": {
+    "fresh_test.jsonl": "506e73dce8a82e3f948534ff0f0a893b5cd36a05d2f5d65f98f7a2e1cf7091df",
+    "replay.jsonl": "3b7897ad24c215c309b1a693dc6b3606783c678e82f7d595bdc3f9f97d8797ab",
+    "train.jsonl": "0a90cbb82b2587f20026dd21c9d1697ab37016c7714e19caade3ce4c94856dcc"
+  },
+  "format": "parent2000-fresh-conversations-v1",
+  "limitations": [
+    "Fresh examples are computed and templated, not a broad human-chat corpus.",
+    "Replay includes previously curated public responses; not all public facts have been independently verified.",
+    "Fresh evaluation separates wording and entities but shares task families. Historical 320/704 panels are reused."
+  ],
+  "maximum_new_sequence": 114,
+  "parent_manifest": "f9273450799963b2fd8e61a5e9cb6892be7ba4a2308849623e288302a687a1f7",
+  "rejected": {
+    "duplicate": 32
+  },
+  "source_training_hash": "f4837b42390186dbd8a412f2eb991f5bea68e17c662ab5d458333aa82c128ee9",
+  "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb",
+  "truncated": 0
+}

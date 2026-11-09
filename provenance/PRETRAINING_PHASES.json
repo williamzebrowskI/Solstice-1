@@ -1,0 +1,1136 @@
+[
+  {
+    "corpus": "configs/pretrain_20261022_121457_b3d5f398/corpus.json",
+    "name": "pretrain_20261022_121457_b3d5f398",
+    "original_corpus_sha256": "c35100988b38c2e4bdb141e2bee37e73e731cc9240891360f6a0aba310be0632",
+    "original_recipe_sha256": "ddf14c4cef8a4fb66392a27e87f8c5a807a88da35fe61599f252c9eba91bec29",
+    "recipe": "configs/pretrain_20261022_121457_b3d5f398/recipe.json",
+    "run": "deep44_prose_20b_20261022",
+    "sources": [
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "fineweb-edu-dedup",
+        "label": "web",
+        "license": "ODC-BY; preserve underlying source notices",
+        "repo": "HuggingFaceTB/smollm-corpus",
+        "revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+        "split": "train",
+        "text_field": "text",
+        "weight": 70
+      },
+      {
+        "columns": [
+          "text",
+          "id",
+          "edu_int_score"
+        ],
+        "label": "dclm",
+        "license": "CC-BY-4.0",
+        "min_score": {
+          "field": "edu_int_score",
+          "value": 3
+        },
+        "repo": "HuggingFaceTB/dclm-edu",
+        "revision": "dbad8ad71224482740cd9c9d353591adbf62fe04",
+        "split": "train",
+        "text_field": "text",
+        "weight": 20
+      },
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "en",
+        "label": "wiki",
+        "license": "CC-BY-SA-4.0 / GFDL",
+        "repo": "HuggingFaceFW/finewiki",
+        "revision": "8bd13e72e6a002407649b3e898535f42ceb1aeb9",
+        "split": "train",
+        "text_field": "text",
+        "weight": 10
+      }
+    ],
+    "stream": {
+      "dedup_window": 100000,
+      "prefetch_batches": 4,
+      "read_attempts": 5,
+      "shuffle_buffer": 256,
+      "tokenizer_corpus_policy": "reuse-frozen"
+    },
+    "transitions": {}
+  },
+  {
+    "corpus": "configs/pretrain_20261024_111140_5f596b7a/corpus.json",
+    "name": "pretrain_20261024_111140_5f596b7a",
+    "original_corpus_sha256": "c35100988b38c2e4bdb141e2bee37e73e731cc9240891360f6a0aba310be0632",
+    "original_recipe_sha256": "900c630d3a315d63ed332a9e300a2d1a86f9a2dd8e9627a15ad6430c2077162e",
+    "recipe": "configs/pretrain_20261024_111140_5f596b7a/recipe.json",
+    "run": "deep44_prose_20b_20261022",
+    "sources": [
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "fineweb-edu-dedup",
+        "label": "web",
+        "license": "ODC-BY; preserve underlying source notices",
+        "repo": "HuggingFaceTB/smollm-corpus",
+        "revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+        "split": "train",
+        "text_field": "text",
+        "weight": 70
+      },
+      {
+        "columns": [
+          "text",
+          "id",
+          "edu_int_score"
+        ],
+        "label": "dclm",
+        "license": "CC-BY-4.0",
+        "min_score": {
+          "field": "edu_int_score",
+          "value": 3
+        },
+        "repo": "HuggingFaceTB/dclm-edu",
+        "revision": "dbad8ad71224482740cd9c9d353591adbf62fe04",
+        "split": "train",
+        "text_field": "text",
+        "weight": 20
+      },
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "en",
+        "label": "wiki",
+        "license": "CC-BY-SA-4.0 / GFDL",
+        "repo": "HuggingFaceFW/finewiki",
+        "revision": "8bd13e72e6a002407649b3e898535f42ceb1aeb9",
+        "split": "train",
+        "text_field": "text",
+        "weight": 10
+      }
+    ],
+    "stream": {
+      "dedup_window": 100000,
+      "prefetch_batches": 4,
+      "read_attempts": 5,
+      "shuffle_buffer": 256,
+      "tokenizer_corpus_policy": "reuse-frozen"
+    },
+    "transitions": {
+      "scheduler_transition": {
+        "baseline_best": 3.1120742715895178,
+        "format": "sml-v2-scheduler-transition-v1",
+        "parent_contract": {
+          "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+          "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+          "recipe": "89d8b84a2fe6ff50ef274ccb70b01e4d5394546ea8371876dccf032f817a2f14",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "52bfaaef0938ea869a6ab16890e6d311df863e56156eafcab58a7e2a694d9ec4",
+        "parent_step": 43145,
+        "start_tokens": 5655101440
+      }
+    }
+  },
+  {
+    "corpus": "configs/pretrain_20261027_222615_4d065da7/corpus.json",
+    "name": "pretrain_20261027_222615_4d065da7",
+    "original_corpus_sha256": "c35100988b38c2e4bdb141e2bee37e73e731cc9240891360f6a0aba310be0632",
+    "original_recipe_sha256": "a81a72c7bfe47b4b9e47ce0b63bb7c6b5a139ddba905c5d2a017bd87f249a0d6",
+    "recipe": "configs/pretrain_20261027_222615_4d065da7/recipe.json",
+    "run": "deep44_prose_open_ended_20261027",
+    "sources": [
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "fineweb-edu-dedup",
+        "label": "web",
+        "license": "ODC-BY; preserve underlying source notices",
+        "repo": "HuggingFaceTB/smollm-corpus",
+        "revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+        "split": "train",
+        "text_field": "text",
+        "weight": 70
+      },
+      {
+        "columns": [
+          "text",
+          "id",
+          "edu_int_score"
+        ],
+        "label": "dclm",
+        "license": "CC-BY-4.0",
+        "min_score": {
+          "field": "edu_int_score",
+          "value": 3
+        },
+        "repo": "HuggingFaceTB/dclm-edu",
+        "revision": "dbad8ad71224482740cd9c9d353591adbf62fe04",
+        "split": "train",
+        "text_field": "text",
+        "weight": 20
+      },
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "en",
+        "label": "wiki",
+        "license": "CC-BY-SA-4.0 / GFDL",
+        "repo": "HuggingFaceFW/finewiki",
+        "revision": "8bd13e72e6a002407649b3e898535f42ceb1aeb9",
+        "split": "train",
+        "text_field": "text",
+        "weight": 10
+      }
+    ],
+    "stream": {
+      "dedup_window": 100000,
+      "prefetch_batches": 4,
+      "read_attempts": 5,
+      "shuffle_buffer": 256,
+      "source_policy": "all-available-v1",
+      "tokenizer_corpus_policy": "reuse-frozen"
+    },
+    "transitions": {
+      "scheduler_transition": {
+        "baseline_best": 3.1120742715895178,
+        "format": "sml-v2-scheduler-transition-v1",
+        "parent_contract": {
+          "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+          "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+          "recipe": "89d8b84a2fe6ff50ef274ccb70b01e4d5394546ea8371876dccf032f817a2f14",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "52bfaaef0938ea869a6ab16890e6d311df863e56156eafcab58a7e2a694d9ec4",
+        "parent_step": 43145,
+        "start_tokens": 5655101440
+      },
+      "stable_schedule_transition": {
+        "format": "sml-v2-open-ended-stable-v1",
+        "parent_contract": {
+          "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+          "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+          "recipe": "99caa9bb0f8182f591c4b466b09a6c9aad4b2ff27ac9314bc44fe1ca821cd9ca",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "b86edb7b0448bc58c6f8e1266ba194eebe4442fc860d3ba888901671ef04663e",
+        "parent_scheduler": {
+          "bad_evals": 7,
+          "best": 2.914223026111722,
+          "cap": 9.830400000000001e-05,
+          "config_fingerprint": "ba037a7d13990f03806dfb7dab1a1107b9fccd2373da86870deebf3457f2caa1",
+          "cooldown_remaining": 0,
+          "evaluations": 100,
+          "format": "sml-v2-plateau-v1",
+          "last_loss": 2.9307962145656345,
+          "last_step": 119019,
+          "last_tokens": 15600058368,
+          "reductions": 5
+        },
+        "parent_step": 119722,
+        "parent_stream": {
+          "dedup_window": 100000,
+          "prefetch_batches": 4,
+          "read_attempts": 5,
+          "shuffle_buffer": 256,
+          "tokenizer_corpus_policy": "reuse-frozen"
+        },
+        "stable_lr": 9.830400000000001e-05,
+        "start_lr": 9.830400000000001e-05,
+        "start_tokens": 15692201984,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa",
+        "warmup_tokens": 0
+      }
+    }
+  },
+  {
+    "corpus": "configs/pretrain_20261028_093017_dd42e713/corpus.json",
+    "name": "pretrain_20261028_093017_dd42e713",
+    "original_corpus_sha256": "c35100988b38c2e4bdb141e2bee37e73e731cc9240891360f6a0aba310be0632",
+    "original_recipe_sha256": "0c384bc3e0e802a8a749883d9e60bed74e02d55501cefa29eaacbc65f88a8da1",
+    "recipe": "configs/pretrain_20261028_093017_dd42e713/recipe.json",
+    "run": "deep44_prose_gradual_100b_20261028",
+    "sources": [
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "fineweb-edu-dedup",
+        "label": "web",
+        "license": "ODC-BY; preserve underlying source notices",
+        "repo": "HuggingFaceTB/smollm-corpus",
+        "revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+        "split": "train",
+        "text_field": "text",
+        "weight": 70
+      },
+      {
+        "columns": [
+          "text",
+          "id",
+          "edu_int_score"
+        ],
+        "label": "dclm",
+        "license": "CC-BY-4.0",
+        "min_score": {
+          "field": "edu_int_score",
+          "value": 3
+        },
+        "repo": "HuggingFaceTB/dclm-edu",
+        "revision": "dbad8ad71224482740cd9c9d353591adbf62fe04",
+        "split": "train",
+        "text_field": "text",
+        "weight": 20
+      },
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "en",
+        "label": "wiki",
+        "license": "CC-BY-SA-4.0 / GFDL",
+        "repo": "HuggingFaceFW/finewiki",
+        "revision": "8bd13e72e6a002407649b3e898535f42ceb1aeb9",
+        "split": "train",
+        "text_field": "text",
+        "weight": 10
+      }
+    ],
+    "stream": {
+      "dedup_window": 100000,
+      "prefetch_batches": 4,
+      "read_attempts": 5,
+      "shuffle_buffer": 256,
+      "source_policy": "all-available-v1",
+      "tokenizer_corpus_policy": "reuse-frozen"
+    },
+    "transitions": {
+      "gradual_decay_transition": {
+        "decay_end_tokens": 100000000000,
+        "floor_lr": 3e-05,
+        "format": "sml-v2-open-ended-gradual-v1",
+        "parent_contract": {
+          "code": "1bc7d03c972319212ea775d4667fc0d3f5c0d2d738f3bfff4967c0093913df00",
+          "data": "4412630e242b60857c2ad4a15afb494338ce9686247e6a9e073867d378f53237",
+          "recipe": "19905de3f7b0d4309d2a3341ad393ebb7934e8ef53fe7822afc97f5197acdfff",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "f6238b6fd8a3447dd4cf669f83ab0705bc352e8b5b58bc5b46533246f97fd5f4",
+        "parent_step": 129579,
+        "shape": "linear",
+        "start_lr": 9.830400000000001e-05,
+        "start_tokens": 16984178688,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa"
+      },
+      "scheduler_transition": {
+        "baseline_best": 3.1120742715895178,
+        "format": "sml-v2-scheduler-transition-v1",
+        "parent_contract": {
+          "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+          "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+          "recipe": "89d8b84a2fe6ff50ef274ccb70b01e4d5394546ea8371876dccf032f817a2f14",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "52bfaaef0938ea869a6ab16890e6d311df863e56156eafcab58a7e2a694d9ec4",
+        "parent_step": 43145,
+        "start_tokens": 5655101440
+      },
+      "stable_schedule_transition": {
+        "format": "sml-v2-open-ended-stable-v1",
+        "parent_contract": {
+          "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+          "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+          "recipe": "99caa9bb0f8182f591c4b466b09a6c9aad4b2ff27ac9314bc44fe1ca821cd9ca",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "b86edb7b0448bc58c6f8e1266ba194eebe4442fc860d3ba888901671ef04663e",
+        "parent_scheduler": {
+          "bad_evals": 7,
+          "best": 2.914223026111722,
+          "cap": 9.830400000000001e-05,
+          "config_fingerprint": "ba037a7d13990f03806dfb7dab1a1107b9fccd2373da86870deebf3457f2caa1",
+          "cooldown_remaining": 0,
+          "evaluations": 100,
+          "format": "sml-v2-plateau-v1",
+          "last_loss": 2.9307962145656345,
+          "last_step": 119019,
+          "last_tokens": 15600058368,
+          "reductions": 5
+        },
+        "parent_step": 119722,
+        "parent_stream": {
+          "dedup_window": 100000,
+          "prefetch_batches": 4,
+          "read_attempts": 5,
+          "shuffle_buffer": 256,
+          "tokenizer_corpus_policy": "reuse-frozen"
+        },
+        "stable_lr": 9.830400000000001e-05,
+        "start_lr": 9.830400000000001e-05,
+        "start_tokens": 15692201984,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa",
+        "warmup_tokens": 0
+      }
+    }
+  },
+  {
+    "corpus": "configs/pretrain_20261102_234538_0ee851dc/corpus.json",
+    "name": "pretrain_20261102_234538_0ee851dc",
+    "original_corpus_sha256": "c35100988b38c2e4bdb141e2bee37e73e731cc9240891360f6a0aba310be0632",
+    "original_recipe_sha256": "0c384bc3e0e802a8a749883d9e60bed74e02d55501cefa29eaacbc65f88a8da1",
+    "recipe": "configs/pretrain_20261102_234538_0ee851dc/recipe.json",
+    "run": "deep44_prose_gradual_100b_20261028",
+    "sources": [
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "fineweb-edu-dedup",
+        "label": "web",
+        "license": "ODC-BY; preserve underlying source notices",
+        "repo": "HuggingFaceTB/smollm-corpus",
+        "revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+        "split": "train",
+        "text_field": "text",
+        "weight": 70
+      },
+      {
+        "columns": [
+          "text",
+          "id",
+          "edu_int_score"
+        ],
+        "label": "dclm",
+        "license": "CC-BY-4.0",
+        "min_score": {
+          "field": "edu_int_score",
+          "value": 3
+        },
+        "repo": "HuggingFaceTB/dclm-edu",
+        "revision": "dbad8ad71224482740cd9c9d353591adbf62fe04",
+        "split": "train",
+        "text_field": "text",
+        "weight": 20
+      },
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "en",
+        "label": "wiki",
+        "license": "CC-BY-SA-4.0 / GFDL",
+        "repo": "HuggingFaceFW/finewiki",
+        "revision": "8bd13e72e6a002407649b3e898535f42ceb1aeb9",
+        "split": "train",
+        "text_field": "text",
+        "weight": 10
+      }
+    ],
+    "stream": {
+      "dedup_window": 100000,
+      "prefetch_batches": 4,
+      "read_attempts": 5,
+      "shuffle_buffer": 256,
+      "source_policy": "all-available-v1",
+      "tokenizer_corpus_policy": "reuse-frozen"
+    },
+    "transitions": {
+      "gradual_decay_transition": {
+        "decay_end_tokens": 100000000000,
+        "floor_lr": 3e-05,
+        "format": "sml-v2-open-ended-gradual-v1",
+        "parent_contract": {
+          "code": "1bc7d03c972319212ea775d4667fc0d3f5c0d2d738f3bfff4967c0093913df00",
+          "data": "4412630e242b60857c2ad4a15afb494338ce9686247e6a9e073867d378f53237",
+          "recipe": "19905de3f7b0d4309d2a3341ad393ebb7934e8ef53fe7822afc97f5197acdfff",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "f6238b6fd8a3447dd4cf669f83ab0705bc352e8b5b58bc5b46533246f97fd5f4",
+        "parent_step": 129579,
+        "shape": "linear",
+        "start_lr": 9.830400000000001e-05,
+        "start_tokens": 16984178688,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa"
+      },
+      "scheduler_transition": {
+        "baseline_best": 3.1120742715895178,
+        "format": "sml-v2-scheduler-transition-v1",
+        "parent_contract": {
+          "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+          "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+          "recipe": "89d8b84a2fe6ff50ef274ccb70b01e4d5394546ea8371876dccf032f817a2f14",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "52bfaaef0938ea869a6ab16890e6d311df863e56156eafcab58a7e2a694d9ec4",
+        "parent_step": 43145,
+        "start_tokens": 5655101440
+      },
+      "stable_schedule_transition": {
+        "format": "sml-v2-open-ended-stable-v1",
+        "parent_contract": {
+          "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+          "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+          "recipe": "99caa9bb0f8182f591c4b466b09a6c9aad4b2ff27ac9314bc44fe1ca821cd9ca",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "b86edb7b0448bc58c6f8e1266ba194eebe4442fc860d3ba888901671ef04663e",
+        "parent_scheduler": {
+          "bad_evals": 7,
+          "best": 2.914223026111722,
+          "cap": 9.830400000000001e-05,
+          "config_fingerprint": "ba037a7d13990f03806dfb7dab1a1107b9fccd2373da86870deebf3457f2caa1",
+          "cooldown_remaining": 0,
+          "evaluations": 100,
+          "format": "sml-v2-plateau-v1",
+          "last_loss": 2.9307962145656345,
+          "last_step": 119019,
+          "last_tokens": 15600058368,
+          "reductions": 5
+        },
+        "parent_step": 119722,
+        "parent_stream": {
+          "dedup_window": 100000,
+          "prefetch_batches": 4,
+          "read_attempts": 5,
+          "shuffle_buffer": 256,
+          "tokenizer_corpus_policy": "reuse-frozen"
+        },
+        "stable_lr": 9.830400000000001e-05,
+        "start_lr": 9.830400000000001e-05,
+        "start_tokens": 15692201984,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa",
+        "warmup_tokens": 0
+      }
+    }
+  },
+  {
+    "corpus": "configs/pretrain_20261103_000432_8ac2605e/corpus.json",
+    "name": "pretrain_20261103_000432_8ac2605e",
+    "original_corpus_sha256": "c35100988b38c2e4bdb141e2bee37e73e731cc9240891360f6a0aba310be0632",
+    "original_recipe_sha256": "0c384bc3e0e802a8a749883d9e60bed74e02d55501cefa29eaacbc65f88a8da1",
+    "recipe": "configs/pretrain_20261103_000432_8ac2605e/recipe.json",
+    "run": "deep44_prose_gradual_100b_20261028",
+    "sources": [
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "fineweb-edu-dedup",
+        "label": "web",
+        "license": "ODC-BY; preserve underlying source notices",
+        "repo": "HuggingFaceTB/smollm-corpus",
+        "revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+        "split": "train",
+        "text_field": "text",
+        "weight": 70
+      },
+      {
+        "columns": [
+          "text",
+          "id",
+          "edu_int_score"
+        ],
+        "label": "dclm",
+        "license": "CC-BY-4.0",
+        "min_score": {
+          "field": "edu_int_score",
+          "value": 3
+        },
+        "repo": "HuggingFaceTB/dclm-edu",
+        "revision": "dbad8ad71224482740cd9c9d353591adbf62fe04",
+        "split": "train",
+        "text_field": "text",
+        "weight": 20
+      },
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "en",
+        "label": "wiki",
+        "license": "CC-BY-SA-4.0 / GFDL",
+        "repo": "HuggingFaceFW/finewiki",
+        "revision": "8bd13e72e6a002407649b3e898535f42ceb1aeb9",
+        "split": "train",
+        "text_field": "text",
+        "weight": 10
+      }
+    ],
+    "stream": {
+      "dedup_window": 100000,
+      "prefetch_batches": 4,
+      "read_attempts": 5,
+      "shuffle_buffer": 256,
+      "source_policy": "all-available-v1",
+      "tokenizer_corpus_policy": "reuse-frozen"
+    },
+    "transitions": {
+      "gradual_decay_transition": {
+        "decay_end_tokens": 100000000000,
+        "floor_lr": 3e-05,
+        "format": "sml-v2-open-ended-gradual-v1",
+        "parent_contract": {
+          "code": "1bc7d03c972319212ea775d4667fc0d3f5c0d2d738f3bfff4967c0093913df00",
+          "data": "4412630e242b60857c2ad4a15afb494338ce9686247e6a9e073867d378f53237",
+          "recipe": "19905de3f7b0d4309d2a3341ad393ebb7934e8ef53fe7822afc97f5197acdfff",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "f6238b6fd8a3447dd4cf669f83ab0705bc352e8b5b58bc5b46533246f97fd5f4",
+        "parent_step": 129579,
+        "shape": "linear",
+        "start_lr": 9.830400000000001e-05,
+        "start_tokens": 16984178688,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa"
+      },
+      "scheduler_transition": {
+        "baseline_best": 3.1120742715895178,
+        "format": "sml-v2-scheduler-transition-v1",
+        "parent_contract": {
+          "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+          "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+          "recipe": "89d8b84a2fe6ff50ef274ccb70b01e4d5394546ea8371876dccf032f817a2f14",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "52bfaaef0938ea869a6ab16890e6d311df863e56156eafcab58a7e2a694d9ec4",
+        "parent_step": 43145,
+        "start_tokens": 5655101440
+      },
+      "stable_schedule_transition": {
+        "format": "sml-v2-open-ended-stable-v1",
+        "parent_contract": {
+          "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+          "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+          "recipe": "99caa9bb0f8182f591c4b466b09a6c9aad4b2ff27ac9314bc44fe1ca821cd9ca",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "b86edb7b0448bc58c6f8e1266ba194eebe4442fc860d3ba888901671ef04663e",
+        "parent_scheduler": {
+          "bad_evals": 7,
+          "best": 2.914223026111722,
+          "cap": 9.830400000000001e-05,
+          "config_fingerprint": "ba037a7d13990f03806dfb7dab1a1107b9fccd2373da86870deebf3457f2caa1",
+          "cooldown_remaining": 0,
+          "evaluations": 100,
+          "format": "sml-v2-plateau-v1",
+          "last_loss": 2.9307962145656345,
+          "last_step": 119019,
+          "last_tokens": 15600058368,
+          "reductions": 5
+        },
+        "parent_step": 119722,
+        "parent_stream": {
+          "dedup_window": 100000,
+          "prefetch_batches": 4,
+          "read_attempts": 5,
+          "shuffle_buffer": 256,
+          "tokenizer_corpus_policy": "reuse-frozen"
+        },
+        "stable_lr": 9.830400000000001e-05,
+        "start_lr": 9.830400000000001e-05,
+        "start_tokens": 15692201984,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa",
+        "warmup_tokens": 0
+      }
+    }
+  },
+  {
+    "corpus": "configs/pretrain_20261104_170916_448e6f64/corpus.json",
+    "name": "pretrain_20261104_170916_448e6f64",
+    "original_corpus_sha256": "f27196edf4eab3270c3ec9a8e232509fcc4435baa68c0d976acdf6b5881a14cb",
+    "original_recipe_sha256": "218451ccbe74415b0e4b2e810200feaacf1e17bb582c0a9f1f84e381d6bf9ad9",
+    "recipe": "configs/pretrain_20261104_170916_448e6f64/recipe.json",
+    "run": "deep44_prose_python_sql_80_15_5_20261104",
+    "sources": [
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "fineweb-edu-dedup",
+        "label": "web",
+        "license": "ODC-BY; preserve underlying source notices",
+        "repo": "HuggingFaceTB/smollm-corpus",
+        "revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+        "split": "train",
+        "text_field": "text",
+        "weight": 56
+      },
+      {
+        "columns": [
+          "text",
+          "id",
+          "edu_int_score"
+        ],
+        "label": "dclm",
+        "license": "CC-BY-4.0",
+        "min_score": {
+          "field": "edu_int_score",
+          "value": 3
+        },
+        "repo": "HuggingFaceTB/dclm-edu",
+        "revision": "dbad8ad71224482740cd9c9d353591adbf62fe04",
+        "split": "train",
+        "text_field": "text",
+        "weight": 16
+      },
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "en",
+        "label": "wiki",
+        "license": "CC-BY-SA-4.0 / GFDL",
+        "repo": "HuggingFaceFW/finewiki",
+        "revision": "8bd13e72e6a002407649b3e898535f42ceb1aeb9",
+        "split": "train",
+        "text_field": "text",
+        "weight": 8
+      },
+      {
+        "code_filter": {
+          "language": "Python",
+          "require_explicit_license": false
+        },
+        "columns": [
+          "blob_id",
+          "repo_name",
+          "path",
+          "src_encoding",
+          "length_bytes",
+          "int_score",
+          "detected_licenses",
+          "license_type",
+          "language",
+          "text",
+          "download_success"
+        ],
+        "config": "default",
+        "label": "python",
+        "license": "Original source repository licenses; preserve provenance and notices",
+        "min_score": {
+          "field": "int_score",
+          "value": 3
+        },
+        "repo": "hongliu9903/stack_edu_python",
+        "revision": "76eeb3eb59bbad948e4fbfae9f4e6159d6f8f376",
+        "split": "train",
+        "text_field": "text",
+        "upstream_config": "Python",
+        "upstream_repo": "HuggingFaceTB/stack-edu",
+        "upstream_revision": "eeec5caac5cc3758a18f1d3ba4416837a9ba814c",
+        "weight": 15
+      },
+      {
+        "additional_sources": [
+          {
+            "columns": [
+              "db_id",
+              "schema",
+              "sql",
+              "question",
+              "external_knowledge"
+            ],
+            "config": "default",
+            "renderer": "synsql-schema-query-v1",
+            "repo": "iNeil77/SynSQL-2.5M",
+            "revision": "56fed46215366defbbc3d7d13064349bbd990a8f",
+            "split": "train",
+            "upstream_repo": "seeklhy/SynSQL-2.5M",
+            "upstream_revision": "cca2c84cc3b41afa6b51534762a6a3a4a420baca"
+          }
+        ],
+        "code_filter": {
+          "language": "SQL",
+          "require_explicit_license": false
+        },
+        "columns": [
+          "blob_id",
+          "repo_name",
+          "path",
+          "src_encoding",
+          "length_bytes",
+          "int_score",
+          "detected_licenses",
+          "license_type",
+          "language",
+          "text",
+          "download_success"
+        ],
+        "config": "default",
+        "label": "sql",
+        "license": "Original source repository licenses; preserve provenance and notices",
+        "min_score": {
+          "field": "int_score",
+          "value": 3
+        },
+        "repo": "hongliu9903/stack_edu_sql",
+        "revision": "079ce8b93c0e83a767ee61af20b9de9931a7e07c",
+        "split": "train",
+        "text_field": "text",
+        "upstream_config": "SQL",
+        "upstream_repo": "HuggingFaceTB/stack-edu",
+        "upstream_revision": "eeec5caac5cc3758a18f1d3ba4416837a9ba814c",
+        "weight": 5
+      }
+    ],
+    "stream": {
+      "dedup_window": 100000,
+      "prefetch_batches": 4,
+      "read_attempts": 5,
+      "shuffle_buffer": 256,
+      "source_policy": "all-available-v1",
+      "tokenizer_corpus_policy": "reuse-frozen"
+    },
+    "transitions": {
+      "code_data_transition": {
+        "format": "sml-prose-python-sql-phase-v1",
+        "manifest": "42ba571cb16dccbf79e65781e82a21881c78c244bb16fac46c40a6e0f123b1e2",
+        "parent_contract": {
+          "code": "b7ff0ae2c1f095bd36300267f5dc2fd60d58be71d828a1b85a796ddf176e942e",
+          "data": "4412630e242b60857c2ad4a15afb494338ce9686247e6a9e073867d378f53237",
+          "recipe": "4f6def65dbd6e1f236be703c2ab977928a55f6bb144ef33688a6e3b0488aacb3",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "051bad7730581c758ce7f469b0214d56cf2e8a9b2df6791c1066b1290881361f",
+        "parent_step": 280771,
+        "start_tokens": 36801216512,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa"
+      },
+      "gradual_decay_transition": {
+        "decay_end_tokens": 100000000000,
+        "floor_lr": 3e-05,
+        "format": "sml-v2-open-ended-gradual-v1",
+        "parent_contract": {
+          "code": "1bc7d03c972319212ea775d4667fc0d3f5c0d2d738f3bfff4967c0093913df00",
+          "data": "4412630e242b60857c2ad4a15afb494338ce9686247e6a9e073867d378f53237",
+          "recipe": "19905de3f7b0d4309d2a3341ad393ebb7934e8ef53fe7822afc97f5197acdfff",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "f6238b6fd8a3447dd4cf669f83ab0705bc352e8b5b58bc5b46533246f97fd5f4",
+        "parent_step": 129579,
+        "shape": "linear",
+        "start_lr": 9.830400000000001e-05,
+        "start_tokens": 16984178688,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa"
+      },
+      "scheduler_transition": {
+        "baseline_best": 3.1120742715895178,
+        "format": "sml-v2-scheduler-transition-v1",
+        "parent_contract": {
+          "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+          "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+          "recipe": "89d8b84a2fe6ff50ef274ccb70b01e4d5394546ea8371876dccf032f817a2f14",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "52bfaaef0938ea869a6ab16890e6d311df863e56156eafcab58a7e2a694d9ec4",
+        "parent_step": 43145,
+        "start_tokens": 5655101440
+      },
+      "stable_schedule_transition": {
+        "format": "sml-v2-open-ended-stable-v1",
+        "parent_contract": {
+          "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+          "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+          "recipe": "99caa9bb0f8182f591c4b466b09a6c9aad4b2ff27ac9314bc44fe1ca821cd9ca",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "b86edb7b0448bc58c6f8e1266ba194eebe4442fc860d3ba888901671ef04663e",
+        "parent_scheduler": {
+          "bad_evals": 7,
+          "best": 2.914223026111722,
+          "cap": 9.830400000000001e-05,
+          "config_fingerprint": "ba037a7d13990f03806dfb7dab1a1107b9fccd2373da86870deebf3457f2caa1",
+          "cooldown_remaining": 0,
+          "evaluations": 100,
+          "format": "sml-v2-plateau-v1",
+          "last_loss": 2.9307962145656345,
+          "last_step": 119019,
+          "last_tokens": 15600058368,
+          "reductions": 5
+        },
+        "parent_step": 119722,
+        "parent_stream": {
+          "dedup_window": 100000,
+          "prefetch_batches": 4,
+          "read_attempts": 5,
+          "shuffle_buffer": 256,
+          "tokenizer_corpus_policy": "reuse-frozen"
+        },
+        "stable_lr": 9.830400000000001e-05,
+        "start_lr": 9.830400000000001e-05,
+        "start_tokens": 15692201984,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa",
+        "warmup_tokens": 0
+      }
+    }
+  },
+  {
+    "corpus": "configs/pretrain_20261107_142423_40700422/corpus.json",
+    "name": "pretrain_20261107_142423_40700422",
+    "original_corpus_sha256": "f27196edf4eab3270c3ec9a8e232509fcc4435baa68c0d976acdf6b5881a14cb",
+    "original_recipe_sha256": "c70c4491d8865d0db8af21d555c309dcfcbaa346760f0668e82a8c0ce54c8d6f",
+    "recipe": "configs/pretrain_20261107_142423_40700422/recipe.json",
+    "run": "deep44_cooldown_2b_20261107",
+    "sources": [
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "fineweb-edu-dedup",
+        "label": "web",
+        "license": "ODC-BY; preserve underlying source notices",
+        "repo": "HuggingFaceTB/smollm-corpus",
+        "revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+        "split": "train",
+        "text_field": "text",
+        "weight": 56
+      },
+      {
+        "columns": [
+          "text",
+          "id",
+          "edu_int_score"
+        ],
+        "label": "dclm",
+        "license": "CC-BY-4.0",
+        "min_score": {
+          "field": "edu_int_score",
+          "value": 3
+        },
+        "repo": "HuggingFaceTB/dclm-edu",
+        "revision": "dbad8ad71224482740cd9c9d353591adbf62fe04",
+        "split": "train",
+        "text_field": "text",
+        "weight": 16
+      },
+      {
+        "columns": [
+          "text",
+          "id"
+        ],
+        "config": "en",
+        "label": "wiki",
+        "license": "CC-BY-SA-4.0 / GFDL",
+        "repo": "HuggingFaceFW/finewiki",
+        "revision": "8bd13e72e6a002407649b3e898535f42ceb1aeb9",
+        "split": "train",
+        "text_field": "text",
+        "weight": 8
+      },
+      {
+        "code_filter": {
+          "language": "Python",
+          "require_explicit_license": false
+        },
+        "columns": [
+          "blob_id",
+          "repo_name",
+          "path",
+          "src_encoding",
+          "length_bytes",
+          "int_score",
+          "detected_licenses",
+          "license_type",
+          "language",
+          "text",
+          "download_success"
+        ],
+        "config": "default",
+        "label": "python",
+        "license": "Original source repository licenses; preserve provenance and notices",
+        "min_score": {
+          "field": "int_score",
+          "value": 3
+        },
+        "repo": "hongliu9903/stack_edu_python",
+        "revision": "76eeb3eb59bbad948e4fbfae9f4e6159d6f8f376",
+        "split": "train",
+        "text_field": "text",
+        "upstream_config": "Python",
+        "upstream_repo": "HuggingFaceTB/stack-edu",
+        "upstream_revision": "eeec5caac5cc3758a18f1d3ba4416837a9ba814c",
+        "weight": 15
+      },
+      {
+        "additional_sources": [
+          {
+            "columns": [
+              "db_id",
+              "schema",
+              "sql",
+              "question",
+              "external_knowledge"
+            ],
+            "config": "default",
+            "renderer": "synsql-schema-query-v1",
+            "repo": "iNeil77/SynSQL-2.5M",
+            "revision": "56fed46215366defbbc3d7d13064349bbd990a8f",
+            "split": "train",
+            "upstream_repo": "seeklhy/SynSQL-2.5M",
+            "upstream_revision": "cca2c84cc3b41afa6b51534762a6a3a4a420baca"
+          }
+        ],
+        "code_filter": {
+          "language": "SQL",
+          "require_explicit_license": false
+        },
+        "columns": [
+          "blob_id",
+          "repo_name",
+          "path",
+          "src_encoding",
+          "length_bytes",
+          "int_score",
+          "detected_licenses",
+          "license_type",
+          "language",
+          "text",
+          "download_success"
+        ],
+        "config": "default",
+        "label": "sql",
+        "license": "Original source repository licenses; preserve provenance and notices",
+        "min_score": {
+          "field": "int_score",
+          "value": 3
+        },
+        "repo": "hongliu9903/stack_edu_sql",
+        "revision": "079ce8b93c0e83a767ee61af20b9de9931a7e07c",
+        "split": "train",
+        "text_field": "text",
+        "upstream_config": "SQL",
+        "upstream_repo": "HuggingFaceTB/stack-edu",
+        "upstream_revision": "eeec5caac5cc3758a18f1d3ba4416837a9ba814c",
+        "weight": 5
+      }
+    ],
+    "stream": {
+      "dedup_window": 100000,
+      "prefetch_batches": 4,
+      "read_attempts": 5,
+      "shuffle_buffer": 256,
+      "source_policy": "all-available-v1",
+      "tokenizer_corpus_policy": "reuse-frozen"
+    },
+    "transitions": {
+      "code_data_transition": {
+        "format": "sml-prose-python-sql-phase-v1",
+        "manifest": "42ba571cb16dccbf79e65781e82a21881c78c244bb16fac46c40a6e0f123b1e2",
+        "parent_contract": {
+          "code": "b7ff0ae2c1f095bd36300267f5dc2fd60d58be71d828a1b85a796ddf176e942e",
+          "data": "4412630e242b60857c2ad4a15afb494338ce9686247e6a9e073867d378f53237",
+          "recipe": "4f6def65dbd6e1f236be703c2ab977928a55f6bb144ef33688a6e3b0488aacb3",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "051bad7730581c758ce7f469b0214d56cf2e8a9b2df6791c1066b1290881361f",
+        "parent_step": 280771,
+        "start_tokens": 36801216512,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa"
+      },
+      "gradual_decay_transition": {
+        "decay_end_tokens": 100000000000,
+        "floor_lr": 3e-05,
+        "format": "sml-v2-open-ended-gradual-v1",
+        "parent_contract": {
+          "code": "1bc7d03c972319212ea775d4667fc0d3f5c0d2d738f3bfff4967c0093913df00",
+          "data": "4412630e242b60857c2ad4a15afb494338ce9686247e6a9e073867d378f53237",
+          "recipe": "19905de3f7b0d4309d2a3341ad393ebb7934e8ef53fe7822afc97f5197acdfff",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "f6238b6fd8a3447dd4cf669f83ab0705bc352e8b5b58bc5b46533246f97fd5f4",
+        "parent_step": 129579,
+        "shape": "linear",
+        "start_lr": 9.830400000000001e-05,
+        "start_tokens": 16984178688,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa"
+      },
+      "scheduler_transition": {
+        "baseline_best": 3.1120742715895178,
+        "format": "sml-v2-scheduler-transition-v1",
+        "parent_contract": {
+          "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+          "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+          "recipe": "89d8b84a2fe6ff50ef274ccb70b01e4d5394546ea8371876dccf032f817a2f14",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "52bfaaef0938ea869a6ab16890e6d311df863e56156eafcab58a7e2a694d9ec4",
+        "parent_step": 43145,
+        "start_tokens": 5655101440
+      },
+      "stable_cooldown_transition": {
+        "duration_tokens": 2000027648,
+        "final_lr": 1e-05,
+        "format": "sml-v2-stable-cooldown-v1",
+        "parent_contract": {
+          "code": "ae36174cc1f5b20f6bf7cf4bc56c7c5f59136dd22104d3dff775d3628600271f",
+          "data": "42ba571cb16dccbf79e65781e82a21881c78c244bb16fac46c40a6e0f123b1e2",
+          "recipe": "d25763cd3f2a452c0cbcb4adec3503644d5bbdccea1deab56412a4843c3d8ec4",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "b6d6568e89215fb219747c3426536ac21e9bcebb9a97bc264e3481d091e37641",
+        "parent_step": 305186,
+        "shape": "1-sqrt",
+        "start_lr": 7.93658732685024e-05,
+        "start_tokens": 40001339392,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa"
+      },
+      "stable_schedule_transition": {
+        "format": "sml-v2-open-ended-stable-v1",
+        "parent_contract": {
+          "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+          "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+          "recipe": "99caa9bb0f8182f591c4b466b09a6c9aad4b2ff27ac9314bc44fe1ca821cd9ca",
+          "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+        },
+        "parent_replica_hash": "b86edb7b0448bc58c6f8e1266ba194eebe4442fc860d3ba888901671ef04663e",
+        "parent_scheduler": {
+          "bad_evals": 7,
+          "best": 2.914223026111722,
+          "cap": 9.830400000000001e-05,
+          "config_fingerprint": "ba037a7d13990f03806dfb7dab1a1107b9fccd2373da86870deebf3457f2caa1",
+          "cooldown_remaining": 0,
+          "evaluations": 100,
+          "format": "sml-v2-plateau-v1",
+          "last_loss": 2.9307962145656345,
+          "last_step": 119019,
+          "last_tokens": 15600058368,
+          "reductions": 5
+        },
+        "parent_step": 119722,
+        "parent_stream": {
+          "dedup_window": 100000,
+          "prefetch_batches": 4,
+          "read_attempts": 5,
+          "shuffle_buffer": 256,
+          "tokenizer_corpus_policy": "reuse-frozen"
+        },
+        "stable_lr": 9.830400000000001e-05,
+        "start_lr": 9.830400000000001e-05,
+        "start_tokens": 15692201984,
+        "validation_fingerprint": "2e9444ddc7de3cf4685911d967c1ad605d9b8cfd9244f7039621e828bf088ffa",
+        "warmup_tokens": 0
+      }
+    }
+  }
+]

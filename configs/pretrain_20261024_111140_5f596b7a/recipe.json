@@ -1,0 +1,87 @@
+{
+  "batches": [
+    7,
+    3,
+    2,
+    2,
+    2
+  ],
+  "betas": [
+    0.9,
+    0.95
+  ],
+  "cache_gib_by_mac": [
+    24,
+    24,
+    8,
+    8,
+    8
+  ],
+  "data_mode": "hf_stream",
+  "decay_start_fraction": 0.8,
+  "eps": 1e-08,
+  "eval_batch_size": 2,
+  "eval_batches_per_source": 32,
+  "eval_every_tokens": 100000000,
+  "grad_accum": 4,
+  "grad_clip": 1.0,
+  "keep_checkpoints": 3,
+  "log_every": 10,
+  "min_lr_ratio": 0.1,
+  "model": {
+    "attention_impl": "fast",
+    "bias": false,
+    "ce_impl": "metal",
+    "d_model": 576,
+    "ffn_impl": "packed-metal",
+    "loss_dtype": "float32",
+    "max_seq_len": 2048,
+    "mlp_multiple_of": 256,
+    "mlp_ratio": 4.0,
+    "n_heads": 9,
+    "n_kv_heads": 3,
+    "n_layers": 44,
+    "qk_norm": true,
+    "vocab_size": 32000
+  },
+  "name": "opensml-deep44-174m-fresh-prose-stream-20b-20261022",
+  "peak_lr": 0.0003,
+  "plateau_scheduler": {
+    "cooldown": 0,
+    "factor": 0.8,
+    "format": "sml-v2-plateau-v1",
+    "initial_lr": 0.0003,
+    "min_delta": 0.0,
+    "min_lr": 3e-05,
+    "patience": 10
+  },
+  "playground_publish_best": false,
+  "reserve_gib": 16,
+  "sample_every_tokens": 100000000,
+  "sample_prompts_file": "sample_prompts.json",
+  "save_every_tokens": 100000000,
+  "scheduler_transition": {
+    "baseline_best": 3.1120742715895178,
+    "format": "sml-v2-scheduler-transition-v1",
+    "parent_contract": {
+      "code": "680fdd3a84c6cae314e9d9038ca00e1f2712284e255d5d8d66599984f57ebb6c",
+      "data": "2f863c538203e9f286b549c7f56598fb9d9b51cef81af77f9627ba7a405e5ec7",
+      "recipe": "89d8b84a2fe6ff50ef274ccb70b01e4d5394546ea8371876dccf032f817a2f14",
+      "tokenizer": "1194292c6d906ac19e6f01c6ad2b42825143fad426a22aa8856d903776701ecb"
+    },
+    "parent_replica_hash": "52bfaaef0938ea869a6ab16890e6d311df863e56156eafcab58a7e2a694d9ec4",
+    "parent_step": 43145,
+    "start_tokens": 5655101440
+  },
+  "seed": 7337,
+  "stream": {
+    "dedup_window": 100000,
+    "prefetch_batches": 4,
+    "read_attempts": 5,
+    "shuffle_buffer": 256,
+    "tokenizer_corpus_policy": "reuse-frozen"
+  },
+  "target_tokens": 20000000000,
+  "warmup_fraction": 0.01,
+  "weight_decay": 0.1
+}
