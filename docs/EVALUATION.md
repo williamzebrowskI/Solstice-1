@@ -4,17 +4,14 @@ All results identify the same release weight hash, `7b2d8777040f05d8e0849acac4e4
 
 ## Likelihood scoring
 
-| Benchmark | Metric | Solstice-1 | OpenSML-150M | SmolLM2-135M Instruct |
-| --- | --- | --- | --- | --- |
-| ARC Easy | Accuracy | 62.58% | 56.65% | — |
-| ARC Easy | acc_norm | 62.33% | 55.43% | — |
-| ARC Challenge | Accuracy | 29.35% | 26.02% | — |
-| ARC Challenge | acc_norm | 30.89% | 29.52% | — |
-| PIQA | Accuracy | 66.49% | 64.53% | — |
-| PIQA | acc_norm | 66.21% | 64.09% | 66.3% |
-| HellaSwag | Accuracy | 32.85% | 30.55% | — |
-| HellaSwag | acc_norm | 39.40% | 33.94% | 40.9% |
-| ARC (publisher average) | acc_norm | — | — | 37.3% |
+| Benchmark | Solstice-1 acc / acc_norm | OpenSML-150M acc / acc_norm | SmolLM2-135M Instruct acc / acc_norm |
+| --- | --- | --- | --- |
+| ARC Easy | 62.58 / 62.33 | 56.65 / 55.43 | — / — |
+| ARC Challenge | 29.35 / 30.89 | 26.02 / 29.52 | — / — |
+| PIQA | 66.49 / 66.21 | 64.53 / 64.09 | — / 66.3 |
+| HellaSwag | 32.85 / 39.40 | 30.55 / 33.94 | — / 40.9 |
+
+All values are percentages, shown as **acc / acc_norm**. SmolLM2 publishes ARC only as a combined average (**37.3% acc_norm**); separate Easy/Challenge scores are unavailable in its card.
 
 Native MLX evaluates complete ARC Easy/Challenge test splits, PIQA validation and HellaSwag validation. It uses zero-shot raw completion prompts, no chat template or inserted BOS/EOS, FP32 weights, vanilla attention, batch size four and chunked scoring. Raw accuracy ranks summed continuation log-likelihood; normalized accuracy divides by choice Unicode-character count. No generated explanation or LLM judge determines the answer. No choices were context-truncated. Dataset revisions and scorer settings are preserved in [the result record](../results/public/choices/results.json).
 

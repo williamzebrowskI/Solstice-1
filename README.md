@@ -55,17 +55,14 @@ Solstice-1 has a separate weight lineage from OpenSML-150M and OpenSML-JSONLite-
 
 Zero-shot likelihood scoring on the complete ARC Easy, ARC Challenge, PIQA and HellaSwag evaluation splits. Accuracy ranks the total answer log-likelihood; `acc_norm` ranks it after dividing by answer length in characters. Higher is better.
 
-| Benchmark | Metric | Solstice-1 | OpenSML-150M | SmolLM2-135M Instruct |
-| --- | --- | --- | --- | --- |
-| ARC Easy | Accuracy | 62.58% | 56.65% | — |
-| ARC Easy | acc_norm | 62.33% | 55.43% | — |
-| ARC Challenge | Accuracy | 29.35% | 26.02% | — |
-| ARC Challenge | acc_norm | 30.89% | 29.52% | — |
-| PIQA | Accuracy | 66.49% | 64.53% | — |
-| PIQA | acc_norm | 66.21% | 64.09% | 66.3% |
-| HellaSwag | Accuracy | 32.85% | 30.55% | — |
-| HellaSwag | acc_norm | 39.40% | 33.94% | 40.9% |
-| ARC (publisher average) | acc_norm | — | — | 37.3% |
+| Benchmark | Solstice-1 acc / acc_norm | OpenSML-150M acc / acc_norm | SmolLM2-135M Instruct acc / acc_norm |
+| --- | --- | --- | --- |
+| ARC Easy | 62.58 / 62.33 | 56.65 / 55.43 | — / — |
+| ARC Challenge | 29.35 / 30.89 | 26.02 / 29.52 | — / — |
+| PIQA | 66.49 / 66.21 | 64.53 / 64.09 | — / 66.3 |
+| HellaSwag | 32.85 / 39.40 | 30.55 / 33.94 | — / 40.9 |
+
+All values are percentages, shown as **acc / acc_norm**. SmolLM2 publishes ARC only as a combined average (**37.3% acc_norm**); separate Easy/Challenge scores are unavailable in its card.
 
 ![Normalized benchmark accuracy for Solstice-1 and published small-model references](docs/figures/benchmark-comparison.png)
 
