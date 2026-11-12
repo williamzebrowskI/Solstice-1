@@ -22,16 +22,16 @@
       "sha256": "0e6865f1a81cfd69ca48e6987658854ce0c0d23e91d72ae545393cd5fa032375"
     },
     "README.md": {
-      "bytes": 13108,
-      "sha256": "b40daa97c526f73ecb882c3981a0fb700032541a0b10dd0eedf40cb9a49a64e2"
+      "bytes": 13073,
+      "sha256": "9923345054c301f7607f9bb8c04f0fa98c5ee0500c8560205b6223233964050f"
     },
     "REPOSITORIES.json": {
-      "bytes": 716,
-      "sha256": "152a87d0098752350d54fdd3cde3861a77eb497c53dc973ee1a8370d12a13ff6"
+      "bytes": 723,
+      "sha256": "291c0f7dc01cd1c0aeb5f49bb8822e0ab32617c72a6886615673ab08e9431891"
     },
     "RUN_GUIDE.md": {
-      "bytes": 3339,
-      "sha256": "fd05e1595bcdc52942e9425b6efb2c7e89553e6b0ad7d5f93d9075969cd75dba"
+      "bytes": 3149,
+      "sha256": "cf237498a98efb229977939cfceaf78a112f25658f32559cad41aab3b8880202"
     },
     "SOURCE_NOTICE.md": {
       "bytes": 1054,
@@ -138,8 +138,8 @@
       "sha256": "7a818c365f1c047b349479829396ba5cd841ca8d2f04fa14fc1489083a1fd4b3"
     },
     "docs/TECHNICAL_REPORT.md": {
-      "bytes": 13515,
-      "sha256": "f98d45b39b9595510fa80d495a3758b211d8c770adc739d381763d3cfb2a2a0b"
+      "bytes": 13512,
+      "sha256": "5fab4741ab86f46c97f8094b75ab3b560197b1a8c9e3d9e4c0783a0cd9de14eb"
     },
     "docs/figures/benchmark-comparison.png": {
       "bytes": 125053,

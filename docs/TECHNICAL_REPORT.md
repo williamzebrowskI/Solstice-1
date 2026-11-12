@@ -14,7 +14,7 @@ The complete tensor shape inventory is in [TENSOR_INVENTORY.json](../provenance/
 
 The model is a decoder-only causal transformer with 44 residual blocks and hidden width 576. Attention uses a combined QKV projection, nine query heads, three KV heads, and head dimension 64. Each query/key head is RMS-normalized. Rotary position embeddings use base 10,000. Blocks use pre-normalization and SwiGLU; the actual FFN intermediate width is 1,536. The packed gate/up matrix has shape 3,072 × 576. Input embeddings and output projection are tied. There are no linear biases or dropout.
 
-The model has a deeper, narrower shape than the earlier 24-layer, width-768 JSONLite ancestor or 20-layer OpenSML-150M. These runs also differ in data, optimization, and training exposure, so their results do not isolate an architectural advantage.
+The model has a deeper, narrower shape than the earlier 24-layer, width-768 JSONLite model or 20-layer OpenSML-150M. These runs also differ in data, optimization, and training exposure, so their results do not isolate an architectural advantage.
 
 Training uses MLX fast attention and packed Metal FFN/cross-entropy paths where specified by each frozen recipe. Release inference and the reported FP32 benchmarks use vanilla attention and reference FFN/cross-entropy paths. No quantization is applied to the release weights.
 

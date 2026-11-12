@@ -152,7 +152,7 @@ Greedy FP32 outputs reproduced in the release environment. The incorrect example
 
 ## Run locally
 
-Use Python 3.11 on Apple Silicon. While the repository is private, sign in with `hf auth login` after installing `huggingface_hub`.
+Use Python 3.11 on Apple Silicon. The public model package can be downloaded without signing in.
 
 ```bash
 python3.11 -m venv .venv

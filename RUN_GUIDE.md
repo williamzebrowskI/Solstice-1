@@ -2,7 +2,7 @@
 
 Use Python 3.11 on Apple Silicon macOS with the pinned requirements. The tested public MLX wheel is 0.32.3; it requires a compatible macOS version. See PACKAGING_VERIFICATION.json for the actual tested system. Inference is offline after downloading the package and installing dependencies.
 
-While the model repository is private, run `hf auth login` after installing `huggingface_hub` below. Use a Hugging Face account with read access to OpenSML/Solstice-1. Tokens belong in the terminal sign-in prompt, never in a shared command, notebook, or repository file.
+The model package is public. No Hugging Face sign-in is required to download it.
 
 ```bash
 python3.11 -m venv .venv

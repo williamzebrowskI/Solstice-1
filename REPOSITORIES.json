@@ -3,16 +3,16 @@
   "organization": "OpenSML",
   "parameter_label": "175M",
   "license": "Apache-2.0",
-  "release_status": "private review",
+  "release_status": "public research release",
   "repositories": {
     "github": {
       "url": "https://github.com/williamzebrowskI/Solstice-1",
-      "visibility": "private",
+      "visibility": "public",
       "role": "Native inference code, documentation, training provenance, evaluation evidence"
     },
     "huggingface": {
       "url": "https://huggingface.co/OpenSML/Solstice-1",
-      "visibility": "private",
+      "visibility": "public",
       "role": "Complete runnable package, including merged FP32 weights and tokenizer"
     }
   },
